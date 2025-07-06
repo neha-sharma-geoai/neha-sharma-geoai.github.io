@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://nehasharma.github.io/sitemap.xml
+Sitemap: https://neha-sharma-geoai.github.io/sitemap.xml
