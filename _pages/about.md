@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>GeoAI and Remote Sensing Enthusiast</a>. New Delhi. neha845sharma@yahoo.com.
+subtitle: <a href='#'>GeoAI and Remote Sensing Enthusiast</a>. 
+<p>New Delhi. neha845sharma@yahoo.com.</p>
 
 profile:
   align: right
