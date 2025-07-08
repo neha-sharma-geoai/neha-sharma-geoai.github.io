@@ -7,7 +7,7 @@ subtitle: <a href='#'>GeoAI and Remote Sensing Enthusiast</a>. New Delhi. neha84
 profile:
   align: right
   image: pic_2.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p>Hi! That's me, nice to meet you. :)</p>
     
