@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-smart-buildings-and-cities-with-remote-sensing-and-gis-first-of-its-kind-global-volume-bridging",
+        
+          title: 'Smart Buildings and Cities with Remote Sensing and GIS: First-of-Its-Kind Global Volume Bridging…... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Edited by: Dr. Shiv Mohan, Dr. Navneet Munoth, Ar. Neha SharmaEdition: 1st Edition, 2025Publisher: Taylor &amp;amp; FrancisPublication Location&amp;#x2026;Continue reading on Medium »",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/smart-buildings-and-cities-with-remote-sensing-and-gis-a-first-of-its-kind-global-volume-bridging-a1fc7e377dd5?source=rss-15523201c57------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
@@ -92,6 +103,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-what-s-special-about-isro-s-xposat",
+        
+          title: 'What’s special about ISRO’s XPoSat? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "On January 1, 2024, ISRO&amp;#x2019;s PSLV-C58 successfully launched XPoSat, India&amp;#x2019;s first dedicated satellite for X-ray polarimetry. &amp;#x1F680; The&amp;#x2026;Continue reading on Medium »",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/whats-special-about-isro-s-xposat-ff26011f7efb?source=rss-15523201c57------2", "_blank");
           
         },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
@@ -147,6 +169,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-parting-ways-from-unimodal-single-tasking-to-multimodal-multitasking-deep-learning-models",
+        
+          title: 'Parting Ways from Unimodal Single-Tasking to Multimodal Multitasking Deep Learning Models <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/parting-ways-from-unimodal-single-tasking-to-multimodal-multitasking-deep-learning-models-ea81b2a77b55?source=rss-15523201c57------2", "_blank");
           
         },
       },{id: "post-a-post-with-code-diff",
@@ -226,6 +259,39 @@ ninja.data = [{
             window.location.href = "/blog/2023/tikzjax/";
           
         },
+      },{id: "post-custom-geospatial-dataloader-with-pytorch-and-rasterio",
+        
+          title: 'Custom Geospatial Dataloader with Pytorch and Rasterio <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/custom-geospatial-dataloader-with-pytorch-and-rasterio-4f6d896ef441?source=rss-15523201c57------2", "_blank");
+          
+        },
+      },{id: "post-the-world-s-first-artificial-satellite",
+        
+          title: 'The World’s First Artificial Satellite <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/the-worlds-first-artificial-satellite-d17324976a83?source=rss-15523201c57------2", "_blank");
+          
+        },
+      },{id: "post-deep-learning-terminologies-quick-revision",
+        
+          title: 'Deep Learning Terminologies — Quick Revision <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/deep-learning-terminologies-quick-revision-7e9d88e1352f?source=rss-15523201c57------2", "_blank");
+          
+        },
       },{id: "post-a-post-with-bibliography",
         
           title: "a post with bibliography",
@@ -237,6 +303,28 @@ ninja.data = [{
             window.location.href = "/blog/2023/post-bibliography/";
           
         },
+      },{id: "post-international-call-for-authors-smart-buildings-and-cities-with-remote-sensing-and-gis-submit-by",
+        
+          title: 'International Call for Authors: Smart Buildings and Cities with Remote Sensing and GIS:... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/international-call-for-authors-smart-buildings-and-cities-with-remote-sensing-and-gis-submit-by-ba4a39b083f8?source=rss-15523201c57------2", "_blank");
+          
+        },
+      },{id: "post-70-geospatial-python-libraries",
+        
+          title: '70 Geospatial Python Libraries <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/70-geospatial-python-libraries-54604d815a7b?source=rss-15523201c57------2", "_blank");
+          
+        },
       },{id: "post-a-post-with-jupyter-notebook",
         
           title: "a post with jupyter notebook",
@@ -246,6 +334,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-100-geospatial-artificial-intelligence-geoai-applications",
+        
+          title: '100+ Geospatial Artificial Intelligence (GeoAI) Applications <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/100-geospatial-artificial-intelligence-geoai-applications-e84e54a89f1f?source=rss-15523201c57------2", "_blank");
+          
+        },
+      },{id: "post-what-is-geoai",
+        
+          title: 'What is GeoAI? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@ns_geoai/what-is-geoai-90af81c6d17e?source=rss-15523201c57------2", "_blank");
           
         },
       },{id: "post-a-post-with-custom-blockquotes",
@@ -323,17 +433,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2022/giscus-comments/";
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
       },{id: "post-a-post-with-redirect",
@@ -516,6 +615,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/neha-sharma-s", "_blank");
+        },
+      },{
+        id: 'social-medium',
+        title: 'Medium',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://medium.com/@ns_geoai", "_blank");
         },
       },{
         id: 'social-orcid',
