@@ -2,31 +2,36 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Neha Sharma
     - name: Date of Birth
-      value: 14th March 1879
+      value: 14th November 19xx
     - name: Languages
-      value: English, German
+      value: English, Hindi
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MS in Data Science
+      institution: Liverpool John Moores University, Liverpool, UK
+      year: 2021 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Specialization - Deep Learning and AI.
+        - Awarded Outstanding Achiever Award by the University.
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
+    - title: MTech in Geomatics
+      institution: CEPT University, Ahmedabad, India
+      year: 2018 - 2020
       description:
-        - Description 1.
-        - Description 2.
+        - 1. Academic Excellence Award - for best academic performance for the duration of the program.
+        - 2. Best Capstone Project Award - for the highest score of the Project in the Graduating Batch.
+        - 3. Distinguished Student Award - for best overall academics plus extracurricular activities.
+    - title: Bachelors in Architecture
+      institution: Maulana Azad National Institute of Technology, Bhopal, India
+      year: 2013 - 2018
+
 
 - title: Experience
   type: time_table
