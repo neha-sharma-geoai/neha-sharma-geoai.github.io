@@ -33,19 +33,19 @@
       year: 2013 - 2018
 
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Product Engineer II - Geospatial Data Science
+      company: Environmental Systems Research Institute (ESRI), New Delhi, India
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - GeoAI R&D Center
+        # - Description 2.
+        - skills: GeoAI, Remote Sensing, Python, PyTorch, TensorFlow, Geospatial Data Science, Machine Learning, Deep Learning, AI, GIS
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
     - title: Visiting Professor
       institution: California Institute of Technology, Pasadena, California, US
       year: 1933
