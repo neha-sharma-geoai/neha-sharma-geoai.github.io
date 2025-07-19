@@ -131,9 +131,9 @@
                       ]
                     }
                     ],
-  "thesis projects": [
+  "projects": [
                       {
-                        "degree": "MS in Data Science",
+                        "degree": "MS in Data Science Thesis Project",
                         "title": "Fine-Grained Roof Type Classification & Multimodal Multitasking Building Detection & Height Estimation Using High Resolution Satellite Imagery",
                         "startDate": "2023-01-01",
                         "endDate": "2023-08-30",
@@ -148,7 +148,7 @@
                         ]
                       },
                       {
-                        "degree": "MTech in Geomatics",
+                        "degree": "MTech in Geomatics Thesis Project",
                         "location": "Ahmedabad, India",
                         "organization": "CEPT University",
                         "startDate": "2020-01-01",
@@ -163,19 +163,19 @@
                         ]
                       },
                       {
-                        "degree": "Bachelors in Architecture",
+                        "degree": "Bachelors in Architecture Thesis Project",
                         "organization": "MA-NIT, Bhopal",
                         "location": "Bhopal, India",
-                        "title": "UG Thesis - Naya Raipur Legislative Assembly",
+                        "title": "Naya Raipur Legislative Assembly",
                         "description": "Based on GRIHA Rating System",
                         "startDate": "2017-06-01",
                         "endDate": "2017-11-30"
                       },
                       {
-                        "degree": "Bachelors in Architecture",
+                        "degree": "Bachelors in Architecture Dissertation",
                         "organization": "MA-NIT, Bhopal",
                         "location": "Bhopal, India",
-                        "title": "UG Dissertation Project - Green Rating of Buildings",
+                        "title": "GRIHA Based Green Rating of Buildings",
                         "startDate": "2017-01-01",
                         "endDate": "2017-04-30"
                       }
