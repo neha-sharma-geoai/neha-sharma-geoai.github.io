@@ -211,7 +211,7 @@
   
   "certificates": [
                     {
-                      "name": "Google Project Management Certificate",
+                      "name": "Project Mgmt Certificate",
                       "issuer": "Google",
                       "date": "2025-02-01",
                       "url": "https://grow.google/projectmanagement/",
@@ -232,14 +232,14 @@
                       "icon": "fa-solid fa-people-group"
                     },
                     {
-                      "name": "AZ-900: Microsoft Azure Fundamentals",
+                      "name": "AZ-900: MS Azure Fundamentals",
                       "issuer": "Microsoft",
                       "date": "2022-04-01",
                       "url": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
                       "icon": "fa-brands fa-microsoft"
                     },
                     {
-                      "name": "PG Diploma in Data Science (Deep Learning)",
+                      "name": "PG Diploma in Data Science",
                       "issuer": "IIIT Bangalore",
                       "date": "2022-04-01",
                       "url": "https://www.iiitb.ac.in/",
