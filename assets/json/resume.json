@@ -38,7 +38,7 @@
   {
     "name": "Larsen & Toubro (L&T) - LTIMindtree, Mindtree and L&T-NxT",
     "position": "Software Engineer - GeoAI",
-    "location": "Chennai, Tamil Nadu, India",
+    "location": "Chennai, India",
     "url": "https://www.ltimindtree.com",
     "startDate": "2020-10-29",
     "endDate": "2023-02-15",
@@ -50,7 +50,7 @@
   {
     "name": "CEPT University",
     "position": "Teaching Associate - M.Tech Geomatics",
-    "location": "Ahmedabad, Gujarat, India",
+    "location": "Ahmedabad, India",
     "url": "https://cept.ac.in",
     "startDate": "2020-07-27",
     "endDate": "2020-10-13",
@@ -62,7 +62,7 @@
   },
   {
     "name": "CEPT University - Center of Applied Geomatics",
-    "location": "Ahmedabad, Gujarat, India",
+    "location": "Ahmedabad, India",
     "position": "Research Assistant",
     "url": "https://cept.ac.in",
     "startDate": "2020-01-01",
@@ -77,7 +77,7 @@
   "volunteer": [
       {
       "organization": "Council of Architecture - Training and Research Center, Bhopal (CoA-TRC)",
-      "location": "India (Online and National Events)",
+      "location": "India (Online)",
       "position": "Organizer and Subject Matter Expert",
       "url": "https://www.coa.gov.in/council_of_architecture_trc.php",
       "startDate": "2020-12-01",
@@ -90,7 +90,7 @@
     },
       {
       "organization": "IEEE India Council - Young Professionals",
-      "location": "India",
+      "location": "Virtual (India)",
       "position": "STEP Program Coordinator",
       "url": "https://ieeeindiacouncil.org",
       "startDate": "2020-03-01",
@@ -114,7 +114,7 @@
     },
       {
       "organization": "CEPT University",
-      "location": "Ahmedabad, Gujarat, India",
+      "location": "Ahmedabad, India",
       "position": "Program Ambassador - Geomatics Programme",
       "url": "https://cept.ac.in",
       "startDate": "2020-06-01",
@@ -127,7 +127,7 @@
     },
       {
       "organization": "CEPT University",
-      "location": "Ahmedabad, Gujarat, India",
+      "location": "Ahmedabad, India",
       "position": "Student Volunteer / Assistant/ Coordinator",
       "url": "https://cept.ac.in",
       "startDate": "2018-12-01",
@@ -139,7 +139,7 @@
     },
       {
       "organization": "Carmel Convent School, Gwalior",
-      "location": "Gwalior, Madhya Pradesh, India",
+      "location": "Gwalior, India",
       "position": "House Captain/ Vice-Captain",
       "url": "",
       "startDate": "2005-01-01",
@@ -164,7 +164,7 @@
     },
     {
       "institution": "CEPT University",
-      "location": "Ahmedabad, Gujarat, India",
+      "location": "Ahmedabad, India",
       "url": "https://cept.ac.in/",
       "area": "Geomatics (Remote Sensing and GIS)",
       "studyType": "Master of Technology (MTech)",
@@ -175,7 +175,7 @@
     },
     {
       "institution": "Maulana Azad National Institute of Technology (MANIT)",
-      "location": "Bhopal, Madhya Pradesh, India",
+      "location": "Bhopal, India",
       "url": "https://www.manit.ac.in/",
       "area": "Architecture",
       "studyType": "Bachelor of Architecture (B.Arch.)",
@@ -186,7 +186,7 @@
     },
     {
       "institution": "Carmel Convent School",
-      "location": "Gwalior, Madhya Pradesh, India",
+      "location": "Gwalior, India",
       "studyType": "Class 12 (CBSE)",
       "area": "Physics, Chemistry, Mathematics",
       "startDate": "2011-04-01",
@@ -196,7 +196,7 @@
     },
     {
       "institution": "Carmel Convent School",
-      "location": "Gwalior, Madhya Pradesh, India",
+      "location": "Gwalior, India",
       "studyType": "Class 10 (CBSE)",
       "area": "Science, Mathematics, Social Studies, Sanskrit, English",
       "startDate": "2009-04-01",
@@ -207,55 +207,129 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Outstanding Achiever Award",
+      "date": "2025-05-25",
+      "awarder": "Liverpool John Moores University, UK",
+      "summary": "Awarded for academic excellence in MS in Data Science.",
+      "url": "https://www.ljmu.ac.uk/",
+      "icon": "fa-solid fa-award"
+    },
+    {
+      "title": "MindFest 2022 Hackathon Winner",
+      "date": "2022-07-01",
+      "awarder": "Mindtree",
+      "summary": "Won prize in ServiceNow Platform Hackathon; awarded by the then CEO and MD of Mindtree.",
+      "url": "https://www.mindtree.com/",
+      "icon": "fa-solid fa-lightbulb"
+    },
+    {
+      "title": "GICEA Gold Medal",
+      "date": "2022-04-23",
+      "awarder": "Gujarat Institute of Civil Engineers and Architects (GICEA)",
+      "summary": "Awarded for academic performance in M. Tech Geomatics.",
+      "url": "https://gicea.com/",
+      "icon": "fa-solid fa-medal"
+    },
+    {
+      "title": "Game Changer Team Award",
+      "date": "2021-12-01",
+      "awarder": "Mindtree NxT",
+      "summary": "For innovative idea on city cleanliness and GeoAI.",
+      "url": "https://www.mindtree.com/",
+      "icon": "fa-solid fa-rocket"
+    },
+    {
+      "title": "Academic Excellence Award",
+      "date": "2020-06-01",
+      "awarder": "CEPT University",
+      "summary": "Awarded for best academic performance in M. Tech Geomatics.",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-graduation-cap"
+    },
+    {
+      "title": "Best Capstone Project Award",
+      "date": "2020-06-01",
+      "awarder": "CEPT University",
+      "summary": "For best thesis project in M. Tech Geomatics.",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-project-diagram"
+    },
+    {
+      "title": "Distinguished Student Award",
+      "date": "2020-06-01",
+      "awarder": "CEPT University",
+      "summary": "For overall excellence in academics and extracurriculars.",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-star"
+    },
+    {
+      "title": "Geomatics Program Ambassador",
+      "date": "2020-01-01",
+      "awarder": "CEPT University",
+      "summary": "Selected as first ambassador under CEPT initiative.",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-user-tie"
+    },
+    {
+      "title": "Best Studio Portfolio",
+      "date": "2018-12-11",
+      "awarder": "CEPT University",
+      "summary": "Awarded in GIS Foundation Studio course (Semester 1).",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-pen-nib"
+    },
+    {
+      "title": "Merit Scholarship",
+      "date": "2018-05-01",
+      "awarder": "CEPT University",
+      "summary": "Secured 2nd rank in PG Entrance Exam (Geomatics).",
+      "url": "https://cept.ac.in/",
+      "icon": "fa-solid fa-coins"
+    },
+    {
+      "title": "Best Student of the Year",
+      "date": "2012-01-28",
+      "awarder": "Carmel Convent School, Gwalior",
+      "summary": "Awarded for top performance in Mathematics.",
+      "url": "https://carmelconventgwalior.com/",
+      "icon": "fa-solid fa-school"
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "name": "Google Project Management Certificate",
+      "issuer": "Google",
+      "date": "2025-02-01",
+      "url": "https://grow.google/projectmanagement/",
+      "icon": "fa-brands fa-google"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "name": "Advanced Python",
+      "issuer": "Atmosera, US",
+      "date": "2024-10-01",
+      "url": "https://www.atmosera.com/",
+      "icon": "fa-solid fa-code"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "name": "Scrum Master",
+      "issuer": "Scrum Alliance",
+      "date": "2024-10-01",
+      "url": "https://www.scrumalliance.org/",
+      "icon": "fa-solid fa-people-group"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
+      "name": "AZ-900: Microsoft Azure Fundamentals",
+      "issuer": "Microsoft",
+      "date": "2022-04-01",
+      "url": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
+      "icon": "fa-brands fa-microsoft"
     },
     {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "name": "PG Diploma in Data Science (Deep Learning)",
+      "issuer": "IIIT Bangalore",
+      "date": "2022-04-01",
+      "url": "https://www.iiitb.ac.in/",
+      "icon": "fa-solid fa-brain"
     }
   ],
   "publications": [
@@ -281,24 +355,72 @@
       "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
     }
   ],
-  "skills": [
+    "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Programming",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Python (PyTorch, TensorFlow, Flask, NumPy, Pandas, GeoPandas, Rasterio, PyQt5, Exif, Matplotlib, Parquet, Dask, Plotly, Folium)",
+        "ArcGIS API for Python",
+        "HTML",
+        "CSS",
+        "C++ (Basic)",
+        "JavaScript (Leaflet, GEE, OpenLayers)",
+        "R (Basic)"
+      ]
+    },
+    {
+      "name": "Artistic",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-paintbrush",
+      "keywords": [
+        "Logo Design",
+        "3D Software Modelling",
+        "Physical Modelling",
+        "Model Rendering",
+        "Walkthroughs",
+        "Card/Poster Design",
+        "Painting and Sketching",
+        "Brochure Design"
+      ],
+      "projects": [
+        "https://youtu.be/57e3ZrM7w2U",
+        "https://youtu.be/gXdHzLD0m34",
+        "https://youtu.be/3SY8WrveTSo"
+      ]
+    },
+    {
+      "name": "Software",
+      "level": "Expert",
+      "icon": "fa-solid fa-laptop-code",
+      "keywords": [
+        "ESRI ArcGIS Pro",
+        "ESRI ArcGIS Online",
+        "Google Earth Engine",
+        "QGIS",
+        "ENVI 5.3",
+        "ESA SNAP",
+        "ERDAS Imagine 2014",
+        "SAGA GIS",
+        "IBM SPSS",
+        "WordPress",
+        "MS Word",
+        "MS PowerPoint",
+        "MS Excel",
+        "Autodesk AutoCAD 2017",
+        "Google SketchUp 2014",
+        "Autodesk Revit 2017",
+        "Photoshop CS6 and CC",
+        "Adobe Illustrator CC",
+        "Wondershare Filmora",
+        "Lumion"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Hindi",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -308,40 +430,91 @@
       "icon": ""
     }
   ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Assessment of Cropping Patterns in Districts of Gujarat",
+      "summary": "Analyzed district-wise cropping pattern shifts and recommended optimal crops based on food security needs.",
+      "highlights": [
+        "Studied cropping pattern shifts across Gujarat districts",
+        "Identified surplus and deficit crop regions",
+        "Linked cropping trends with population growth and food security",
+        "Recommended optimal crop choices for each district"
+      ],
+      "startDate": "2018-06-01",
+      "endDate": "2018-11-30",
+      "url": ""
+    },
+    {
+      "name": "Spectral Signature and NDVI Analysis",
+      "summary": "Used optical remote sensing to classify land use and monitor mangrove health in India.",
+      "highlights": [
+        "Identified LU classes in Kochi using spectral signatures",
+        "Assessed mangrove forests in Sundarbans using NDVI"
+      ],
+      "startDate": "2018-06-01",
+      "endDate": "2018-11-30",
+      "url": ""
+    },
+    {
+      "name": "Spatial Livability Index Model (SLIM) – Rajkot",
+      "summary": "Developed ward-level livability index using spatial indicators to support urban governance in Rajkot.",
+      "highlights": [
+        "Collected and normalized urban livability indicators",
+        "Created ward-wise composite index in GIS",
+        "Used choropleth mapping for visual decision support"
+      ],
+      "startDate": "2019-01-01",
+      "endDate": "2019-06-01",
+      "url": ""
+    },
+    {
+      "name": "Advanced Remote Sensing Projects",
+      "summary": "Explored SAR, hyperspectral, and thermal techniques for urban and environmental mapping.",
+      "highlights": [
+        "Performed SAR polarimetry using Freeman-Durden decomposition",
+        "Generated scattering indices (Volume, Span)",
+        "Mapped urban land use using AVIRIS hyperspectral imagery"
+      ],
+      "startDate": "2019-01-01",
+      "endDate": "2019-06-01",
+      "url": ""
+    },
+    {
+      "name": "Spatial Analysis and Suitability Modeling",
+      "summary": "Applied spatial analysis methods for network planning, landfill suitability, and watershed delineation.",
+      "highlights": [
+        "Conducted network analysis with barriers and topology",
+        "Executed landfill site selection using MCDM",
+        "Delineated Padma River watershed using DEMs"
+      ],
+      "startDate": "2019-07-01",
+      "endDate": "2020-11-30",
+      "url": ""
+    },
+    {
+      "name": "Predicting Urban Sprawl in Surat",
+      "summary": "Developed urban growth models using LU/LC maps and simulation tools for Surat city.",
+      "highlights": [
+        "Processed LISS-4 imagery in GEE",
+        "Performed change detection and image registration",
+        "Modeled sprawl with FUTURES and GeoSOS"
+      ],
+      "startDate": "2019-07-01",
+      "endDate": "2020-11-30",
+      "url": ""
+    },
+    {
+      "name": "WebGIS and Survey123 Dashboard Development",
+      "summary": "Built interactive WebGIS apps and dashboards using Survey123, PostgreSQL, and ArcGIS Online.",
+      "highlights": [
+        "Collected data with Survey123 forms",
+        "Created live dashboards and web apps",
+        "Integrated data with PostgreSQL and AppBuilder"
+      ],
+      "startDate": "2019-07-01",
+      "endDate": "2019-12-31",
+      "url": ""
     }
   ]
+}
 }
