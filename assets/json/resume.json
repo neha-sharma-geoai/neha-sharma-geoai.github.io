@@ -22,6 +22,41 @@
       }
     ]
   },
+  "education": [
+    {
+      "institution": "Liverpool John Moores University",
+      "location": "Great Britain, UK",
+      "url": "https://www.ljmu.ac.uk/",
+      "area": "Data Science (Specialization: Deep Learning)",
+      "studyType": "Master of Science (MS)",
+      "startDate": "2021-03-01",
+      "endDate": "2023-08-01",
+      "score": "73%",
+      "grade": "Distinction"
+    },
+    {
+      "institution": "CEPT University",
+      "location": "Ahmedabad, India",
+      "url": "https://cept.ac.in/",
+      "area": "Geomatics (Remote Sensing and GIS)",
+      "studyType": "Master of Technology (MTech)",
+      "startDate": "2018-07-23",
+      "endDate": "2020-06-01",
+      "score": "3.95/5.0",
+      "grade": "83% (Gold Medalist)"
+    },
+    {
+      "institution": "Maulana Azad National Institute of Technology (MANIT)",
+      "location": "Bhopal, India",
+      "url": "https://www.manit.ac.in/",
+      "area": "Architecture",
+      "studyType": "Bachelor of Architecture (B.Arch.)",
+      "startDate": "2013-08-01",
+      "endDate": "2018-06-01",
+      "score": "7.54/10",
+      "grade": "75.4%"
+    }
+  ],
   "work": [
   {
     "name": "ESRI Inc.",
@@ -199,151 +234,7 @@
       ]
     }
   ],
-  "education": [
-    {
-      "institution": "Liverpool John Moores University",
-      "location": "Great Britain, UK",
-      "url": "https://www.ljmu.ac.uk/",
-      "area": "Data Science (Specialization: Deep Learning)",
-      "studyType": "Master of Science (MS)",
-      "startDate": "2021-03-01",
-      "endDate": "2023-08-01",
-      "score": "73%",
-      "grade": "Distinction"
-    },
-    {
-      "institution": "CEPT University",
-      "location": "Ahmedabad, India",
-      "url": "https://cept.ac.in/",
-      "area": "Geomatics (Remote Sensing and GIS)",
-      "studyType": "Master of Technology (MTech)",
-      "startDate": "2018-07-23",
-      "endDate": "2020-06-01",
-      "score": "3.95/5.0",
-      "grade": "83% (Gold Medalist)"
-    },
-    {
-      "institution": "Maulana Azad National Institute of Technology (MANIT)",
-      "location": "Bhopal, India",
-      "url": "https://www.manit.ac.in/",
-      "area": "Architecture",
-      "studyType": "Bachelor of Architecture (B.Arch.)",
-      "startDate": "2013-08-01",
-      "endDate": "2018-06-01",
-      "score": "7.54/10",
-      "grade": "75.4%"
-    },
-    {
-      "institution": "Carmel Convent School",
-      "location": "Gwalior, India",
-      "studyType": "Class 12 (CBSE)",
-      "area": "Physics, Chemistry, Mathematics",
-      "startDate": "2011-04-01",
-      "endDate": "2012-03-01",
-      "score": "442/500",
-      "grade": "88.4%, PCM – 93%"
-    },
-    {
-      "institution": "Carmel Convent School",
-      "location": "Gwalior, India",
-      "studyType": "Class 10 (CBSE)",
-      "area": "Science, Mathematics, Social Studies, Sanskrit, English",
-      "startDate": "2009-04-01",
-      "endDate": "2010-03-01",
-      "score": "9.2/10",
-      "grade": "A+"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Outstanding Achiever Award",
-      "date": "2025-05-25",
-      "awarder": "Liverpool John Moores University, UK",
-      "summary": "Awarded for academic excellence in MS in Data Science.",
-      "url": "https://www.ljmu.ac.uk/",
-      "icon": "fa-solid fa-award"
-    },
-    {
-      "title": "MindFest 2022 Hackathon Winner",
-      "date": "2022-07-01",
-      "awarder": "Mindtree",
-      "summary": "Won prize in ServiceNow Platform Hackathon; awarded by the then CEO and MD of Mindtree.",
-      "url": "https://www.mindtree.com/",
-      "icon": "fa-solid fa-lightbulb"
-    },
-    {
-      "title": "GICEA Gold Medal",
-      "date": "2022-04-23",
-      "awarder": "Gujarat Institute of Civil Engineers and Architects (GICEA)",
-      "summary": "Awarded for academic performance in M. Tech Geomatics.",
-      "url": "https://gicea.com/",
-      "icon": "fa-solid fa-medal"
-    },
-    {
-      "title": "Game Changer Team Award",
-      "date": "2021-12-01",
-      "awarder": "Mindtree NxT",
-      "summary": "For innovative idea on city cleanliness and GeoAI.",
-      "url": "https://www.mindtree.com/",
-      "icon": "fa-solid fa-rocket"
-    },
-    {
-      "title": "Academic Excellence Award",
-      "date": "2020-06-01",
-      "awarder": "CEPT University",
-      "summary": "Awarded for best academic performance in M. Tech Geomatics.",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-graduation-cap"
-    },
-    {
-      "title": "Best Capstone Project Award",
-      "date": "2020-06-01",
-      "awarder": "CEPT University",
-      "summary": "For best thesis project in M. Tech Geomatics.",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-project-diagram"
-    },
-    {
-      "title": "Distinguished Student Award",
-      "date": "2020-06-01",
-      "awarder": "CEPT University",
-      "summary": "For overall excellence in academics and extracurriculars.",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-star"
-    },
-    {
-      "title": "Geomatics Program Ambassador",
-      "date": "2020-01-01",
-      "awarder": "CEPT University",
-      "summary": "Selected as first ambassador under CEPT initiative.",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-user-tie"
-    },
-    {
-      "title": "Best Studio Portfolio",
-      "date": "2018-12-11",
-      "awarder": "CEPT University",
-      "summary": "Awarded in GIS Foundation Studio course (Semester 1).",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-pen-nib"
-    },
-    {
-      "title": "Merit Scholarship",
-      "date": "2018-05-01",
-      "awarder": "CEPT University",
-      "summary": "Secured 2nd rank in PG Entrance Exam (Geomatics).",
-      "url": "https://cept.ac.in/",
-      "icon": "fa-solid fa-coins"
-    },
-    {
-      "title": "Best Student of the Year",
-      "date": "2012-01-28",
-      "awarder": "Carmel Convent School, Gwalior",
-      "summary": "Awarded for top performance in Mathematics.",
-      "url": "https://carmelconventgwalior.com/",
-      "icon": "fa-solid fa-school"
-    }
-  ],
+  
   "certificates": [
     {
       "name": "Google Project Management Certificate",
@@ -379,29 +270,6 @@
       "date": "2022-04-01",
       "url": "https://www.iiitb.ac.in/",
       "icon": "fa-solid fa-brain"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
     }
   ],
     "skills": [
@@ -477,92 +345,6 @@
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
-    }
-  ],
-  "projects": [
-    {
-      "name": "Assessment of Cropping Patterns in Districts of Gujarat",
-      "summary": "Analyzed district-wise cropping pattern shifts and recommended optimal crops based on food security needs.",
-      "highlights": [
-        "Studied cropping pattern shifts across Gujarat districts",
-        "Identified surplus and deficit crop regions",
-        "Linked cropping trends with population growth and food security",
-        "Recommended optimal crop choices for each district"
-      ],
-      "startDate": "2018-06-01",
-      "endDate": "2018-11-30",
-      "url": ""
-    },
-    {
-      "name": "Spectral Signature and NDVI Analysis",
-      "summary": "Used optical remote sensing to classify land use and monitor mangrove health in India.",
-      "highlights": [
-        "Identified LU classes in Kochi using spectral signatures",
-        "Assessed mangrove forests in Sundarbans using NDVI"
-      ],
-      "startDate": "2018-06-01",
-      "endDate": "2018-11-30",
-      "url": ""
-    },
-    {
-      "name": "Spatial Livability Index Model (SLIM) – Rajkot",
-      "summary": "Developed ward-level livability index using spatial indicators to support urban governance in Rajkot.",
-      "highlights": [
-        "Collected and normalized urban livability indicators",
-        "Created ward-wise composite index in GIS",
-        "Used choropleth mapping for visual decision support"
-      ],
-      "startDate": "2019-01-01",
-      "endDate": "2019-06-01",
-      "url": ""
-    },
-    {
-      "name": "Advanced Remote Sensing Projects",
-      "summary": "Explored SAR, hyperspectral, and thermal techniques for urban and environmental mapping.",
-      "highlights": [
-        "Performed SAR polarimetry using Freeman-Durden decomposition",
-        "Generated scattering indices (Volume, Span)",
-        "Mapped urban land use using AVIRIS hyperspectral imagery"
-      ],
-      "startDate": "2019-01-01",
-      "endDate": "2019-06-01",
-      "url": ""
-    },
-    {
-      "name": "Spatial Analysis and Suitability Modeling",
-      "summary": "Applied spatial analysis methods for network planning, landfill suitability, and watershed delineation.",
-      "highlights": [
-        "Conducted network analysis with barriers and topology",
-        "Executed landfill site selection using MCDM",
-        "Delineated Padma River watershed using DEMs"
-      ],
-      "startDate": "2019-07-01",
-      "endDate": "2020-11-30",
-      "url": ""
-    },
-    {
-      "name": "Predicting Urban Sprawl in Surat",
-      "summary": "Developed urban growth models using LU/LC maps and simulation tools for Surat city.",
-      "highlights": [
-        "Processed LISS-4 imagery in GEE",
-        "Performed change detection and image registration",
-        "Modeled sprawl with FUTURES and GeoSOS"
-      ],
-      "startDate": "2019-07-01",
-      "endDate": "2020-11-30",
-      "url": ""
-    },
-    {
-      "name": "WebGIS and Survey123 Dashboard Development",
-      "summary": "Built interactive WebGIS apps and dashboards using Survey123, PostgreSQL, and ArcGIS Online.",
-      "highlights": [
-        "Collected data with Survey123 forms",
-        "Created live dashboards and web apps",
-        "Integrated data with PostgreSQL and AppBuilder"
-      ],
-      "startDate": "2019-07-01",
-      "endDate": "2019-12-31",
-      "url": ""
     }
   ],
   "memberships": [
