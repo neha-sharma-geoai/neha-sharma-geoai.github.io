@@ -205,7 +205,7 @@
       "endDate": "2021-03-13",
       "summary": "Promoted the M.Tech Geomatics program, mentored students, and ran outreach campaigns.",
       "highlights": [
-        "Mentored 50+ students.",
+        "Mentored students.",
         "Handled social media presence for Geomatics."
       ]
     },
@@ -279,12 +279,7 @@
       "icon": "fa-solid fa-code",
       "keywords": [
         "Python (PyTorch, TensorFlow, Flask, NumPy, Pandas, GeoPandas, Rasterio, PyQt5, Exif, Matplotlib, Parquet, Dask, Plotly, Folium)",
-        "ArcGIS API for Python",
-        "HTML",
-        "CSS",
-        "C++ (Basic)",
-        "JavaScript (Leaflet, GEE, OpenLayers)",
-        "R (Basic)"
+        "ArcGIS API for Python", "HTML", "CSS", "C++ (Basic)", "JavaScript (Leaflet, GEE, OpenLayers)", "R (Basic)"
       ]
     },
     {
@@ -293,18 +288,13 @@
       "icon": "fa-solid fa-paintbrush",
       "keywords": [
         "Logo Design",
-        "3D Software Modelling",
+        "3D Software Modelling (https://youtu.be/57e3ZrM7w2U", "https://youtu.be/gXdHzLD0m34", "https://youtu.be/3SY8WrveTSo"),
         "Physical Modelling",
         "Model Rendering",
         "Walkthroughs",
         "Card/Poster Design",
         "Painting and Sketching",
         "Brochure Design"
-      ],
-      "projects": [
-        "https://youtu.be/57e3ZrM7w2U",
-        "https://youtu.be/gXdHzLD0m34",
-        "https://youtu.be/3SY8WrveTSo"
       ]
     },
     {
