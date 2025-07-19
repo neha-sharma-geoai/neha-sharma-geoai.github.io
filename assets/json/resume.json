@@ -74,6 +74,55 @@
     ]
   }
 ],
+  "thesis projects": [
+      {
+        "degree": "MS in Data Science",
+        "title": "Fine-Grained Roof Type Classification & Multimodal Multitasking Building Detection & Height Estimation Using High Resolution Satellite Imagery",
+        "startDate": "2023-01-01",
+        "endDate": "2023-08-30",
+        "highlights": [
+          "Classification of 12 roof type classes",
+          "Custom geospatial dataloader using PyTorch and Rasterio",
+          "Unified DeepLabv3 for segmentation and height estimation",
+          "Fusion of RS, CV, and multitasking",
+          "Multimodal inputs (RGB + SAR) for robustness",
+          "Dataset spans 7 continents for scalability",
+          "Shared features improve computational efficiency"
+        ]
+      },
+      {
+        "degree": "MTech in Geomatics",
+        "location": "Ahmedabad, India",
+        "organization": "CEPT University",
+        "startDate": "2020-01-01",
+        "endDate": "2020-04-30",
+        "title": "Urban Air Quality Analysis of Ahmedabad District – A Spatio-Temporal Assessment",
+        "highlights": [
+          "Remote sensing, GIS, and mathematical modeling integration",
+          "Mapped AQ hotspots using satellite data (AURA OMI, MODIS MAIAC, Sentinel 5P)",
+          "Pollutant and land use correlation analysis",
+          "Developed satellite-based AQI tool using GIS",
+          "Analyzed 2020 lockdown impact using Sentinel 5P TROPOMI"
+        ]
+      },
+      {
+        "degree": "Bachelors in Architecture",
+        "organization": "MA-NIT, Bhopal",
+        "location": "Bhopal, India",
+        "title": "UG Thesis - Naya Raipur Legislative Assembly",
+        "description": "Based on GRIHA Rating System",
+        "startDate": "2017-06-01",
+        "endDate": "2017-11-30"
+      },
+      {
+        "degree": "Bachelors in Architecture",
+        "organization": "MA-NIT, Bhopal",
+        "location": "Bhopal, India",
+        "title": "UG Dissertation Project - Green Rating of Buildings",
+        "startDate": "2017-01-01",
+        "endDate": "2017-04-30"
+      }
+    ],
   "volunteer": [
       {
       "organization": "Council of Architecture - Training and Research Center, Bhopal (CoA-TRC)",
@@ -515,6 +564,38 @@
       "endDate": "2019-12-31",
       "url": ""
     }
-  ]
+  ],
+  "memberships": [
+      {
+        "organization": "American Association of Geographers",
+        "role": "Member",
+        "since": "2025"
+      },
+      {
+        "organization": "Council of Architecture (COA) - India",
+        "role": "Registered Architect",
+        "since": "2018"
+      },
+      {
+        "organization": "Indian Society of Geomatics (ISG)",
+        "role": "Life Member",
+        "since": "2018"
+      },
+      {
+        "organization": "IEEE – Geoscience and Remote Sensing Society (GRSS)",
+        "role": "Young Professional Member",
+        "duration": "2019–2022"
+      },
+      {
+        "organization": "The Institution of Engineers (India)",
+        "role": "Associate Member (Architectural Engineering Division)",
+        "since": "2021"
+      },
+      {
+        "organization": "Society of Women Engineers - USA",
+        "role": "Professional Member",
+        "since": "2024"
+      }
+    ]
 }
-}
+
