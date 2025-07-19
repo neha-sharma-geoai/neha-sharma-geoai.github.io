@@ -23,351 +23,373 @@
     ]
   },
   "education": [
-    {
-      "institution": "Liverpool John Moores University",
-      "location": "Great Britain, UK",
-      "url": "https://www.ljmu.ac.uk/",
-      "area": "Data Science (Specialization: Deep Learning)",
-      "studyType": "Master of Science (MS)",
-      "startDate": "2021-03-01",
-      "endDate": "2023-08-01",
-      "score": "73%",
-      "grade": "Distinction"
-    },
-    {
-      "institution": "CEPT University",
-      "location": "Ahmedabad, India",
-      "url": "https://cept.ac.in/",
-      "area": "Geomatics (Remote Sensing and GIS)",
-      "studyType": "Master of Technology (MTech)",
-      "startDate": "2018-07-23",
-      "endDate": "2020-06-01",
-      "score": "3.95/5.0",
-      "grade": "83% (Gold Medalist)"
-    },
-    {
-      "institution": "Maulana Azad National Institute of Technology (MANIT)",
-      "location": "Bhopal, India",
-      "url": "https://www.manit.ac.in/",
-      "area": "Architecture",
-      "studyType": "Bachelor of Architecture (B.Arch.)",
-      "startDate": "2013-08-01",
-      "endDate": "2018-06-01",
-      "score": "7.54/10",
-      "grade": "75.4%"
-    }
-  ],
+                        {
+                          "institution": "Liverpool John Moores University",
+                          "location": "Great Britain, UK",
+                          "url": "https://www.ljmu.ac.uk/",
+                          "area": "Data Science (Specialization: Deep Learning)",
+                          "studyType": "Master of Science (MS)",
+                          "startDate": "2021-03-01",
+                          "endDate": "2023-08-01",
+                          "score": "73%",
+                          "grade": "Distinction"
+                        },
+                        {
+                          "institution": "CEPT University",
+                          "location": "Ahmedabad, India",
+                          "url": "https://cept.ac.in/",
+                          "area": "Geomatics (Remote Sensing and GIS)",
+                          "studyType": "Master of Technology (MTech)",
+                          "startDate": "2018-07-23",
+                          "endDate": "2020-06-01",
+                          "score": "3.95/5.0",
+                          "grade": "83% (Gold Medalist)"
+                        },
+                        {
+                          "institution": "Maulana Azad National Institute of Technology (MANIT)",
+                          "location": "Bhopal, India",
+                          "url": "https://www.manit.ac.in/",
+                          "area": "Architecture",
+                          "studyType": "Bachelor of Architecture (B.Arch.)",
+                          "startDate": "2013-08-01",
+                          "endDate": "2018-06-01",
+                          "score": "7.54/10",
+                          "grade": "75.4%"
+                        }
+                      ],
+  "national_exams": [
+                      {
+                        "exam": "GATE 2022",
+                        "domain": "Geomatics Engineering",
+                        "organizer": "IIT Kharagpur",
+                        "rank": "AIR 171"
+                      },
+                      {
+                        "exam": "National JRF Eligibility Test (JET) 2020",
+                        "organizer": "Indian Institute of Remote Sensing (ISRO)",
+                        "note": "First-time exam for Geomatics scholars",
+                        "date": "21st March 2021"
+                      },
+                      {
+                        "exam": "CEPT Geomatics PG Entrance Exam 2018",
+                        "rank": "AIR 2"
+                      },
+                      {
+                        "exam": "JEE MAINS 2013",
+                        "papers": ["Paper 1", "Paper 2"]
+                      }
+                    ],
   "work": [
-  {
-    "name": "ESRI Inc.",
-    "position": "Product Engineer II - Geospatial Data Science",
-    "location": "Delhi, India",
-    "url": "https://www.esri.com",
-    "startDate": "2023-02-16",
-    "endDate": "Present",
-    "summary": "Working at the GeoAI R&D Center, responsible for building geospatial AI models, creating Python-based workflows, maintaining pretrained models, writing technical documentation and blogs, and ensuring QA of ESRI GeoAI tools.",
-    "highlights": [
-      "GeoAI/ Spatial Data Science, Remote Sensing, Geographic Information Systems (GIS), Geospatial Python, Project Management, Product Engineering"
-    ]
-  },
-  {
-    "name": "Larsen & Toubro (L&T) - LTIMindtree, Mindtree and L&T-NxT",
-    "position": "Software Engineer - GeoAI",
-    "location": "Chennai, India",
-    "url": "https://www.ltimindtree.com",
-    "startDate": "2020-10-29",
-    "endDate": "2023-02-15",
-    "summary": "Worked on geospatial applications and deep learning models. Developed custom deep learning models, user interfaces and open-source tools for satellite image analysis, drone video analytics, and spatial feature detection.",
-    "highlights": [
-      "GeoAI/ Spatial Data Science, Remote Sensing, Geographic Information Systems (GIS), Geospatial Python, Flask, HTML, CSS, Leaflet, and Folium."
-    ]
-  },
-  {
-    "name": "CEPT University",
-    "position": "Teaching Associate - M.Tech Geomatics",
-    "location": "Ahmedabad, India",
-    "url": "https://cept.ac.in",
-    "startDate": "2020-07-27",
-    "endDate": "2020-10-13",
-    "summary": "Taught ‘Geographic Information Science - Foundation Studio’ for the Monsoon Semester in the Faculty of Technology.",
-    "highlights": [
-      "Mentored first-year M.Tech Geomatics students.",
-      "Designed studio exercises and reviewed student GIS projects."
-    ]
-  },
-  {
-    "name": "CEPT University - Center of Applied Geomatics",
-    "location": "Ahmedabad, India",
-    "position": "Research Assistant",
-    "url": "https://cept.ac.in",
-    "startDate": "2020-01-01",
-    "endDate": "2020-04-30",
-    "summary": "Worked on the ISRO-SAC sponsored project for Urban Air Quality Analysis in Ahmedabad using geospatial and temporal data analysis techniques.",
-    "highlights": [
-      "Project awarded Best Capstone Project 2020 (Geomatics).",
-      "Performed spatial-temporal assessment of urban air quality."
-    ]
-  }
-],
+                    {
+                      "name": "ESRI Inc.",
+                      "position": "Product Engineer II - Geospatial Data Science",
+                      "location": "Delhi, India",
+                      "url": "https://www.esri.com",
+                      "startDate": "2023-02-16",
+                      "endDate": "Present",
+                      "summary": "Working at the GeoAI R&D Center, responsible for building geospatial AI models, creating Python-based workflows, maintaining pretrained models, writing technical documentation and blogs, and ensuring QA of ESRI GeoAI tools.",
+                      "highlights": [
+                        "GeoAI/ Spatial Data Science, Remote Sensing, Geographic Information Systems (GIS), Geospatial Python, Project Management, Product Engineering"
+                      ]
+                    },
+                    {
+                      "name": "Larsen & Toubro (L&T) - LTIMindtree, Mindtree and L&T-NxT",
+                      "position": "Software Engineer - GeoAI",
+                      "location": "Chennai, India",
+                      "url": "https://www.ltimindtree.com",
+                      "startDate": "2020-10-29",
+                      "endDate": "2023-02-15",
+                      "summary": "Worked on geospatial applications and deep learning models. Developed custom deep learning models, user interfaces and open-source tools for satellite image analysis, drone video analytics, and spatial feature detection.",
+                      "highlights": [
+                        "GeoAI/ Spatial Data Science, Remote Sensing, Geographic Information Systems (GIS), Geospatial Python, Flask, HTML, CSS, Leaflet, and Folium."
+                      ]
+                    },
+                    {
+                      "name": "CEPT University",
+                      "position": "Teaching Associate - M.Tech Geomatics",
+                      "location": "Ahmedabad, India",
+                      "url": "https://cept.ac.in",
+                      "startDate": "2020-07-27",
+                      "endDate": "2020-10-13",
+                      "summary": "Taught ‘Geographic Information Science - Foundation Studio’ for the Monsoon Semester in the Faculty of Technology.",
+                      "highlights": [
+                        "Mentored first-year M.Tech Geomatics students.",
+                        "Designed studio exercises and reviewed student GIS projects."
+                      ]
+                    },
+                    {
+                      "name": "CEPT University - Center of Applied Geomatics",
+                      "location": "Ahmedabad, India",
+                      "position": "Research Assistant",
+                      "url": "https://cept.ac.in",
+                      "startDate": "2020-01-01",
+                      "endDate": "2020-04-30",
+                      "summary": "Worked on the ISRO-SAC sponsored project for Urban Air Quality Analysis in Ahmedabad using geospatial and temporal data analysis techniques.",
+                      "highlights": [
+                        "Project awarded Best Capstone Project 2020 (Geomatics).",
+                        "Performed spatial-temporal assessment of urban air quality."
+                      ]
+                    }
+                    ],
   "thesis projects": [
-      {
-        "degree": "MS in Data Science",
-        "title": "Fine-Grained Roof Type Classification & Multimodal Multitasking Building Detection & Height Estimation Using High Resolution Satellite Imagery",
-        "startDate": "2023-01-01",
-        "endDate": "2023-08-30",
-        "highlights": [
-          "Classification of 12 roof type classes",
-          "Custom geospatial dataloader using PyTorch and Rasterio",
-          "Unified DeepLabv3 for segmentation and height estimation",
-          "Fusion of RS, CV, and multitasking",
-          "Multimodal inputs (RGB + SAR) for robustness",
-          "Dataset spans 7 continents for scalability",
-          "Shared features improve computational efficiency"
-        ]
-      },
-      {
-        "degree": "MTech in Geomatics",
-        "location": "Ahmedabad, India",
-        "organization": "CEPT University",
-        "startDate": "2020-01-01",
-        "endDate": "2020-04-30",
-        "title": "Urban Air Quality Analysis of Ahmedabad District – A Spatio-Temporal Assessment",
-        "highlights": [
-          "Remote sensing, GIS, and mathematical modeling integration",
-          "Mapped AQ hotspots using satellite data (AURA OMI, MODIS MAIAC, Sentinel 5P)",
-          "Pollutant and land use correlation analysis",
-          "Developed satellite-based AQI tool using GIS",
-          "Analyzed 2020 lockdown impact using Sentinel 5P TROPOMI"
-        ]
-      },
-      {
-        "degree": "Bachelors in Architecture",
-        "organization": "MA-NIT, Bhopal",
-        "location": "Bhopal, India",
-        "title": "UG Thesis - Naya Raipur Legislative Assembly",
-        "description": "Based on GRIHA Rating System",
-        "startDate": "2017-06-01",
-        "endDate": "2017-11-30"
-      },
-      {
-        "degree": "Bachelors in Architecture",
-        "organization": "MA-NIT, Bhopal",
-        "location": "Bhopal, India",
-        "title": "UG Dissertation Project - Green Rating of Buildings",
-        "startDate": "2017-01-01",
-        "endDate": "2017-04-30"
-      }
-    ],
+                      {
+                        "degree": "MS in Data Science",
+                        "title": "Fine-Grained Roof Type Classification & Multimodal Multitasking Building Detection & Height Estimation Using High Resolution Satellite Imagery",
+                        "startDate": "2023-01-01",
+                        "endDate": "2023-08-30",
+                        "highlights": [
+                          "Classification of 12 roof type classes",
+                          "Custom geospatial dataloader using PyTorch and Rasterio",
+                          "Unified DeepLabv3 for segmentation and height estimation",
+                          "Fusion of RS, CV, and multitasking",
+                          "Multimodal inputs (RGB + SAR) for robustness",
+                          "Dataset spans 7 continents for scalability",
+                          "Shared features improve computational efficiency"
+                        ]
+                      },
+                      {
+                        "degree": "MTech in Geomatics",
+                        "location": "Ahmedabad, India",
+                        "organization": "CEPT University",
+                        "startDate": "2020-01-01",
+                        "endDate": "2020-04-30",
+                        "title": "Urban Air Quality Analysis of Ahmedabad District – A Spatio-Temporal Assessment",
+                        "highlights": [
+                          "Remote sensing, GIS, and mathematical modeling integration",
+                          "Mapped AQ hotspots using satellite data (AURA OMI, MODIS MAIAC, Sentinel 5P)",
+                          "Pollutant and land use correlation analysis",
+                          "Developed satellite-based AQI tool using GIS",
+                          "Analyzed 2020 lockdown impact using Sentinel 5P TROPOMI"
+                        ]
+                      },
+                      {
+                        "degree": "Bachelors in Architecture",
+                        "organization": "MA-NIT, Bhopal",
+                        "location": "Bhopal, India",
+                        "title": "UG Thesis - Naya Raipur Legislative Assembly",
+                        "description": "Based on GRIHA Rating System",
+                        "startDate": "2017-06-01",
+                        "endDate": "2017-11-30"
+                      },
+                      {
+                        "degree": "Bachelors in Architecture",
+                        "organization": "MA-NIT, Bhopal",
+                        "location": "Bhopal, India",
+                        "title": "UG Dissertation Project - Green Rating of Buildings",
+                        "startDate": "2017-01-01",
+                        "endDate": "2017-04-30"
+                      }
+                    ],
   "volunteer": [
-      {
-      "organization": "Council of Architecture - Training and Research Center, Bhopal (CoA-TRC)",
-      "location": "India (Online)",
-      "position": "Organizer and Subject Matter Expert",
-      "url": "https://www.coa.gov.in/council_of_architecture_trc.php",
-      "startDate": "2020-12-01",
-      "endDate": "Present",
-      "summary": "Organized and conducted national-level training program titled GAP (Bridging the GAP between Geomatics, Architects, and Planners), focusing on Remote Sensing and GIS in Architectural Pedagogy. Trained over 200 students and professionals.",
-      "highlights": [
-        "Collaborated with IEEE GRSS Gujarat, PIADS Nagpur, NASA India, and NIT Bhopal.",
-        "Led multiple sessions between 2020 and 2023."
-      ]
-    },
-      {
-      "organization": "IEEE India Council - Young Professionals",
-      "location": "Virtual (India)",
-      "position": "STEP Program Coordinator",
-      "url": "https://ieeeindiacouncil.org",
-      "startDate": "2020-03-01",
-      "endDate": "2022-03-01",
-      "summary": "Coordinated IEEE STEP events to facilitate the transition from student to young professional roles across India.",
-      "highlights": [
-        "Guided young IEEE inductees under Gujarat Section and India Council."
-      ]
-    },
-      {
-      "organization": "Angel Xpress Foundation (AXF)",
-      "location": "Virtual (India)",
-      "position": "Volunteer - Online Educator",
-      "url": "https://angelxpress.org",
-      "startDate": "2021-03-01",
-      "endDate": "2023-03-01",
-      "summary": "Virtually educated an underprivileged child under L&T CSR initiative.",
-      "highlights": [
-        "Enabled access to quality education through consistent mentoring."
-      ]
-    },
-      {
-      "organization": "CEPT University",
-      "location": "Ahmedabad, India",
-      "position": "Program Ambassador - Geomatics Programme",
-      "url": "https://cept.ac.in",
-      "startDate": "2020-06-01",
-      "endDate": "2021-03-13",
-      "summary": "Promoted the M.Tech Geomatics program, mentored students, and ran outreach campaigns.",
-      "highlights": [
-        "Mentored students.",
-        "Handled social media presence for Geomatics."
-      ]
-    },
-      {
-      "organization": "CEPT University",
-      "location": "Ahmedabad, India",
-      "position": "Student Volunteer / Assistant/ Coordinator",
-      "url": "https://cept.ac.in",
-      "startDate": "2018-12-01",
-      "endDate": "2019-12-31",
-      "summary": "Volunteered for various events like national and international symposiums, conferences, and government-sponsored geospatial training programs.",
-      "highlights": [
-        "Coordination, Mentorship, Team-work"
-      ]
-    },
-      {
-      "organization": "Carmel Convent School, Gwalior",
-      "location": "Gwalior, India",
-      "position": "House Captain/ Vice-Captain",
-      "url": "",
-      "startDate": "2005-01-01",
-      "endDate": "2009-12-31",
-      "summary": "Held various leadership roles during school years including House Captain, Vice-Captain, and student discipline roles.",
-      "highlights": [
-        "Blue House Captain (2006-08), Yellow Vice-Captain (2009-10), Red House Captain (2005-06)."
-      ]
-    }
-  ],
+                      {
+                      "organization": "Council of Architecture - Training and Research Center, Bhopal (CoA-TRC)",
+                      "location": "India (Online)",
+                      "position": "Organizer and Subject Matter Expert",
+                      "url": "https://www.coa.gov.in/council_of_architecture_trc.php",
+                      "startDate": "2020-12-01",
+                      "endDate": "Present",
+                      "summary": "Organized and conducted national-level training program titled GAP (Bridging the GAP between Geomatics, Architects, and Planners), focusing on Remote Sensing and GIS in Architectural Pedagogy. Trained over 200 students and professionals.",
+                      "highlights": [
+                        "Collaborated with IEEE GRSS Gujarat, PIADS Nagpur, NASA India, and NIT Bhopal.",
+                        "Led multiple sessions between 2020 and 2023."
+                      ]
+                    },
+                      {
+                      "organization": "IEEE India Council - Young Professionals",
+                      "location": "Virtual (India)",
+                      "position": "STEP Program Coordinator",
+                      "url": "https://ieeeindiacouncil.org",
+                      "startDate": "2020-03-01",
+                      "endDate": "2022-03-01",
+                      "summary": "Coordinated IEEE STEP events to facilitate the transition from student to young professional roles across India.",
+                      "highlights": [
+                        "Guided young IEEE inductees under Gujarat Section and India Council."
+                      ]
+                    },
+                      {
+                      "organization": "Angel Xpress Foundation (AXF)",
+                      "location": "Virtual (India)",
+                      "position": "Volunteer - Online Educator",
+                      "url": "https://angelxpress.org",
+                      "startDate": "2021-03-01",
+                      "endDate": "2023-03-01",
+                      "summary": "Virtually educated an underprivileged child under L&T CSR initiative.",
+                      "highlights": [
+                        "Enabled access to quality education through consistent mentoring."
+                      ]
+                    },
+                      {
+                      "organization": "CEPT University",
+                      "location": "Ahmedabad, India",
+                      "position": "Program Ambassador - Geomatics Programme",
+                      "url": "https://cept.ac.in",
+                      "startDate": "2020-06-01",
+                      "endDate": "2021-03-13",
+                      "summary": "Promoted the M.Tech Geomatics program, mentored students, and ran outreach campaigns.",
+                      "highlights": [
+                        "Mentored students.",
+                        "Handled social media presence for Geomatics."
+                      ]
+                    },
+                      {
+                      "organization": "CEPT University",
+                      "location": "Ahmedabad, India",
+                      "position": "Student Volunteer / Assistant/ Coordinator",
+                      "url": "https://cept.ac.in",
+                      "startDate": "2018-12-01",
+                      "endDate": "2019-12-31",
+                      "summary": "Volunteered for various events like national and international symposiums, conferences, and government-sponsored geospatial training programs.",
+                      "highlights": [
+                        "Coordination, Mentorship, Team-work"
+                      ]
+                    },
+                      {
+                      "organization": "Carmel Convent School, Gwalior",
+                      "location": "Gwalior, India",
+                      "position": "House Captain/ Vice-Captain",
+                      "url": "",
+                      "startDate": "2005-01-01",
+                      "endDate": "2009-12-31",
+                      "summary": "Held various leadership roles during school years including House Captain, Vice-Captain, and student discipline roles.",
+                      "highlights": [
+                        "Blue House Captain (2006-08), Yellow Vice-Captain (2009-10), Red House Captain (2005-06)."
+                      ]
+                    }
+                  ],
   
   "certificates": [
-    {
-      "name": "Google Project Management Certificate",
-      "issuer": "Google",
-      "date": "2025-02-01",
-      "url": "https://grow.google/projectmanagement/",
-      "icon": "fa-brands fa-google"
-    },
-    {
-      "name": "Advanced Python",
-      "issuer": "Atmosera, US",
-      "date": "2024-10-01",
-      "url": "https://www.atmosera.com/",
-      "icon": "fa-solid fa-code"
-    },
-    {
-      "name": "Scrum Master",
-      "issuer": "Scrum Alliance",
-      "date": "2024-10-01",
-      "url": "https://www.scrumalliance.org/",
-      "icon": "fa-solid fa-people-group"
-    },
-    {
-      "name": "AZ-900: Microsoft Azure Fundamentals",
-      "issuer": "Microsoft",
-      "date": "2022-04-01",
-      "url": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
-      "icon": "fa-brands fa-microsoft"
-    },
-    {
-      "name": "PG Diploma in Data Science (Deep Learning)",
-      "issuer": "IIIT Bangalore",
-      "date": "2022-04-01",
-      "url": "https://www.iiitb.ac.in/",
-      "icon": "fa-solid fa-brain"
-    }
-  ],
+                    {
+                      "name": "Google Project Management Certificate",
+                      "issuer": "Google",
+                      "date": "2025-02-01",
+                      "url": "https://grow.google/projectmanagement/",
+                      "icon": "fa-brands fa-google"
+                    },
+                    {
+                      "name": "Advanced Python",
+                      "issuer": "Atmosera, US",
+                      "date": "2024-10-01",
+                      "url": "https://www.atmosera.com/",
+                      "icon": "fa-solid fa-code"
+                    },
+                    {
+                      "name": "Scrum Master",
+                      "issuer": "Scrum Alliance",
+                      "date": "2024-10-01",
+                      "url": "https://www.scrumalliance.org/",
+                      "icon": "fa-solid fa-people-group"
+                    },
+                    {
+                      "name": "AZ-900: Microsoft Azure Fundamentals",
+                      "issuer": "Microsoft",
+                      "date": "2022-04-01",
+                      "url": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
+                      "icon": "fa-brands fa-microsoft"
+                    },
+                    {
+                      "name": "PG Diploma in Data Science (Deep Learning)",
+                      "issuer": "IIIT Bangalore",
+                      "date": "2022-04-01",
+                      "url": "https://www.iiitb.ac.in/",
+                      "icon": "fa-solid fa-brain"
+                    }
+                  ],
     "skills": [
-    {
-      "name": "Programming",
-      "level": "Advanced",
-      "icon": "fa-solid fa-code",
-      "keywords": [
-        "Python (PyTorch, TensorFlow, Flask, NumPy, Pandas, GeoPandas, Rasterio, PyQt5, Exif, Matplotlib, Parquet, Dask, Plotly, Folium)",
-        "ArcGIS API for Python", "HTML", "CSS", "C++ (Basic)", "JavaScript (Leaflet, GEE, OpenLayers)", "R (Basic)"
-      ]
-    },
-    {
-      "name": "Artistic",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-paintbrush",
-      "keywords": [
-        "Logo Design",
-        "3D Software Modelling (https://youtu.be/57e3ZrM7w2U", "https://youtu.be/gXdHzLD0m34", "https://youtu.be/3SY8WrveTSo"),
-        "Physical Modelling",
-        "Model Rendering",
-        "Walkthroughs",
-        "Card/Poster Design",
-        "Painting and Sketching",
-        "Brochure Design"
-      ]
-    },
-    {
-      "name": "Software",
-      "level": "Expert",
-      "icon": "fa-solid fa-laptop-code",
-      "keywords": [
-        "ESRI ArcGIS Pro",
-        "ESRI ArcGIS Online",
-        "Google Earth Engine",
-        "QGIS",
-        "ENVI 5.3",
-        "ESA SNAP",
-        "ERDAS Imagine 2014",
-        "SAGA GIS",
-        "IBM SPSS",
-        "WordPress",
-        "MS Word",
-        "MS PowerPoint",
-        "MS Excel",
-        "Autodesk AutoCAD 2017",
-        "Google SketchUp 2014",
-        "Autodesk Revit 2017",
-        "Photoshop CS6 and CC",
-        "Adobe Illustrator CC",
-        "Wondershare Filmora",
-        "Lumion"
-      ]
-    }
+                  {
+                    "name": "Programming",
+                    "level": "Advanced",
+                    "icon": "fa-solid fa-code",
+                    "keywords": [
+                      "Python (PyTorch, TensorFlow, Flask, NumPy, Pandas, GeoPandas, Rasterio, PyQt5, Exif, Matplotlib, Parquet, Dask, Plotly, Folium)",
+                      "ArcGIS API for Python", "HTML", "CSS", "C++ (Basic)", "JavaScript (Leaflet, GEE, OpenLayers)", "R (Basic)"
+                    ]
+                  },
+                  {
+                    "name": "Artistic",
+                    "level": "Intermediate",
+                    "icon": "fa-solid fa-paintbrush",
+                    "keywords": [
+                      "Logo Design",
+                      "3D Software Modelling (https://youtu.be/57e3ZrM7w2U", "https://youtu.be/gXdHzLD0m34", "https://youtu.be/3SY8WrveTSo"),
+                      "Physical Modelling",
+                      "Model Rendering",
+                      "Walkthroughs",
+                      "Card/Poster Design",
+                      "Painting and Sketching",
+                      "Brochure Design"
+                    ]
+                  },
+                  {
+                    "name": "Software",
+                    "level": "Expert",
+                    "icon": "fa-solid fa-laptop-code",
+                    "keywords": [
+                      "ESRI ArcGIS Pro",
+                      "ESRI ArcGIS Online",
+                      "Google Earth Engine",
+                      "QGIS",
+                      "ENVI 5.3",
+                      "ESA SNAP",
+                      "ERDAS Imagine 2014",
+                      "SAGA GIS",
+                      "IBM SPSS",
+                      "WordPress",
+                      "MS Word",
+                      "MS PowerPoint",
+                      "MS Excel",
+                      "Autodesk AutoCAD 2017",
+                      "Google SketchUp 2014",
+                      "Autodesk Revit 2017",
+                      "Photoshop CS6 and CC",
+                      "Adobe Illustrator CC",
+                      "Wondershare Filmora",
+                      "Lumion"
+                    ]
+                  }
   ],
   "languages": [
-    {
-      "language": "Hindi",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
+                  {
+                    "language": "Hindi",
+                    "fluency": "Native speaker",
+                    "icon": ""
+                  },
+                  {
+                    "language": "English",
+                    "fluency": "Fluent",
+                    "icon": ""
+                  }
+                ],
   "memberships": [
-      {
-        "organization": "American Association of Geographers",
-        "role": "Member",
-        "since": "2025"
-      },
-      {
-        "organization": "Council of Architecture (COA) - India",
-        "role": "Registered Architect",
-        "since": "2018"
-      },
-      {
-        "organization": "Indian Society of Geomatics (ISG)",
-        "role": "Life Member",
-        "since": "2018"
-      },
-      {
-        "organization": "IEEE – Geoscience and Remote Sensing Society (GRSS)",
-        "role": "Young Professional Member",
-        "duration": "2019–2022"
-      },
-      {
-        "organization": "The Institution of Engineers (India)",
-        "role": "Associate Member (Architectural Engineering Division)",
-        "since": "2021"
-      },
-      {
-        "organization": "Society of Women Engineers - USA",
-        "role": "Professional Member",
-        "since": "2024"
-      }
-    ]
+                {
+                  "organization": "American Association of Geographers",
+                  "role": "Member",
+                  "since": "2025"
+                },
+                {
+                  "organization": "Council of Architecture (COA) - India",
+                  "role": "Registered Architect",
+                  "since": "2018"
+                },
+                {
+                  "organization": "Indian Society of Geomatics (ISG)",
+                  "role": "Life Member",
+                  "since": "2018"
+                },
+                {
+                  "organization": "IEEE – Geoscience and Remote Sensing Society (GRSS)",
+                  "role": "Young Professional Member",
+                  "duration": "2019–2022"
+                },
+                {
+                  "organization": "The Institution of Engineers (India)",
+                  "role": "Associate Member (Architectural Engineering Division)",
+                  "since": "2021"
+                },
+                {
+                  "organization": "Society of Women Engineers - USA",
+                  "role": "Professional Member",
+                  "since": "2024"
+                }
+              ]
 }
 
