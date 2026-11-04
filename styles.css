@@ -888,9 +888,9 @@ button:focus-visible {
 }
 
 .india-outline {
-  fill: var(--globe-land);
-  stroke: var(--forest-deep);
-  stroke-width: 1.2;
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 0.7;
   stroke-linejoin: round;
 }
 
