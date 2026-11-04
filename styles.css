@@ -542,6 +542,7 @@ button:focus-visible {
   position: relative;
   width: min(100%, 520px);
   height: 500px;
+  overflow: hidden;
   justify-self: end;
 }
 
@@ -559,15 +560,15 @@ button:focus-visible {
 
 .portrait-frame {
   position: absolute;
-  top: 33px;
-  right: 68px;
-  width: 310px;
-  height: 406px;
+  top: 28px;
+  right: 22px;
+  width: min(64%, 330px);
+  height: 420px;
   overflow: hidden;
   border: 7px solid var(--paper);
-  border-radius: 47% 47% 3px 3px;
+  border-radius: 18px;
   background: var(--map-ground-mid);
-  box-shadow: 0 22px 65px rgba(34, 55, 45, 0.16);
+  box-shadow: 0 22px 65px rgba(34, 55, 45, 0.18);
 }
 
 .portrait {
@@ -575,7 +576,7 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: 50% 25%;
-  filter: saturate(0.83);
+  filter: saturate(0.96);
 }
 
 .portrait-caption {
@@ -586,7 +587,7 @@ button:focus-visible {
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
-  background: rgba(243, 241, 231, 0.93);
+  background: color-mix(in srgb, var(--paper) 93%, transparent);
   color: var(--forest-deep);
   font-size: 8px;
   font-weight: 650;
@@ -596,14 +597,14 @@ button:focus-visible {
 .globe-card {
   position: absolute;
   z-index: 2;
-  top: 165px;
-  left: 0;
-  width: 220px;
+  top: 245px;
+  left: 6px;
+  width: 138px;
   padding: 3px 5px 13px;
-  border: 1px solid rgba(38, 59, 50, 0.12);
-  background: rgba(243, 241, 231, 0.94);
-  box-shadow: 0 15px 44px rgba(34, 55, 45, 0.12);
-  transform: rotate(-5deg);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  box-shadow: 0 15px 44px rgba(34, 55, 45, 0.14);
+  transform: rotate(-3deg);
   backdrop-filter: blur(7px);
 }
 
@@ -613,7 +614,7 @@ button:focus-visible {
 }
 
 .globe-orbit {
-  stroke: rgba(189, 117, 84, 0.72);
+  stroke: color-mix(in srgb, var(--clay) 72%, transparent);
   stroke-width: 1;
   stroke-dasharray: 2 4;
 }
@@ -1733,19 +1734,19 @@ button:focus-visible {
   }
 
   .hero-art {
-    height: 430px;
+    height: 560px;
   }
 
   .portrait-frame {
-    top: 35px;
-    right: 25px;
-    width: 260px;
-    height: 365px;
+    top: 15px;
+    right: 0;
+    width: min(78%, 280px);
+    height: 350px;
   }
 
   .globe-card {
-    top: 156px;
-    width: 180px;
+    top: 380px;
+    width: 145px;
   }
 
   .about-grid {
@@ -1916,7 +1917,7 @@ button:focus-visible {
 
   .hero-art {
     width: min(100%, 440px);
-    height: 400px;
+    height: 540px;
     margin: 27px auto 0;
     justify-self: center;
   }
@@ -1926,21 +1927,21 @@ button:focus-visible {
   }
 
   .portrait-frame {
-    top: 15px;
-    right: 39px;
-    width: min(66%, 270px);
+    top: 0;
+    right: 0;
+    width: min(82%, 300px);
     height: 340px;
   }
 
   .globe-card {
-    top: 137px;
-    left: 7px;
-    width: 174px;
+    top: 360px;
+    left: 6px;
+    width: 150px;
   }
 
   .art-coordinate {
-    right: 10px;
-    bottom: -10px;
+    right: 0;
+    bottom: 10px;
     font-size: 11px;
   }
 
@@ -2220,11 +2221,11 @@ button:focus-visible {
   }
 
   .globe-card {
-    width: 153px;
+    width: 140px;
   }
 
   .portrait-frame {
-    right: 24px;
+    right: 0;
   }
 
   .experience-row {
