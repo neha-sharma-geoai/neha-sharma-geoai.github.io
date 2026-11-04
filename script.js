@@ -78,3 +78,75 @@ if (menuToggle && navigation) {
     }
   });
 }
+
+const journeyMarkers = document.querySelectorAll(".journey-marker");
+const journeyPopup = document.querySelector("#journey-popup");
+const journeyPopupTitle = document.querySelector("#journey-popup-title");
+const journeyPopupDetail = document.querySelector("#journey-popup-detail");
+const journeyPopupClose = document.querySelector(".journey-popup-close");
+
+if (
+  journeyMarkers.length > 0 &&
+  journeyPopup instanceof HTMLElement &&
+  journeyPopupTitle instanceof HTMLElement &&
+  journeyPopupDetail instanceof HTMLElement &&
+  journeyPopupClose instanceof HTMLButtonElement
+) {
+  let activeJourneyMarker = null;
+
+  const closeJourneyPopup = (returnFocus = false) => {
+    journeyPopup.hidden = true;
+    journeyMarkers.forEach((marker) => {
+      marker.setAttribute("aria-expanded", "false");
+    });
+    const markerToFocus = activeJourneyMarker;
+    activeJourneyMarker = null;
+    if (returnFocus && markerToFocus instanceof HTMLButtonElement) {
+      markerToFocus.focus();
+    }
+  };
+
+  journeyMarkers.forEach((marker) => {
+    marker.addEventListener("click", () => {
+      const title = marker.dataset.popupTitle;
+      const detail = marker.dataset.popupDetail;
+      if (!title || !detail) {
+        console.error("A journey map marker is missing its location details.", marker);
+        return;
+      }
+
+      if (activeJourneyMarker === marker && !journeyPopup.hidden) {
+        closeJourneyPopup(true);
+        return;
+      }
+
+      closeJourneyPopup();
+      activeJourneyMarker = marker;
+      journeyPopupTitle.textContent = title;
+      journeyPopupDetail.textContent = detail;
+      journeyPopup.hidden = false;
+      marker.setAttribute("aria-expanded", "true");
+      journeyPopupClose.focus();
+    });
+  });
+
+  journeyPopupClose.addEventListener("click", () => {
+    closeJourneyPopup(true);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      event.target instanceof Element &&
+      !journeyPopup.contains(event.target) &&
+      !event.target.closest(".journey-marker")
+    ) {
+      closeJourneyPopup();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !journeyPopup.hidden) {
+      closeJourneyPopup(true);
+    }
+  });
+}

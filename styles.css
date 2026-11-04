@@ -862,12 +862,16 @@ button:focus-visible {
 .locus-map {
   min-width: 0;
   margin: 0;
-  padding: 11px;
+}
+
+.journey-map-canvas {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
   background: var(--paper);
 }
 
-.locus-map svg {
+.journey-map-svg {
   display: block;
   width: 100%;
   height: auto;
@@ -883,79 +887,25 @@ button:focus-visible {
   stroke-width: 0.7;
 }
 
-.locus-land {
+.india-outline {
   fill: var(--globe-land);
   stroke: var(--forest-deep);
-  stroke-width: 1.6;
+  stroke-width: 1.2;
   stroke-linejoin: round;
 }
 
-.locus-land-neighbor {
-  fill: color-mix(in srgb, var(--sage) 55%, transparent);
-  stroke: var(--contour);
-  stroke-width: 1;
-}
-
-.locus-state-line,
-.locus-coast-line {
-  stroke: color-mix(in srgb, var(--forest-deep) 45%, transparent);
-  stroke-width: 0.8;
-  stroke-linecap: round;
-}
-
-.locus-coast-line {
-  stroke: var(--paper);
-  stroke-width: 2;
-}
-
-.locus-leader {
-  stroke: var(--clay);
-  stroke-width: 1.4;
-  stroke-linecap: round;
-}
-
-.locus-point-halo {
-  fill: color-mix(in srgb, var(--clay) 22%, transparent);
-}
-
-.locus-point {
-  fill: var(--clay);
-  stroke: var(--paper);
-  stroke-width: 1.5;
-}
-
-.locus-study-point {
-  fill: var(--water-deep);
-  stroke: var(--paper);
-  stroke-width: 1.5;
-}
-
-.locus-work-point {
-  fill: var(--forest-deep);
-  stroke: var(--paper);
-  stroke-width: 1.5;
-}
-
-.locus-map-label,
-.locus-map-sub-label,
 .locus-map-note,
 .locus-north-label {
   fill: var(--ink);
   font-family: var(--sans);
-  font-size: 7px;
+  font-size: 6.5px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
-.locus-map-sub-label,
 .locus-map-note {
   fill: var(--ink-soft);
-  font-size: 5.5px;
   font-weight: 600;
-}
-
-.locus-map-note {
-  letter-spacing: 1.1px;
 }
 
 .locus-north {
@@ -964,20 +914,164 @@ button:focus-visible {
   stroke-linecap: round;
 }
 
+.journey-leaders {
+  stroke: color-mix(in srgb, var(--ink-soft) 72%, transparent);
+  stroke-width: 0.9;
+  stroke-dasharray: 2 2;
+  stroke-linecap: round;
+}
+
+.journey-city {
+  stroke: var(--paper);
+  stroke-width: 1.2;
+}
+
+.journey-city--home {
+  fill: var(--clay);
+}
+
+.journey-city--study {
+  fill: var(--water-deep);
+}
+
+.journey-city--work {
+  fill: var(--forest-deep);
+}
+
+.journey-marker {
+  position: absolute;
+  top: var(--point-y);
+  left: var(--point-x);
+  z-index: 2;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--paper);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.journey-marker::before {
+  position: absolute;
+  inset: 5px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: var(--forest-deep);
+  box-shadow: 0 1px 5px rgba(22, 61, 56, 0.4);
+  content: "";
+  transition: transform 160ms ease;
+}
+
+.journey-marker--home::before {
+  background: var(--clay);
+}
+
+.journey-marker--study::before {
+  background: var(--water-deep);
+}
+
+.journey-marker span {
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.journey-marker:hover::before,
+.journey-marker[aria-expanded="true"]::before {
+  transform: scale(1.2);
+}
+
+.journey-popup {
+  position: absolute;
+  z-index: 4;
+  top: 10px;
+  right: 10px;
+  width: min(230px, calc(100% - 20px));
+  padding: 16px 38px 16px 16px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 12px 30px rgba(22, 61, 56, 0.18);
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.journey-popup[hidden] {
+  display: none;
+}
+
+.journey-popup-kicker {
+  margin: 0 0 7px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.journey-popup h4 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.journey-popup-detail {
+  margin: 7px 0 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.journey-popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 22px;
+}
+
 .locus-map figcaption {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 10px;
   margin-top: 8px;
   color: var(--ink-soft);
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 650;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
+}
+
+.map-attribution {
+  color: var(--ink-soft);
+  font-size: 10px;
+  text-align: right;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.journey-map-instruction {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 13px;
 }
 
 .locus-copy .eyebrow {
   margin-bottom: 15px;
-  font-size: 8px;
 }
 
 .locus-copy h3 {
@@ -998,59 +1092,8 @@ button:focus-visible {
   max-width: 390px;
   margin: 16px 0 22px;
   color: var(--ink-soft);
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
-}
-
-.locus-data {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding-top: 15px;
-  border-top: 1px solid var(--line);
-}
-
-.locus-data div {
-  display: grid;
-  grid-template-columns: 118px 1fr;
-  gap: 12px;
-}
-
-.locus-data dt {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-soft);
-  font-size: 7px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-}
-
-.locus-data-key {
-  width: 6px;
-  height: 6px;
-  flex: 0 0 auto;
-  border-radius: 50%;
-}
-
-.locus-data-key--home {
-  background: var(--clay);
-}
-
-.locus-data-key--study {
-  background: var(--water-deep);
-}
-
-.locus-data-key--work {
-  background: var(--forest-deep);
-}
-
-.locus-data dd {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 12px;
-  line-height: 1.45;
 }
 
 .experience-row {
@@ -1973,11 +2016,6 @@ button:focus-visible {
     gap: 8%;
   }
 
-  .locus-data div {
-    grid-template-columns: 100px 1fr;
-    gap: 8px;
-  }
-
   .project-grid {
     gap: 12px;
   }
@@ -2229,6 +2267,14 @@ button:focus-visible {
     padding: 14px;
   }
 
+  .journey-popup {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    margin: 10px;
+  }
+
   .locus-copy {
     padding: 0 3px 4px;
   }
@@ -2240,10 +2286,6 @@ button:focus-visible {
 
   .locus-description {
     margin-block: 13px 18px;
-  }
-
-  .locus-data div {
-    grid-template-columns: 112px 1fr;
   }
 
   .experience-row {
@@ -2503,5 +2545,182 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-size: 17px;
+}
+
+.site-nav a,
+.footer-links a {
+  font-size: 14px;
+}
+
+.theme-control-label,
+.theme-control select {
+  font-size: 12px;
+}
+
+.eyebrow,
+.section-index,
+.experience-period,
+.project-meta,
+.book-year,
+.education-year,
+.field-note-coordinates,
+.portrait-caption,
+.globe-label,
+.hero-bottom {
+  font-size: 11px;
+}
+
+.hero-description,
+.about-copy,
+.section-intro,
+.project-content p,
+.field-note-copy > p:not(.eyebrow),
+.earth-copy > p:not(.eyebrow),
+.book-copy > p:not(.eyebrow),
+.contact-section > p:not(.eyebrow),
+.locus-description {
+  font-size: 16px;
+}
+
+.button,
+.text-link,
+.project-link {
+  font-size: 14px;
+}
+
+.hero-location,
+.experience-item > span:last-child,
+.education-card p {
+  font-size: 14px;
+}
+
+.experience-item strong {
+  font-size: 14px;
+}
+
+.experience-label {
+  font-size: 18px;
+}
+
+.art-coordinate {
+  font-size: 15px;
+}
+
+.art-coordinate span,
+.art-scale {
+  font-size: 11px;
+}
+
+.art-tag,
+.raster-legend small,
+.land-label {
+  font-size: 9px;
+}
+
+.education-note {
+  font-size: 12px;
+}
+
+.footer-note {
+  font-size: 13px;
+}
+
+.footer-year {
+  font-size: 12px;
+}
+
+.book-kicker,
+.book-subtitle,
+.book-authors,
+.book-publisher {
+  font-size: 8px;
+}
+
+.system-label {
+  font-size: 10px;
+}
+
+.system-center-label,
+.diagram-caption {
+  font-size: 9px;
+}
+
+.journey-map-instruction,
+.map-attribution {
+  font-size: 13px;
+}
+
+.locus-map-note,
+.locus-north-label {
+  font-size: 9px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .hero-description,
+  .about-copy,
+  .section-intro,
+  .project-content p,
+  .field-note-copy > p:not(.eyebrow),
+  .earth-copy > p:not(.eyebrow),
+  .book-copy > p:not(.eyebrow),
+  .contact-section > p:not(.eyebrow),
+  .locus-description {
+    font-size: 15px;
+  }
+
+  .site-nav a {
+    font-size: 15px;
+  }
+
+  .button,
+  .text-link,
+  .project-link {
+    font-size: 13px;
+  }
+
+  .hero-bottom {
+    font-size: 10px;
+  }
+
+  .book-kicker,
+  .book-subtitle,
+  .book-authors,
+  .book-publisher {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-bottom {
+    font-size: 9px;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .section-index {
+    max-width: 100%;
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .book-grid {
+    grid-template-columns: 108px 1fr;
+    gap: 16px;
   }
 }
