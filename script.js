@@ -79,19 +79,26 @@ if (menuToggle && navigation) {
   });
 }
 
-const journeyMarkers = document.querySelectorAll(".journey-marker");
-const journeyPopup = document.querySelector("#journey-popup");
-const journeyPopupTitle = document.querySelector("#journey-popup-title");
-const journeyPopupDetail = document.querySelector("#journey-popup-detail");
-const journeyPopupClose = document.querySelector(".journey-popup-close");
+const journeyMapCanvases = document.querySelectorAll(".journey-map-canvas");
 
-if (
-  journeyMarkers.length > 0 &&
-  journeyPopup instanceof HTMLElement &&
-  journeyPopupTitle instanceof HTMLElement &&
-  journeyPopupDetail instanceof HTMLElement &&
-  journeyPopupClose instanceof HTMLButtonElement
-) {
+journeyMapCanvases.forEach((canvas) => {
+  const journeyMarkers = canvas.querySelectorAll(".journey-marker");
+  const journeyPopup = canvas.querySelector(".journey-popup");
+  const journeyPopupTitle = journeyPopup?.querySelector(".journey-popup-title");
+  const journeyPopupDetail = journeyPopup?.querySelector(".journey-popup-detail");
+  const journeyPopupClose = journeyPopup?.querySelector(".journey-popup-close");
+
+  if (
+    journeyMarkers.length === 0 ||
+    !(journeyPopup instanceof HTMLElement) ||
+    !(journeyPopupTitle instanceof HTMLElement) ||
+    !(journeyPopupDetail instanceof HTMLElement) ||
+    !(journeyPopupClose instanceof HTMLButtonElement)
+  ) {
+    console.error("A journey map is missing its location details or popup controls.", canvas);
+    return;
+  }
+
   let activeJourneyMarker = null;
 
   const closeJourneyPopup = (returnFocus = false) => {
@@ -107,6 +114,11 @@ if (
   };
 
   journeyMarkers.forEach((marker) => {
+    if (!(marker instanceof HTMLButtonElement)) {
+      console.error("A journey map marker must be a button.", marker);
+      return;
+    }
+
     marker.addEventListener("click", () => {
       const title = marker.dataset.popupTitle;
       const detail = marker.dataset.popupDetail;
@@ -135,11 +147,12 @@ if (
   });
 
   document.addEventListener("click", (event) => {
-    if (
-      event.target instanceof Element &&
-      !journeyPopup.contains(event.target) &&
-      !event.target.closest(".journey-marker")
-    ) {
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const clickedMarker = event.target.closest(".journey-marker");
+    if (!canvas.contains(event.target) || (!journeyPopup.contains(event.target) && !clickedMarker)) {
       closeJourneyPopup();
     }
   });
@@ -149,4 +162,4 @@ if (
       closeJourneyPopup(true);
     }
   });
-}
+});

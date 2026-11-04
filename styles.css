@@ -864,6 +864,13 @@ button:focus-visible {
   margin: 0;
 }
 
+.journey-maps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(12px, 2vw, 24px);
+}
+
 .journey-map-canvas {
   position: relative;
   overflow: hidden;
@@ -891,6 +898,13 @@ button:focus-visible {
   fill: var(--paper);
   stroke: var(--ink);
   stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+.world-outline {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 0.38;
   stroke-linejoin: round;
 }
 
@@ -965,6 +979,35 @@ button:focus-visible {
   box-shadow: 0 1px 5px rgba(22, 61, 56, 0.4);
   content: "";
   transition: transform 160ms ease;
+}
+
+.journey-marker::after {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid var(--clay);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  animation: journey-pulse 3.2s ease-out infinite;
+  animation-delay: var(--journey-delay, 0s);
+}
+
+@keyframes journey-pulse {
+  0%,
+  72%,
+  100% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  10% {
+    opacity: 0.58;
+  }
+
+  42% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
 }
 
 .journey-marker--home::before {
@@ -1098,7 +1141,7 @@ button:focus-visible {
 
 .experience-row {
   display: grid;
-  grid-template-columns: 0.8fr repeat(3, 1fr);
+  grid-template-columns: 0.8fr repeat(4, 1fr);
   gap: 22px;
   margin-top: 76px;
   padding-top: 20px;
@@ -1163,7 +1206,7 @@ button:focus-visible {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -1390,6 +1433,63 @@ button:focus-visible {
   font-size: 8px;
   font-weight: 650;
   letter-spacing: 0.15em;
+}
+
+.ship-art {
+  background:
+    radial-gradient(ellipse at 48% 47%, color-mix(in srgb, var(--water-deep) 36%, transparent), transparent 58%),
+    linear-gradient(140deg, var(--map-ground-start), var(--map-ground-mid) 60%, var(--water-deep));
+}
+
+.ship-raster-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--paper) 22%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 22%, transparent) 1px, transparent 1px);
+  background-size: 19px 19px;
+  mask-image: radial-gradient(ellipse at center, #000 15%, transparent 85%);
+}
+
+.ship-sea-line {
+  stroke: color-mix(in srgb, var(--paper) 42%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 3 6;
+}
+
+.ship-track {
+  stroke: var(--sand);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.ship-vessel {
+  fill: var(--paper);
+  stroke: var(--forest-deep);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.ship-vessel-detail {
+  fill: var(--sand);
+}
+
+.ship-detection-box {
+  stroke: var(--clay);
+  stroke-width: 2;
+  stroke-dasharray: 6 3;
+}
+
+.ship-crosshair {
+  stroke: var(--clay);
+  stroke-width: 2;
+  stroke-linecap: square;
+}
+
+.ship-detection-point {
+  fill: var(--clay);
+  stroke: var(--paper);
+  stroke-width: 2;
 }
 
 .project-content {
@@ -2265,6 +2365,10 @@ button:focus-visible {
     gap: 24px;
     margin-top: 38px;
     padding: 14px;
+  }
+
+  .journey-maps {
+    grid-template-columns: 1fr;
   }
 
   .journey-popup {
