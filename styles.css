@@ -1,129 +1,144 @@
 :root {
   color-scheme: light;
-  --paper: #f8faef;
-  --paper-deep: #e5efdc;
-  --ink: #163d38;
-  --ink-soft: #426059;
-  --forest: #14816b;
-  --forest-deep: #104d48;
-  --moss: #4b9565;
-  --sage: #b9d995;
-  --sage-light: #deedc5;
-  --water: #5dbdbe;
-  --water-deep: #2b8a90;
-  --clay: #e96e4b;
-  --sand: #f4c652;
-  --line: rgba(22, 61, 56, 0.16);
-  --contour: rgba(20, 105, 82, 0.17);
+  --paper: #e7ece7;
+  --paper-deep: #dce5dc;
+  --ink: #203e36;
+  --ink-soft: #52675f;
+  --forest: #19856c;
+  --forest-deep: #174e43;
+  --moss: #5d8a65;
+  --sage: #b8d2a4;
+  --sage-light: #d9e7ce;
+  --water: #65b7b2;
+  --water-deep: #3e8586;
+  --clay: #d66e4d;
+  --sand: #dfb94f;
+  --line: rgba(32, 62, 54, 0.12);
+  --contour: rgba(32, 91, 69, 0.17);
   --dark-contour: rgba(231, 239, 216, 0.18);
-  --map-ground-start: #e5f0d7;
-  --map-ground-mid: #bdd8b0;
-  --map-land-dark: #45875b;
-  --map-heat: #ed8057;
-  --map-raster-low: #a4ca8e;
-  --map-raster-mid: #f0cc67;
-  --map-raster-high: #f08a58;
-  --map-raster-peak: #da5947;
-  --globe-land: #c3dfab;
+  --map-ground-start: #dce8d9;
+  --map-ground-mid: #b9d0bc;
+  --map-land-dark: #438365;
+  --map-heat: #d97856;
+  --map-raster-low: #a3c49b;
+  --map-raster-mid: #e1c263;
+  --map-raster-high: #e38a62;
+  --map-raster-peak: #d45e4e;
+  --globe-land: #c4dcb3;
   --system-node: #236657;
   --system-node-alt: #378370;
   --system-center: #327b70;
+  --shadow-hi: #fbfffb;
+  --shadow-lo: #c2cdc3;
+  --shadow-raised: 10px 10px 20px var(--shadow-lo), -10px -10px 20px var(--shadow-hi);
+  --shadow-soft: 6px 6px 13px var(--shadow-lo), -6px -6px 13px var(--shadow-hi);
+  --shadow-inset: inset 7px 7px 14px var(--shadow-lo), inset -7px -7px 14px var(--shadow-hi);
+  --shadow-inset-soft: inset 4px 4px 9px var(--shadow-lo), inset -4px -4px 9px var(--shadow-hi);
+  --radius-panel: 34px;
+  --radius-card: 25px;
+  --radius-control: 16px;
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   --content: 1180px;
 }
 
 html[data-theme="ocean"] {
-  --paper: #effbfc;
-  --paper-deep: #dceff3;
-  --ink: #122f43;
-  --ink-soft: #3c5d6b;
-  --forest: #087f95;
-  --forest-deep: #0d465a;
-  --moss: #367e8f;
-  --sage: #afe1d9;
-  --sage-light: #d4f0e5;
-  --water: #45c2d0;
-  --water-deep: #247f9c;
-  --clay: #fa735d;
-  --sand: #f4c75e;
-  --line: rgba(18, 47, 67, 0.16);
+  --paper: #e6eef1;
+  --paper-deep: #d9e5e9;
+  --ink: #193b49;
+  --ink-soft: #506b76;
+  --forest: #167e8d;
+  --forest-deep: #17495a;
+  --moss: #4e8290;
+  --sage: #acd8d3;
+  --sage-light: #d2e8e1;
+  --water: #4ab5c2;
+  --water-deep: #317f95;
+  --clay: #df725b;
+  --sand: #d9b752;
+  --line: rgba(25, 59, 73, 0.12);
   --contour: rgba(15, 107, 130, 0.18);
   --dark-contour: rgba(205, 240, 245, 0.18);
-  --map-ground-start: #d9edf0;
-  --map-ground-mid: #abd7dc;
-  --map-land-dark: #2e7d86;
-  --map-heat: #fa8063;
-  --map-raster-low: #73cfca;
-  --map-raster-mid: #f4cf67;
-  --map-raster-high: #f49067;
-  --map-raster-peak: #e65d57;
-  --globe-land: #b4e1ca;
+  --map-ground-start: #d7e8e9;
+  --map-ground-mid: #adcbd0;
+  --map-land-dark: #347d83;
+  --map-heat: #e67b63;
+  --map-raster-low: #78c5bf;
+  --map-raster-mid: #dec56e;
+  --map-raster-high: #e69470;
+  --map-raster-peak: #d76660;
+  --globe-land: #b4d9ca;
   --system-node: #1c7180;
   --system-node-alt: #3296a2;
   --system-center: #287c91;
+  --shadow-hi: #fbffff;
+  --shadow-lo: #becdd2;
 }
 
 html[data-theme="canopy"] {
-  --paper: #fff9eb;
-  --paper-deep: #edf0d3;
-  --ink: #2c3822;
-  --ink-soft: #596447;
-  --forest: #3d7c41;
-  --forest-deep: #244b2c;
-  --moss: #618748;
-  --sage: #c8dc86;
-  --sage-light: #e6edba;
-  --water: #68c4a8;
-  --water-deep: #369078;
-  --clay: #e76543;
-  --sand: #e9b848;
-  --line: rgba(44, 56, 34, 0.16);
+  --paper: #e9eee4;
+  --paper-deep: #dce5d5;
+  --ink: #354535;
+  --ink-soft: #5b6b57;
+  --forest: #4a8050;
+  --forest-deep: #315b39;
+  --moss: #68894e;
+  --sage: #c0d29a;
+  --sage-light: #dfe8c7;
+  --water: #69b49c;
+  --water-deep: #438777;
+  --clay: #d96f4d;
+  --sand: #d8b15b;
+  --line: rgba(53, 69, 53, 0.12);
   --contour: rgba(67, 109, 57, 0.2);
   --dark-contour: rgba(241, 243, 210, 0.17);
-  --map-ground-start: #edf0d3;
-  --map-ground-mid: #c7d998;
-  --map-land-dark: #4b813e;
-  --map-heat: #e87949;
-  --map-raster-low: #b6d479;
-  --map-raster-mid: #e9c257;
-  --map-raster-high: #e7894a;
-  --map-raster-peak: #d85339;
-  --globe-land: #d2e09a;
+  --map-ground-start: #e2e8d4;
+  --map-ground-mid: #c0d19e;
+  --map-land-dark: #4c7c45;
+  --map-heat: #de7a52;
+  --map-raster-low: #b4cc88;
+  --map-raster-mid: #dec46b;
+  --map-raster-high: #df9157;
+  --map-raster-peak: #ce5e45;
+  --globe-land: #d0dda9;
   --system-node: #39703d;
   --system-node-alt: #5b8a4c;
   --system-center: #4f8054;
+  --shadow-hi: #fffffa;
+  --shadow-lo: #c4cdb9;
 }
 
 html[data-theme="lavender"] {
-  --paper: #f8f5ff;
-  --paper-deep: #ece5fa;
-  --ink: #332a4c;
-  --ink-soft: #625775;
-  --forest: #6853a2;
-  --forest-deep: #3b3068;
-  --moss: #8c77c4;
-  --sage: #d0c4ef;
-  --sage-light: #e7e0f8;
-  --water: #81b9dc;
-  --water-deep: #5a85bf;
-  --clay: #d46692;
-  --sand: #edc56d;
-  --line: rgba(51, 42, 76, 0.17);
+  --paper: #ece9f3;
+  --paper-deep: #e0ddeb;
+  --ink: #3a3150;
+  --ink-soft: #665c7a;
+  --forest: #705da3;
+  --forest-deep: #494078;
+  --moss: #8a79b6;
+  --sage: #cdc2e2;
+  --sage-light: #e3dcf0;
+  --water: #80b6d2;
+  --water-deep: #5d86b2;
+  --clay: #cf6e92;
+  --sand: #d7b86b;
+  --line: rgba(58, 49, 80, 0.13);
   --contour: rgba(99, 76, 151, 0.18);
   --dark-contour: rgba(242, 236, 255, 0.2);
-  --map-ground-start: #e9e2f6;
-  --map-ground-mid: #cad7ec;
-  --map-land-dark: #776daf;
-  --map-heat: #df7c9a;
-  --map-raster-low: #a3c9cf;
-  --map-raster-mid: #eed17a;
-  --map-raster-high: #e58b9b;
+  --map-ground-start: #e4e0ed;
+  --map-ground-mid: #cbd4e4;
+  --map-land-dark: #776d9e;
+  --map-heat: #d97f9b;
+  --map-raster-low: #a8c8cd;
+  --map-raster-mid: #dec97e;
+  --map-raster-high: #dc91a0;
   --map-raster-peak: #c75d88;
-  --globe-land: #d3c9eb;
+  --globe-land: #d3c9e5;
   --system-node: #67559c;
   --system-node-alt: #8873ba;
   --system-center: #6d64ad;
+  --shadow-hi: #fffefe;
+  --shadow-lo: #c8c3d3;
 }
 
 * {
@@ -2871,5 +2886,513 @@ body {
   .book-grid {
     grid-template-columns: 108px 1fr;
     gap: 16px;
+  }
+}
+
+/* Neumorphic visual system */
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--paper);
+}
+
+.site-header {
+  position: sticky;
+  top: 10px;
+  height: 72px;
+  padding-inline: 20px;
+  border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+  border-radius: 23px;
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.brand-mark {
+  border-radius: 13px;
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.site-nav a:not(.nav-contact) {
+  padding: 9px 11px;
+  border-radius: 13px;
+}
+
+.site-nav a:not(.nav-contact):hover {
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.theme-control {
+  border: 1px solid color-mix(in srgb, var(--ink) 5%, transparent);
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.site-nav .nav-contact {
+  border: 0;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero {
+  min-height: 640px;
+  margin-top: 24px;
+  padding: 42px 42px 88px;
+  border: 1px solid color-mix(in srgb, var(--ink) 5%, transparent);
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.hero-art {
+  border: 1px solid color-mix(in srgb, var(--ink) 5%, transparent);
+  border-radius: 32px;
+  background: var(--paper);
+  box-shadow: var(--shadow-inset);
+}
+
+.art-contours {
+  inset: 5%;
+  background-color: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.portrait-frame {
+  border: 8px solid var(--paper);
+  border-radius: 27px;
+  box-shadow:
+    8px 8px 18px color-mix(in srgb, var(--ink) 20%, transparent),
+    -6px -6px 16px color-mix(in srgb, var(--paper) 92%, transparent);
+}
+
+.globe-card {
+  border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.portrait-caption,
+.art-tag {
+  border-radius: 11px;
+  box-shadow: var(--shadow-soft);
+}
+
+.button {
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-soft);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.button-dark {
+  border: 1px solid color-mix(in srgb, var(--paper) 18%, transparent);
+  background: var(--forest-deep);
+  box-shadow:
+    6px 6px 13px color-mix(in srgb, var(--forest-deep) 36%, transparent),
+    -5px -5px 12px color-mix(in srgb, var(--moss) 36%, transparent);
+}
+
+.button-dark:hover {
+  background: var(--forest);
+}
+
+.button-light {
+  box-shadow:
+    6px 6px 12px rgba(6, 30, 25, 0.26),
+    -5px -5px 12px rgba(100, 145, 123, 0.22);
+}
+
+.button-outline {
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+}
+
+.button-outline:hover {
+  background: var(--paper);
+  color: var(--forest);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.intro-strip {
+  border: 0;
+  background: transparent;
+}
+
+.strip-inner {
+  min-height: 72px;
+  margin-block: 27px;
+  padding-inline: clamp(18px, 3vw, 36px);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.about-grid {
+  padding: clamp(22px, 4vw, 40px);
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.geo-journey {
+  border: 0;
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.journey-map-canvas {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--paper) 10%, transparent);
+  border-radius: 21px;
+  box-shadow:
+    inset 8px 8px 16px rgba(4, 27, 24, 0.38),
+    inset -6px -6px 13px color-mix(in srgb, var(--moss) 25%, transparent);
+}
+
+.journey-marker::before {
+  box-shadow:
+    4px 4px 8px rgba(6, 25, 23, 0.32),
+    -3px -3px 7px color-mix(in srgb, var(--paper) 34%, transparent);
+}
+
+.journey-popup {
+  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  border-radius: 19px;
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.journey-popup-close {
+  border-radius: 10px;
+}
+
+.journey-popup-close:hover {
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.experience-row {
+  border: 0;
+}
+
+.experience-label,
+.experience-item {
+  min-height: 100%;
+  padding: 17px;
+  border-radius: 19px;
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+}
+
+.experience-label {
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.work-section,
+.book-section {
+  background: transparent;
+}
+
+.project-card {
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.project-card:hover {
+  box-shadow:
+    13px 13px 24px var(--shadow-lo),
+    -10px -10px 22px var(--shadow-hi);
+}
+
+.project-art {
+  margin: 10px 10px 0;
+  border-radius: 18px;
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.project-content {
+  padding: 20px 22px 24px;
+}
+
+.field-note {
+  margin-block: 30px;
+  padding: clamp(22px, 4vw, 42px);
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.field-photo {
+  border-radius: 24px;
+  box-shadow: var(--shadow-inset);
+}
+
+.earth-section {
+  overflow: visible;
+  padding-block: 30px;
+  background: var(--paper);
+}
+
+.earth-section::before {
+  display: none;
+}
+
+.earth-grid {
+  padding: clamp(28px, 5vw, 58px);
+  border-radius: var(--radius-panel);
+  background: var(--forest-deep);
+  box-shadow:
+    14px 14px 28px color-mix(in srgb, var(--ink) 20%, var(--paper)),
+    -12px -12px 25px color-mix(in srgb, var(--forest) 25%, var(--paper));
+}
+
+.system-node,
+.system-center {
+  filter:
+    drop-shadow(4px 4px 5px rgba(5, 25, 22, 0.3))
+    drop-shadow(-2px -2px 3px rgba(149, 190, 166, 0.12));
+}
+
+.education-grid {
+  gap: 17px;
+  border: 0;
+}
+
+.education-card {
+  border: 0;
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.education-card + .education-card {
+  border: 0;
+}
+
+.book-grid {
+  padding: clamp(24px, 4vw, 46px);
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-raised);
+}
+
+.book-cover {
+  border: 1px solid color-mix(in srgb, var(--paper) 18%, transparent);
+  border-radius: 8px;
+  box-shadow:
+    9px 10px 18px rgba(5, 26, 22, 0.32),
+    -5px -5px 12px rgba(113, 155, 126, 0.18);
+}
+
+.contact-section {
+  margin-block: 34px;
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.contact-section .button-outline {
+  border: 0;
+}
+
+.site-footer {
+  margin-bottom: 20px;
+  padding-inline: 20px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-soft);
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline-color: var(--forest);
+}
+
+@media (max-width: 960px) {
+  .hero {
+    padding-inline: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  .site-header {
+    top: 8px;
+    height: 64px;
+    padding-inline: 13px;
+    border-radius: 19px;
+  }
+
+  .site-nav {
+    top: calc(100% + 10px);
+    padding: 12px 16px 16px;
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: var(--shadow-raised);
+  }
+
+  .site-nav a:not(.nav-contact) {
+    padding: 12px 8px;
+    border-radius: 11px;
+  }
+
+  .site-nav .theme-control {
+    border: 0;
+    border-radius: 13px;
+    background: var(--paper);
+    box-shadow: var(--shadow-inset-soft);
+  }
+
+  .site-nav .nav-contact {
+    margin-top: 10px;
+    padding: 12px 14px;
+    border-radius: 13px;
+    background: var(--paper);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .menu-toggle {
+    border: 0;
+    border-radius: 13px;
+    background: var(--paper);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .menu-toggle[aria-expanded="true"] {
+    box-shadow: var(--shadow-inset-soft);
+  }
+
+  .hero {
+    min-height: auto;
+    margin-top: 18px;
+    padding: 31px 23px 79px;
+    border-radius: 28px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .hero-art {
+    border-radius: 24px;
+  }
+
+  .strip-inner {
+    margin-block: 20px;
+    border-radius: 18px;
+  }
+
+  .about-grid {
+    padding: 21px;
+    border-radius: 20px;
+  }
+
+  .geo-journey {
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .experience-item,
+  .experience-label {
+    padding: 14px;
+    border-radius: 15px;
+  }
+
+  .project-card {
+    border-radius: 21px;
+  }
+
+  .project-art {
+    margin: 8px 8px 0;
+    border-radius: 15px;
+  }
+
+  .field-note {
+    margin-block: 22px;
+    padding: 18px;
+    border-radius: 23px;
+  }
+
+  .field-photo {
+    border-radius: 18px;
+  }
+
+  .earth-section {
+    padding-block: 18px;
+  }
+
+  .earth-grid {
+    padding: 26px 21px;
+    border-radius: 25px;
+    box-shadow:
+      9px 9px 20px color-mix(in srgb, var(--ink) 20%, var(--paper)),
+      -8px -8px 18px color-mix(in srgb, var(--forest) 25%, var(--paper));
+  }
+
+  .education-grid {
+    gap: 13px;
+  }
+
+  .education-card {
+    min-height: 176px;
+    border-radius: 18px;
+  }
+
+  .book-grid {
+    padding: 20px 16px;
+    border-radius: 23px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .book-cover {
+    border-radius: 6px;
+  }
+
+  .contact-section {
+    margin-block: 22px;
+    padding-inline: 18px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .site-footer {
+    margin-bottom: 14px;
+    padding-inline: 16px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    padding-inline: 17px;
+  }
+
+  .hero-art {
+    width: calc(100% + 2px);
+  }
+
+  .site-footer {
+    padding-inline: 13px;
   }
 }
