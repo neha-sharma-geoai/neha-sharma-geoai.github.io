@@ -696,20 +696,35 @@ button:focus-visible {
 
 .art-coordinate {
   position: absolute;
-  right: -5px;
-  bottom: -16px;
+  right: 0;
+  bottom: 4px;
   color: var(--ink);
   font-family: var(--serif);
   font-size: 13px;
   line-height: 1.6;
   text-align: right;
+  text-decoration: none;
 }
 
 .art-coordinate span {
+  display: inline-block;
   color: var(--ink-soft);
   font-family: var(--sans);
   font-size: 8px;
   letter-spacing: 0.14em;
+}
+
+.art-coordinate:hover {
+  color: var(--forest);
+}
+
+.art-coordinate:hover span {
+  color: var(--clay);
+}
+
+.art-coordinate:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 4px;
 }
 
 .hero-bottom {
@@ -831,6 +846,177 @@ button:focus-visible {
 .about-copy .text-link {
   margin-top: 3px;
   color: var(--ink);
+}
+
+.research-locus {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  margin-top: 56px;
+  padding: clamp(16px, 3vw, 30px);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper-deep) 55%, var(--paper));
+}
+
+.locus-map {
+  min-width: 0;
+  margin: 0;
+  padding: 11px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.locus-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.locus-map-ground {
+  fill: var(--map-ground-start);
+  stroke: var(--line);
+}
+
+.locus-grid-line {
+  stroke: var(--contour);
+  stroke-width: 0.7;
+}
+
+.locus-land {
+  fill: var(--globe-land);
+  stroke: var(--forest-deep);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+.locus-land-neighbor {
+  fill: color-mix(in srgb, var(--sage) 55%, transparent);
+  stroke: var(--contour);
+  stroke-width: 1;
+}
+
+.locus-state-line,
+.locus-coast-line {
+  stroke: color-mix(in srgb, var(--forest-deep) 45%, transparent);
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+
+.locus-coast-line {
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
+.locus-leader {
+  stroke: var(--clay);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.locus-point-halo {
+  fill: color-mix(in srgb, var(--clay) 22%, transparent);
+}
+
+.locus-point {
+  fill: var(--clay);
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+
+.locus-map-label,
+.locus-map-sub-label,
+.locus-map-note,
+.locus-north-label {
+  fill: var(--ink);
+  font-family: var(--sans);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.locus-map-sub-label,
+.locus-map-note {
+  fill: var(--ink-soft);
+  font-size: 5.5px;
+  font-weight: 600;
+}
+
+.locus-map-note {
+  letter-spacing: 1.1px;
+}
+
+.locus-north {
+  stroke: var(--ink-soft);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.locus-map figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 7px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.locus-copy .eyebrow {
+  margin-bottom: 15px;
+  font-size: 8px;
+}
+
+.locus-copy h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 47px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.08;
+}
+
+.locus-copy h3 em {
+  color: var(--forest);
+  font-weight: 400;
+}
+
+.locus-description {
+  max-width: 390px;
+  margin: 16px 0 22px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.locus-data {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.locus-data div {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  gap: 12px;
+}
+
+.locus-data dt {
+  color: var(--ink-soft);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.locus-data dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .experience-row {
@@ -1753,6 +1939,11 @@ button:focus-visible {
     gap: 8%;
   }
 
+  .locus-data div {
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+  }
+
   .project-grid {
     gap: 12px;
   }
@@ -1995,6 +2186,30 @@ button:focus-visible {
 
   .about-copy {
     font-size: 11px;
+  }
+
+  .research-locus {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 38px;
+    padding: 14px;
+  }
+
+  .locus-copy {
+    padding: 0 3px 4px;
+  }
+
+  .locus-copy h3 {
+    max-width: 400px;
+    font-size: clamp(35px, 9vw, 46px);
+  }
+
+  .locus-description {
+    margin-block: 13px 18px;
+  }
+
+  .locus-data div {
+    grid-template-columns: 112px 1fr;
   }
 
   .experience-row {
