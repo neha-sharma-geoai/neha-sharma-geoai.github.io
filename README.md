@@ -7,9 +7,10 @@ the palette selector in the navigation; their choice is saved in the browser.
 
 ## Journey maps
 
-The interactive India and world maps use Natural Earth boundary data. The India
-map uses the 1:10m boundary, and the world map uses the 1:110m boundary; each
-map includes an attribution link and accessible popups for its journey points.
+The interactive maps use locally embedded boundary masks derived from the
+supplied India and world references. Their markers and location popups remain
+interactive and accessible, with online study and remote work called out in the
+location details.
 
 ## Run locally
 

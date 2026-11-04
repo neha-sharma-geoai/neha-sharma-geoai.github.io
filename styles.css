@@ -850,94 +850,164 @@ button:focus-visible {
 
 .geo-journey {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  align-items: center;
-  gap: clamp(24px, 5vw, 64px);
+  gap: clamp(24px, 3vw, 38px);
   margin-top: 56px;
-  padding: clamp(16px, 3vw, 30px);
+  padding: clamp(20px, 3.8vw, 42px);
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--paper-deep) 55%, var(--paper));
 }
 
+.journey-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: end;
+  gap: clamp(24px, 5vw, 70px);
+}
+
+.journey-intro .eyebrow {
+  margin-bottom: 15px;
+}
+
+.journey-intro h3 {
+  max-width: 520px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+}
+
+.journey-intro h3 em {
+  color: var(--forest);
+  font-weight: 400;
+}
+
+.journey-intro-copy {
+  max-width: 650px;
+}
+
+.locus-description {
+  margin: 0 0 20px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.journey-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+}
+
+.journey-stats > div {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.journey-stats strong {
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journey-stats span {
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .locus-map {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
   margin: 0;
 }
 
 .journey-maps {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.82fr) minmax(250px, 0.78fr);
   align-items: start;
-  gap: clamp(12px, 2vw, 24px);
+  gap: clamp(18px, 3vw, 36px);
 }
 
 .journey-map-canvas {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--paper) 28%, var(--ink));
+  background-color: var(--forest-deep);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--paper) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 9%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+  box-shadow: 0 14px 28px rgba(22, 61, 56, 0.12);
 }
 
-.journey-map-svg {
-  display: block;
+.locus-map--world .journey-map-canvas {
+  aspect-ratio: 1.78;
+}
+
+.locus-map--india .journey-map-canvas {
+  aspect-ratio: 0.883;
+}
+
+.map-boundary {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.map-boundary--world {
+  background-color: var(--paper);
+  filter: drop-shadow(0 8px 8px rgba(12, 35, 38, 0.2));
+  -webkit-mask-image: url("assets/world-boundary-mask.png?v=2");
+  mask-image: url("assets/world-boundary-mask.png?v=2");
+  mask-mode: alpha;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.map-boundary--india {
+  background-color: var(--sand);
+  -webkit-mask-image: url("assets/india-boundary-mask.png?v=2");
+  mask-image: url("assets/india-boundary-mask.png?v=2");
+  mask-mode: alpha;
+  -webkit-mask-size: 96% 96%;
+  mask-size: 96% 96%;
+}
+
+.journey-annotation-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
   width: 100%;
-  height: auto;
-}
-
-.locus-map-ground {
-  fill: var(--map-ground-start);
-  stroke: var(--line);
-}
-
-.locus-grid-line {
-  stroke: var(--contour);
-  stroke-width: 0.7;
-}
-
-.india-outline {
-  fill: var(--paper);
-  stroke: var(--ink);
-  stroke-width: 0.7;
-  stroke-linejoin: round;
-}
-
-.world-outline {
-  fill: var(--paper);
-  stroke: var(--ink);
-  stroke-width: 0.38;
-  stroke-linejoin: round;
-}
-
-.locus-map-note,
-.locus-north-label {
-  fill: var(--ink);
-  font-family: var(--sans);
-  font-size: 6.5px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-}
-
-.locus-map-note {
-  fill: var(--ink-soft);
-  font-weight: 600;
-}
-
-.locus-north {
-  stroke: var(--ink-soft);
-  stroke-width: 1;
-  stroke-linecap: round;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .journey-leaders {
-  stroke: color-mix(in srgb, var(--ink-soft) 72%, transparent);
-  stroke-width: 0.9;
-  stroke-dasharray: 2 2;
+  fill: none;
+  stroke: color-mix(in srgb, var(--paper) 82%, transparent);
+  stroke-width: 0.38;
+  stroke-dasharray: 1.2 0.9;
   stroke-linecap: round;
 }
 
 .journey-city {
-  stroke: var(--paper);
-  stroke-width: 1.2;
+  stroke: var(--forest-deep);
+  stroke-width: 0.45;
 }
 
 .journey-city--home {
@@ -945,21 +1015,21 @@ button:focus-visible {
 }
 
 .journey-city--study {
-  fill: var(--water-deep);
+  fill: var(--water);
 }
 
 .journey-city--work {
-  fill: var(--forest-deep);
+  fill: var(--sand);
 }
 
 .journey-marker {
   position: absolute;
   top: var(--point-y);
   left: var(--point-x);
-  z-index: 2;
+  z-index: 3;
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   padding: 0;
   border: 0;
@@ -972,7 +1042,7 @@ button:focus-visible {
 
 .journey-marker::before {
   position: absolute;
-  inset: 5px;
+  inset: 6px;
   border: 2px solid var(--paper);
   border-radius: 50%;
   background: var(--forest-deep);
@@ -1020,7 +1090,7 @@ button:focus-visible {
 
 .journey-marker span {
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1;
 }
@@ -1033,13 +1103,13 @@ button:focus-visible {
 .journey-popup {
   position: absolute;
   z-index: 4;
-  top: 10px;
-  right: 10px;
-  width: min(230px, calc(100% - 20px));
-  padding: 16px 38px 16px 16px;
+  top: 16px;
+  right: 16px;
+  width: min(290px, calc(100% - 32px));
+  padding: 18px 42px 18px 18px;
   border: 1px solid var(--line);
   background: var(--paper);
-  box-shadow: 0 12px 30px rgba(22, 61, 56, 0.18);
+  box-shadow: 0 12px 30px rgba(22, 61, 56, 0.2);
   color: var(--ink);
   line-height: 1.45;
 }
@@ -1091,52 +1161,24 @@ button:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-top: 8px;
-  color: var(--ink-soft);
-  font-size: 10px;
-  font-weight: 650;
+  gap: 8px 14px;
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
-.map-attribution {
+.map-source {
   color: var(--ink-soft);
-  font-size: 10px;
-  text-align: right;
-  text-decoration-color: var(--line);
-  text-underline-offset: 3px;
+  font-size: 9px;
+  font-weight: 600;
 }
 
 .journey-map-instruction {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
   color: var(--ink-soft);
-  font-size: 13px;
-}
-
-.locus-copy .eyebrow {
-  margin-bottom: 15px;
-}
-
-.locus-copy h3 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(32px, 4vw, 47px);
-  font-weight: 400;
-  letter-spacing: -0.06em;
-  line-height: 1.08;
-}
-
-.locus-copy h3 em {
-  color: var(--forest);
-  font-weight: 400;
-}
-
-.locus-description {
-  max-width: 390px;
-  margin: 16px 0 22px;
-  color: var(--ink-soft);
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 12px;
 }
 
 .experience-row {
@@ -2116,6 +2158,15 @@ button:focus-visible {
     gap: 8%;
   }
 
+  .journey-intro {
+    gap: 28px;
+  }
+
+  .journey-maps {
+    grid-template-columns: minmax(0, 1.55fr) minmax(230px, 0.8fr);
+    gap: 18px;
+  }
+
   .project-grid {
     gap: 12px;
   }
@@ -2367,29 +2418,29 @@ button:focus-visible {
     padding: 14px;
   }
 
-  .journey-maps {
+  .journey-intro {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
-  .journey-popup {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: auto;
-    margin: 10px;
-  }
-
-  .locus-copy {
-    padding: 0 3px 4px;
-  }
-
-  .locus-copy h3 {
-    max-width: 400px;
+  .journey-intro h3 {
+    max-width: 420px;
     font-size: clamp(35px, 9vw, 46px);
   }
 
+  .journey-maps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .locus-description {
-    margin-block: 13px 18px;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+  .journey-marker {
+    width: 40px;
+    height: 40px;
   }
 
   .experience-row {
@@ -2754,14 +2805,8 @@ body {
   font-size: 9px;
 }
 
-.journey-map-instruction,
-.map-attribution {
+.journey-map-instruction {
   font-size: 13px;
-}
-
-.locus-map-note,
-.locus-north-label {
-  font-size: 9px;
 }
 
 @media (max-width: 700px) {
