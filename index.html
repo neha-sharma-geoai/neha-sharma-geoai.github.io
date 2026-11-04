@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Neha Sharma is a GeoAI researcher working across remote sensing, spatial data science, and Digital Earths."
+    />
+    <meta name="theme-color" content="#f3f1e7" />
+    <meta property="og:title" content="Neha Sharma — GeoAI & Earth systems" />
+    <meta
+      property="og:description"
+      content="Making the Earth legible through maps, models, and machine learning."
+    />
+    <meta property="og:type" content="website" />
+    <title>Neha Sharma — GeoAI &amp; Earth systems</title>
+    <link rel="icon" href="assets/earth-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Neha Sharma, home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="13.5" />
+            <path d="M5 18h26M18 4.5c4.2 4 6.3 8.5 6.3 13.5S22.2 27.5 18 31.5C13.8 27.5 11.7 23 11.7 18S13.8 8.5 18 4.5Z" />
+            <path d="M8.5 10.5c5.8 3.2 13.2 3.2 19 0M8.5 25.5c5.8-3.2 13.2-3.2 19 0" />
+          </svg>
+        </span>
+        <span class="brand-name">Neha Sharma<span class="brand-dot">.</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Selected work</a>
+        <a href="#research">Research</a>
+        <a href="#contact" class="nav-contact">Let’s connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> GEOAI · REMOTE SENSING · DIGITAL EARTHS</p>
+          <h1 id="hero-title">Making the Earth <em>legible.</em></h1>
+          <p class="hero-subtitle">Through maps, models &amp; machine learning.</p>
+          <p class="hero-description">
+            I’m Neha Sharma, a geospatial researcher exploring how AI and spatial
+            data can help us understand a changing planet—from the air above our
+            cities to the landscapes that sustain us.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#about">A little about me <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-location">
+            <span class="location-dot" aria-hidden="true"></span>
+            <span>GeoAI researcher <span class="location-divider">/</span> Earth systems thinker</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Portrait of Neha Sharma with a globe and mapped landscape illustration">
+          <div class="art-contours" aria-hidden="true"></div>
+          <div class="portrait-frame">
+            <img
+              class="portrait"
+              src="assets/neha-sharma-portrait.jpg"
+              alt="Neha Sharma outdoors"
+              fetchpriority="high"
+            />
+            <span class="portrait-caption"><span class="caption-dot"></span> PEOPLE · PLACE · PLANET</span>
+          </div>
+          <div class="globe-card" aria-hidden="true">
+            <svg class="globe-illustration" viewBox="0 0 260 260" fill="none">
+              <defs>
+                <radialGradient id="ocean" cx="30%" cy="28%" r="80%">
+                  <stop offset="0" stop-color="#7d9d80" />
+                  <stop offset="1" stop-color="#31584b" />
+                </radialGradient>
+                <clipPath id="sphere"><circle cx="130" cy="130" r="91" /></clipPath>
+                <clipPath id="raster">
+                  <path d="M106 68c18-12 37-8 43 7l-4 18-21 10-22-9-8-14 12-12Z" />
+                </clipPath>
+              </defs>
+              <ellipse cx="130" cy="235" rx="66" ry="8" fill="#263e35" opacity=".12" />
+              <ellipse class="globe-orbit" cx="130" cy="130" rx="118" ry="47" transform="rotate(-26 130 130)" />
+              <circle cx="130" cy="130" r="104" fill="#d9e3cf" opacity=".48" />
+              <circle cx="130" cy="130" r="91" fill="url(#ocean)" />
+              <g clip-path="url(#sphere)">
+                <ellipse class="globe-grid" cx="130" cy="130" rx="91" ry="31" />
+                <ellipse class="globe-grid" cx="130" cy="130" rx="52" ry="91" />
+                <path class="globe-grid" d="M39 130h182M53 96h154M53 164h154" />
+                <path class="land" d="m66 87 17-17 19-4 11 8 16-4 13 7 11 1 11 13-7 11-16 2-9 12-16 3-10-8-14 5-12-7-15 2-9-11-12-4-4-10Z" />
+                <path class="land" d="m113 136 14-8 15 7 12 16-5 16-8 12-5 21-12 14-9-13-3-19-9-14 2-15-9-10Z" />
+                <path class="land land-light" d="m161 146 12-5 11 8-2 12-9 3-8-6Z" />
+                <g clip-path="url(#raster)">
+                  <path class="raster-base" d="M90 62h80v55H90z" />
+                  <path class="raster-lines" d="M101 62v55m12-55v55m12-55v55m12-55v55m12-55v55m12-55v55M90 73h80M90 85h80M90 97h80M90 109h80" />
+                  <path class="raster-high" d="M125 73h12v12h-12zm24 12h12v12h-12zm-36 12h12v12h-12z" />
+                  <path class="raster-low" d="M101 85h12v12h-12zm36 12h12v12h-12z" />
+                </g>
+                <path class="vector-route" d="M52 157c24-30 47-31 63-14s34 15 48-5 31-20 50-7" />
+                <circle class="vector-node" cx="52" cy="157" r="3" />
+                <circle class="vector-node" cx="115" cy="143" r="3" />
+                <circle class="vector-node" cx="163" cy="138" r="3" />
+                <circle class="vector-node" cx="213" cy="131" r="3" />
+              </g>
+              <circle class="globe-edge" cx="130" cy="130" r="91" />
+              <circle cx="43" cy="86" r="2" fill="#c88958" />
+              <circle cx="216" cy="76" r="2" fill="#c88958" />
+            </svg>
+            <span class="globe-label"><span class="label-key"></span> RASTER <span class="label-key label-vector"></span> VECTOR</span>
+          </div>
+          <div class="art-coordinate">23°02′N &nbsp; 72°34′E<br /><span>EARTH, IN LAYERS</span></div>
+        </div>
+
+        <div class="hero-bottom">
+          <span>OBSERVE <span aria-hidden="true">/</span> UNDERSTAND <span aria-hidden="true">/</span> CARE</span>
+          <a href="#about" aria-label="Scroll to about section">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Research areas">
+        <div class="page-wrap strip-inner">
+          <span>Spatial data science</span><i aria-hidden="true"></i>
+          <span>Earth observation</span><i aria-hidden="true"></i>
+          <span>Human-centered GeoAI</span><i aria-hidden="true"></i>
+          <span>Climate &amp; place</span>
+        </div>
+      </section>
+
+      <section class="about section page-wrap" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A PRACTICE ROOTED IN PLACE</p>
+          <span class="section-index">01 — ABOUT</span>
+        </div>
+        <div class="about-grid">
+          <h2 id="about-title">Curiosity about the world, grounded in <em>where.</em></h2>
+          <div class="about-copy">
+            <p>
+              My work brings together geospatial science, artificial intelligence,
+              and the built and natural environments. I’m interested in making
+              complex spatial information easier to explore—and more meaningful
+              for the people and places it represents.
+            </p>
+            <p>
+              At MIT CSAIL, I contribute to research and outreach around visual
+              data science, multimodal knowledge exploration, and human–AI
+              collaboration. I’m also part of the WCRP Digital Twins – Beyond
+              Physical Systems Working Group, within the Digital Earths
+              Lighthouse Activity.
+            </p>
+            <a class="text-link" href="https://www.csail.mit.edu/" target="_blank" rel="noreferrer">Explore MIT CSAIL <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="experience-row">
+          <div class="experience-label">A path through<br />different scales</div>
+          <div class="experience-item">
+            <span class="experience-period">NOW</span>
+            <strong>MIT CSAIL</strong>
+            <span>Artificial Intelligence · Research &amp; outreach</span>
+          </div>
+          <div class="experience-item">
+            <span class="experience-period">2023 — 2026</span>
+            <strong>Esri · GeoAI R&amp;D Center</strong>
+            <span>Product Engineer · Geospatial Data Science</span>
+          </div>
+          <div class="experience-item">
+            <span class="experience-period">BEFORE</span>
+            <strong>Larsen &amp; Toubro</strong>
+            <span>GeoAI · Built environment</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section section" id="work" aria-labelledby="work-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> FROM PIXELS TO PATTERNS</p>
+              <h2 id="work-title">Selected <em>work.</em></h2>
+            </div>
+            <span class="section-index">02 — PROJECTS</span>
+          </div>
+          <p class="section-intro">
+            A few ways I’ve used spatial data to ask questions about cities,
+            buildings, air, and the land we share.
+          </p>
+          <div class="project-grid">
+            <article class="project-card project-card--air">
+              <div class="project-art air-art" aria-hidden="true">
+                <div class="air-map-grid"></div>
+                <svg viewBox="0 0 480 250" fill="none">
+                  <path class="map-water" d="M320-12c-17 37-11 60 17 74s44 32 33 60 8 44 31 50 40 29 28 76" />
+                  <path class="map-road" d="M-20 198c75-29 107-67 162-56s94 54 149 31 92-64 209-57" />
+                  <path class="map-road map-road-light" d="M20-15c22 50 70 53 73 108s41 75 78 88 53 30 55 84M199-12c-9 51 9 81 53 103s53 57 45 100 8 49 24 72M395-15c-43 50-53 88-39 121s-4 60-27 79-32 43-34 75" />
+                  <path class="contour" d="M-12 82c54-21 92-18 126 7s57 31 94 18 57-36 102-23 81 19 183-16" />
+                  <path class="contour" d="M-4 95c52-18 88-14 120 9s59 28 91 15 60-32 101-20 83 19 179-10" />
+                  <circle class="heat heat-one" cx="190" cy="126" r="41" />
+                  <circle class="heat heat-two" cx="190" cy="126" r="23" />
+                  <circle class="heat heat-three" cx="315" cy="105" r="31" />
+                  <circle class="map-point" cx="190" cy="126" r="5" />
+                  <circle class="map-point map-point-light" cx="315" cy="105" r="4" />
+                </svg>
+                <span class="art-scale">23°01′ N<br />72°34′ E</span>
+                <span class="art-tag">AIR · TIME · PLACE</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta"><span>REMOTE SENSING</span><span>01 / 03</span></div>
+                <h3>Urban air quality, in space &amp; time</h3>
+                <p>A spatio-temporal assessment of air quality across Ahmedabad, developed as an M.Tech Geomatics thesis.</p>
+                <a class="project-link" href="https://repository.cept.ac.in/items/bd12366d-50ec-41a4-8bdb-dc010cd081b9" target="_blank" rel="noreferrer">View research <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--building">
+              <div class="project-art building-art" aria-hidden="true">
+                <svg viewBox="0 0 480 250" fill="none">
+                  <path class="building-contour" d="M-8 56c43-28 94-36 132-16s54 34 101 23 87-42 129-26 77 19 136-9" />
+                  <path class="building-contour" d="M-15 76c45-27 94-32 130-11s59 29 105 18 84-37 124-21 80 20 145-4" />
+                  <path class="block block-dark" d="m62 110 43-18 31 15-2 44-44 17-29-17z" />
+                  <path class="block block-mid" d="m136 81 36-16 34 15-1 35-37 16-32-14z" />
+                  <path class="block block-light" d="m224 112 43-20 37 17-2 38-41 19-38-18z" />
+                  <path class="block block-terracotta" d="m317 74 35-17 31 14v35l-34 17-31-16z" />
+                  <path class="block block-dark" d="m355 138 41-17 31 17-3 36-37 14-32-17z" />
+                  <path class="building-road" d="M-8 196c64-40 105-45 153-27s69 29 114 4 75-31 122-13 68 18 111-5" />
+                  <path class="building-road building-road-light" d="M287-12c-5 40-20 69-2 99s19 57 7 87 0 55 16 84" />
+                  <circle class="building-point" cx="250" cy="130" r="5" />
+                </svg>
+                <span class="raster-legend"><i></i><i></i><i></i><i></i><small>LOW → HIGH</small></span>
+                <span class="art-tag">BUILDINGS · RASTER · AI</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta"><span>GEOAI · COMPUTER VISION</span><span>02 / 03</span></div>
+                <h3>Reading rooftops from above</h3>
+                <p>Fine-grained roof-type classification and multimodal building detection and height estimation for an MS Data Science thesis.</p>
+                <a class="project-link" href="https://link.springer.com/book/9789819677481#overview" target="_blank" rel="noreferrer">Explore the research <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--land">
+              <div class="project-art land-art" aria-hidden="true">
+                <svg viewBox="0 0 480 250" fill="none">
+                  <path class="field-line" d="M-13 42c60 15 102 8 141-13s80-22 119 4 78 38 124 17 77-28 125-14" />
+                  <path class="field-line" d="M-17 67c59 14 100 7 139-13s79-21 116 5 80 37 126 16 77-27 129-12" />
+                  <path class="field-line" d="M-17 92c59 13 100 6 136-13s79-19 116 6 82 35 128 15 78-25 129-10" />
+                  <path class="field-line" d="M-10 118c58 11 98 4 134-14s77-18 114 8 85 33 130 13 80-24 129-8" />
+                  <path class="field-line" d="M-10 145c58 9 95 2 131-15s75-17 112 10 87 31 134 11 80-21 123-5" />
+                  <path class="field-line" d="M-7 172c54 8 93 0 128-17s73-15 110 12 90 29 136 8 78-19 119-1" />
+                  <path class="field-line" d="M-2 200c51 5 89-3 124-19s71-14 109 13 91 27 136 5 79-15 121 3" />
+                  <path class="field-line field-line-accent" d="M42 266c41-44 77-73 112-84s76-9 100 4 60 12 103-24 67-55 105-61" />
+                  <circle class="field-node" cx="254" cy="186" r="5" />
+                </svg>
+                <span class="land-label">GUJARAT · INDIA</span>
+                <span class="art-tag">CROPS · LAND · SEASONS</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta"><span>GIS · LANDSCAPES</span><span>03 / 03</span></div>
+                <h3>Following the fields of Gujarat</h3>
+                <p>A geographic information science project assessing cropping patterns across districts of Gujarat.</p>
+                <a class="project-link" href="https://portfolio.cept.ac.in/2024/M/ft/geographic-information-science-foundation-studio-5757-monsoon-2018/assessment-of-crops-of-gujarat-monsoon-2018-pg180592" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="field-note section page-wrap" aria-labelledby="field-note-title">
+        <figure class="field-photo">
+          <img
+            src="assets/neha-among-the-trees.jpg"
+            alt="Neha standing beside a large tree in a garden"
+            loading="lazy"
+          />
+          <figcaption><span>FIELD NOTE 01</span><span>PLACE BEFORE PIXELS</span></figcaption>
+        </figure>
+        <div class="field-note-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A NOTE ON PLACE</p>
+          <h2 id="field-note-title">The data matters. The <em>living world</em> matters more.</h2>
+          <p>
+            Maps and models are ways of seeing—not substitutes for the places
+            they describe. I’m drawn to work that keeps people, ecosystems, and
+            local context in the picture as we turn spatial data into insight.
+          </p>
+          <span class="field-note-coordinates">LAND · WATER · AIR · LIFE</span>
+        </div>
+      </section>
+
+      <section class="earth-section section" id="research" aria-labelledby="earth-title">
+        <div class="page-wrap earth-grid">
+          <div class="earth-copy">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> THINKING IN SYSTEMS</p>
+            <span class="section-index section-index-light">03 — RESEARCH</span>
+            <h2 id="earth-title">The Earth isn’t a set of layers. It’s a set of <em>relationships.</em></h2>
+            <p>
+              Through the WCRP Digital Twins – Beyond Physical Systems Working
+              Group, I collaborate on frameworks connecting human and physical
+              Earth systems—with applications in climate risk, water,
+              agriculture, energy, and urban planning.
+            </p>
+            <a class="button button-light" href="https://www.wcrp-climate.org/" target="_blank" rel="noreferrer">About the WCRP <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="earth-diagram">
+            <svg class="system-map" viewBox="0 0 520 520" fill="none" role="img" aria-labelledby="system-title system-desc">
+              <title id="system-title">Earth systems connected through spatial data</title>
+              <desc id="system-desc">A globe is surrounded by connected landscape, water, climate, and community nodes.</desc>
+              <circle class="system-ring system-ring-outer" cx="260" cy="260" r="219" />
+              <circle class="system-ring system-ring-mid" cx="260" cy="260" r="162" />
+              <circle class="system-ring system-ring-inner" cx="260" cy="260" r="107" />
+              <path class="system-link" d="M260 153V83M354 203l61-35M353 316l64 36M260 367v72M167 316l-62 36M167 203l-62-35" />
+              <circle class="system-node" cx="260" cy="76" r="42" />
+              <circle class="system-node" cx="424" cy="165" r="42" />
+              <circle class="system-node" cx="424" cy="355" r="42" />
+              <circle class="system-node" cx="260" cy="444" r="42" />
+              <circle class="system-node" cx="96" cy="355" r="42" />
+              <circle class="system-node" cx="96" cy="165" r="42" />
+              <circle class="system-center" cx="260" cy="260" r="91" />
+              <ellipse class="system-latitude" cx="260" cy="260" rx="91" ry="34" />
+              <ellipse class="system-longitude" cx="260" cy="260" rx="40" ry="91" />
+              <path class="system-land" d="m202 222 18-19 19-3 11 8 14-3 12 8 15 2 12 13-9 11-14 1-9 11-14 2-11-9-12 5-11-7-13 2-9-11-12-4-5-10Z" />
+              <path class="system-land" d="m245 272 15-7 15 8 10 15-6 15-8 12-4 16-12 10-9-12-3-14-10-14 3-13-9-11Z" />
+              <path class="system-route" d="M194 278c20-22 39-23 53-10s30 10 42-4 26-15 45-5" />
+              <circle class="system-node-dot" cx="194" cy="278" r="4" />
+              <circle class="system-node-dot" cx="247" cy="268" r="4" />
+              <circle class="system-node-dot" cx="289" cy="264" r="4" />
+              <text class="system-label" x="260" y="81" text-anchor="middle">CLIMATE</text>
+              <text class="system-label" x="424" y="170" text-anchor="middle">WATER</text>
+              <text class="system-label" x="424" y="360" text-anchor="middle">CITIES</text>
+              <text class="system-label" x="260" y="449" text-anchor="middle">LAND</text>
+              <text class="system-label" x="96" y="360" text-anchor="middle">PEOPLE</text>
+              <text class="system-label" x="96" y="170" text-anchor="middle">ENERGY</text>
+              <text class="system-center-label" x="260" y="380" text-anchor="middle">ONE LIVING SYSTEM</text>
+            </svg>
+            <span class="diagram-caption">OBSERVE THE CONNECTIONS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="education section page-wrap" aria-labelledby="education-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> MANY WAYS OF SEEING</p>
+            <h2 id="education-title">Built across <em>disciplines.</em></h2>
+          </div>
+          <span class="section-index">04 — FOUNDATIONS</span>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <span class="education-year">2021 — 2023</span>
+            <span class="education-mark mark-data" aria-hidden="true">01</span>
+            <h3>MS, Data Science</h3>
+            <p>Liverpool John Moores University</p>
+            <span class="education-note">Deep learning &amp; AI</span>
+          </article>
+          <article class="education-card">
+            <span class="education-year">2018 — 2020</span>
+            <span class="education-mark mark-geo" aria-hidden="true">02</span>
+            <h3>M.Tech, Geomatics</h3>
+            <p>CEPT University</p>
+            <span class="education-note">Spatial science &amp; mapping</span>
+          </article>
+          <article class="education-card">
+            <span class="education-year">2013 — 2018</span>
+            <span class="education-mark mark-arch" aria-hidden="true">03</span>
+            <h3>B.Arch, Architecture</h3>
+            <p>MANIT Bhopal</p>
+            <span class="education-note">Designing for people &amp; place</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="book-section section" aria-labelledby="book-title">
+        <div class="page-wrap book-grid">
+          <div class="book-cover" aria-hidden="true">
+            <div class="book-cover-topo"></div>
+            <span class="book-kicker">A FIELD GUIDE TO</span>
+            <strong>Smart<br />Buildings<br /><span>&amp;</span> Cities</strong>
+            <span class="book-subtitle">WITH REMOTE SENSING &amp; GIS</span>
+            <span class="book-authors">SHIV MOHAN · NAVNEET MUNOTH<br />NEHA SHARMA</span>
+            <span class="book-publisher">CRC PRESS</span>
+          </div>
+          <div class="book-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A BOOK FOR CROSSING BOUNDARIES</p>
+            <h2 id="book-title">Smarter cities begin with a better <em>view.</em></h2>
+            <p>
+              Co-edited with Shiv Mohan and Navneet Munoth, <i>Smart Buildings
+              and Cities with Remote Sensing and GIS</i> explores how Earth
+              observation and geospatial tools can inform buildings, cities, and
+              the people who shape them.
+            </p>
+            <a class="text-link" href="https://www.taylorfrancis.com/books/edit/10.1201/9781003453321/smart-buildings-cities-remote-sensing-gis-shiv-mohan-navneet-munoth-neha-sharma" target="_blank" rel="noreferrer">Discover the book <span aria-hidden="true">↗</span></a>
+            <span class="book-year">CRC Press · Taylor &amp; Francis · 2025</span>
+          </div>
+          <div class="book-decoration" aria-hidden="true">
+            <svg viewBox="0 0 260 180" fill="none">
+              <path d="M-5 108c38-43 74-56 106-39s51 24 75 8 54-41 90-29" />
+              <path d="M-5 120c38-42 74-54 106-37s51 23 75 7 54-39 90-27" />
+              <path d="M-5 132c38-40 74-52 106-35s51 22 75 6 54-37 90-25" />
+              <path d="M-5 144c38-39 74-50 106-33s51 21 75 5 54-35 90-23" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section page-wrap" id="contact" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"></div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> GOOD WORK IS A COLLECTIVE MAP</p>
+        <h2 id="contact-title">Let’s find the <em>next point</em> together.</h2>
+        <p>For research collaborations, GeoAI projects, mentoring, or a conversation about the world in data.</p>
+        <div class="contact-actions">
+          <a class="button button-dark" href="mailto:neha845sharma@yahoo.com">Write me a note <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="https://www.linkedin.com/in/neha-sharma-s/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-wrap">
+      <a class="footer-brand" href="#top">Neha Sharma<span class="brand-dot">.</span></a>
+      <span class="footer-note">Made with care for a living planet.</span>
+      <div class="footer-links">
+        <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer">ORCID</a>
+        <a href="mailto:neha845sharma@yahoo.com">Email</a>
+      </div>
+      <span class="footer-year">© <span id="current-year">2026</span></span>
+    </footer>
+  </body>
+</html>

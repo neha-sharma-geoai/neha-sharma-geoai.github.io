@@ -1,0 +1,18 @@
+# Neha Sharma — GeoAI & Earth systems
+
+A standalone, responsive portfolio site for Neha Sharma, designed around
+geospatial research and the colors and textures of the natural world.
+
+## Run locally
+
+Open `index.html` in a browser. The site uses plain HTML, CSS, JavaScript, and
+local image assets; it does not require a build step or package installation.
+
+## Publish with GitHub Pages
+
+1. Push this folder to the root of a GitHub repository.
+2. In the repository settings, open **Pages**.
+3. Choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+
+The site is a static portfolio; update `index.html`, `styles.css`, and
+`script.js` directly.
