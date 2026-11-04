@@ -848,7 +848,7 @@ button:focus-visible {
   color: var(--ink);
 }
 
-.research-locus {
+.geo-journey {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
@@ -920,6 +920,18 @@ button:focus-visible {
 
 .locus-point {
   fill: var(--clay);
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+
+.locus-study-point {
+  fill: var(--water-deep);
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+
+.locus-work-point {
+  fill: var(--forest-deep);
   stroke: var(--paper);
   stroke-width: 1.5;
 }
@@ -1005,10 +1017,32 @@ button:focus-visible {
 }
 
 .locus-data dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--ink-soft);
   font-size: 7px;
   font-weight: 700;
   letter-spacing: 0.13em;
+}
+
+.locus-data-key {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.locus-data-key--home {
+  background: var(--clay);
+}
+
+.locus-data-key--study {
+  background: var(--water-deep);
+}
+
+.locus-data-key--work {
+  background: var(--forest-deep);
 }
 
 .locus-data dd {
@@ -2188,7 +2222,7 @@ button:focus-visible {
     font-size: 11px;
   }
 
-  .research-locus {
+  .geo-journey {
     grid-template-columns: 1fr;
     gap: 24px;
     margin-top: 38px;
