@@ -3040,17 +3040,18 @@ body {
 }
 
 .about-grid {
-  padding: clamp(22px, 4vw, 40px);
-  border-radius: var(--radius-card);
-  background: var(--paper);
-  box-shadow: var(--shadow-inset-soft);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .geo-journey {
+  padding: 0;
   border: 0;
-  border-radius: var(--radius-panel);
-  background: var(--paper);
-  box-shadow: var(--shadow-raised);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .journey-map-canvas {
@@ -3085,19 +3086,34 @@ body {
 }
 
 .experience-row {
-  border: 0;
-}
-
-.experience-label,
-.experience-item {
-  min-height: 100%;
-  padding: 17px;
-  border-radius: 19px;
-  background: var(--paper);
-  box-shadow: var(--shadow-soft);
+  grid-template-columns: 0.9fr repeat(4, 1fr);
+  gap: 0;
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 .experience-label {
+  padding: 4px 16px 0 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.experience-item {
+  min-height: 0;
+  padding: 0 12px 0 18px;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--paper);
   box-shadow: var(--shadow-inset-soft);
 }
 
@@ -3106,40 +3122,84 @@ body {
   background: transparent;
 }
 
+.project-grid {
+  column-gap: clamp(26px, 4vw, 54px);
+  row-gap: 48px;
+}
+
 .project-card {
+  overflow: visible;
   border: 0;
-  border-radius: var(--radius-card);
-  background: var(--paper);
-  box-shadow: var(--shadow-raised);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: none;
 }
 
 .project-card:hover {
-  box-shadow:
-    13px 13px 24px var(--shadow-lo),
-    -10px -10px 22px var(--shadow-hi);
+  transform: none;
+  box-shadow: none;
 }
 
 .project-art {
-  margin: 10px 10px 0;
+  margin: 0;
   border-radius: 18px;
   box-shadow: var(--shadow-inset-soft);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.project-card--air .project-art {
+  border-radius: 42% 18px 18px 18px / 20px 18px 18px 18px;
+  box-shadow: var(--shadow-inset);
+}
+
+.project-card--building .project-art {
+  border-radius: 18px 38% 18px 18px / 18px 22% 18px 18px;
+  box-shadow: var(--shadow-soft);
+  transform: translateY(7px);
+}
+
+.project-card--land .project-art {
+  border-radius: 18px 18px 44% 18px / 18px 18px 23% 18px;
+  box-shadow:
+    inset 6px 6px 11px color-mix(in srgb, var(--shadow-lo) 65%, transparent),
+    inset -6px -6px 11px color-mix(in srgb, var(--shadow-hi) 75%, transparent);
+}
+
+.project-card--ship .project-art {
+  border-radius: 48px 18px 48px 18px;
+  box-shadow:
+    8px 8px 16px var(--shadow-lo),
+    -8px -8px 16px var(--shadow-hi);
+}
+
+.project-card:hover .project-art {
+  transform: translateY(-4px);
+}
+
+.project-card--building:hover .project-art {
+  transform: translateY(2px);
 }
 
 .project-content {
-  padding: 20px 22px 24px;
+  padding: 22px 4px 8px;
 }
 
 .field-note {
   margin-block: 30px;
-  padding: clamp(22px, 4vw, 42px);
-  border-radius: var(--radius-panel);
-  background: var(--paper);
-  box-shadow: var(--shadow-raised);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .field-photo {
-  border-radius: 24px;
-  box-shadow: var(--shadow-inset);
+  border-radius: 38px 18px 74px 18px;
+  box-shadow:
+    9px 9px 17px var(--shadow-lo),
+    -7px -7px 16px var(--shadow-hi);
 }
 
 .earth-section {
@@ -3169,26 +3229,63 @@ body {
 }
 
 .education-grid {
-  gap: 17px;
+  gap: 24px;
   border: 0;
 }
 
 .education-card {
+  min-height: 220px;
+  padding: 24px 16px 18px;
   border: 0;
-  border-radius: 22px;
-  background: var(--paper);
-  box-shadow: var(--shadow-raised);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.education-card:nth-child(2) {
+  transform: translateY(18px);
 }
 
 .education-card + .education-card {
   border: 0;
 }
 
-.book-grid {
-  padding: clamp(24px, 4vw, 46px);
-  border-radius: var(--radius-panel);
+.education-mark {
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
   background: var(--paper);
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 650;
+  box-shadow: var(--shadow-inset-soft);
+}
+
+.education-card:nth-child(1) .education-mark {
   box-shadow: var(--shadow-raised);
+}
+
+.education-card:nth-child(2) .education-mark {
+  box-shadow: var(--shadow-inset);
+}
+
+.education-card:nth-child(3) .education-mark {
+  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  box-shadow:
+    4px 4px 8px var(--shadow-lo),
+    -4px -4px 8px var(--shadow-hi);
+}
+
+.book-grid {
+  padding: 28px 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .book-cover {
@@ -3201,22 +3298,23 @@ body {
 
 .contact-section {
   margin-block: 34px;
-  border-radius: var(--radius-panel);
-  background: var(--paper);
-  box-shadow: var(--shadow-inset-soft);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .contact-section .button-outline {
   border: 0;
+  box-shadow: var(--shadow-inset-soft);
 }
 
 .site-footer {
   margin-bottom: 20px;
   padding-inline: 20px;
-  border: 0;
-  border-radius: 22px;
-  background: var(--paper);
-  box-shadow: var(--shadow-inset-soft);
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 a:focus-visible,
@@ -3304,38 +3402,56 @@ select:focus-visible {
   }
 
   .about-grid {
-    padding: 21px;
-    border-radius: 20px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .geo-journey {
-    border-radius: 24px;
-    box-shadow: var(--shadow-soft);
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .experience-item,
   .experience-label {
-    padding: 14px;
-    border-radius: 15px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .experience-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 18px;
+    margin-top: 44px;
+    padding-top: 20px;
+  }
+
+  .experience-label {
+    grid-column: 1 / -1;
+  }
+
+  .experience-item {
+    padding-left: 12px;
   }
 
   .project-card {
-    border-radius: 21px;
+    border-radius: 0;
   }
 
   .project-art {
-    margin: 8px 8px 0;
-    border-radius: 15px;
+    margin: 0;
   }
 
   .field-note {
     margin-block: 22px;
-    padding: 18px;
-    border-radius: 23px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .field-photo {
-    border-radius: 18px;
+    border-radius: 28px 16px 56px 16px;
   }
 
   .earth-section {
@@ -3351,18 +3467,31 @@ select:focus-visible {
   }
 
   .education-grid {
-    gap: 13px;
+    gap: 10px;
   }
 
   .education-card {
     min-height: 176px;
-    border-radius: 18px;
+    padding: 19px 13px 16px 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .education-card:nth-child(2) {
+    transform: none;
+  }
+
+  .education-mark {
+    top: 14px;
+    right: 8px;
+    width: 46px;
+    height: 46px;
   }
 
   .book-grid {
-    padding: 20px 16px;
-    border-radius: 23px;
-    box-shadow: var(--shadow-soft);
+    padding: 24px 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .book-cover {
@@ -3372,14 +3501,15 @@ select:focus-visible {
   .contact-section {
     margin-block: 22px;
     padding-inline: 18px;
-    border-radius: 24px;
-    box-shadow: var(--shadow-soft);
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .site-footer {
     margin-bottom: 14px;
     padding-inline: 16px;
-    border-radius: 18px;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 

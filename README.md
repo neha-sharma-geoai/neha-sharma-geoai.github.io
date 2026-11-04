@@ -2,10 +2,11 @@
 
 A standalone, responsive portfolio site for Neha Sharma, designed around
 geospatial research and the colors and textures of the natural world. Its
-neumorphic surfaces use soft raised and inset treatments to echo the contours
-of a physical atlas. Visitors can switch between Earth relief, Ocean mist,
-Canopy, and Lavender from the palette selector in the navigation; their choice
-is saved in the browser.
+neumorphic treatments vary by section: open editorial passages, inset maps,
+floating project artwork, and raised controls create a softer, flowing atlas.
+Visitors can switch between Earth relief, Ocean mist, Canopy, and Lavender
+from the palette selector in the navigation; their choice is saved in the
+browser.
 
 ## Journey maps
 
