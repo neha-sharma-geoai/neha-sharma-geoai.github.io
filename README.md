@@ -1,7 +1,9 @@
 # Neha Sharma — GeoAI & Earth systems
 
 A standalone, responsive portfolio site for Neha Sharma, designed around
-geospatial research and the colors and textures of the natural world.
+geospatial research and the colors and textures of the natural world. Visitors
+can switch between Vivid Earth, Ocean Signal, Canopy & Clay, and Lavender from
+the palette selector in the navigation; their choice is saved in the browser.
 
 ## Run locally
 

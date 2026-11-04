@@ -7,7 +7,7 @@
       name="description"
       content="Neha Sharma is a GeoAI researcher working across remote sensing, spatial data science, and Digital Earths."
     />
-    <meta name="theme-color" content="#f3f1e7" />
+    <meta name="theme-color" content="#f8faef" />
     <meta property="og:title" content="Neha Sharma — GeoAI & Earth systems" />
     <meta
       property="og:description"
@@ -48,6 +48,16 @@
         <a href="#about">About</a>
         <a href="#work">Selected work</a>
         <a href="#research">Research</a>
+        <label class="theme-control">
+          <span class="theme-swatch" aria-hidden="true"></span>
+          <span class="theme-control-label">Palette</span>
+          <select id="theme-select" aria-label="Choose a color palette">
+            <option value="earth">Vivid Earth</option>
+            <option value="ocean">Ocean Signal</option>
+            <option value="canopy">Canopy &amp; Clay</option>
+            <option value="lavender">Lavender</option>
+          </select>
+        </label>
         <a href="#contact" class="nav-contact">Let’s connect <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -88,8 +98,8 @@
             <svg class="globe-illustration" viewBox="0 0 260 260" fill="none">
               <defs>
                 <radialGradient id="ocean" cx="30%" cy="28%" r="80%">
-                  <stop offset="0" stop-color="#7d9d80" />
-                  <stop offset="1" stop-color="#31584b" />
+                  <stop offset="0" stop-color="var(--moss)" />
+                  <stop offset="1" stop-color="var(--forest-deep)" />
                 </radialGradient>
                 <clipPath id="sphere"><circle cx="130" cy="130" r="91" /></clipPath>
                 <clipPath id="raster">
@@ -98,7 +108,7 @@
               </defs>
               <ellipse cx="130" cy="235" rx="66" ry="8" fill="#263e35" opacity=".12" />
               <ellipse class="globe-orbit" cx="130" cy="130" rx="118" ry="47" transform="rotate(-26 130 130)" />
-              <circle cx="130" cy="130" r="104" fill="#d9e3cf" opacity=".48" />
+              <circle cx="130" cy="130" r="104" fill="var(--sage-light)" opacity=".48" />
               <circle cx="130" cy="130" r="91" fill="url(#ocean)" />
               <g clip-path="url(#sphere)">
                 <ellipse class="globe-grid" cx="130" cy="130" rx="91" ry="31" />

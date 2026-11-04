@@ -1,22 +1,129 @@
 :root {
   color-scheme: light;
-  --paper: #f3f1e7;
-  --paper-deep: #e9e7d8;
-  --ink: #263b32;
-  --ink-soft: #52635a;
-  --forest: #355a4b;
-  --forest-deep: #243f35;
-  --moss: #77876a;
-  --sage: #bdc5a6;
-  --sage-light: #dfe4d2;
-  --water: #8eaaa0;
-  --water-deep: #547a71;
-  --clay: #bd7554;
-  --sand: #d6bd91;
-  --line: rgba(38, 59, 50, 0.16);
+  --paper: #f8faef;
+  --paper-deep: #e5efdc;
+  --ink: #163d38;
+  --ink-soft: #426059;
+  --forest: #14816b;
+  --forest-deep: #104d48;
+  --moss: #4b9565;
+  --sage: #b9d995;
+  --sage-light: #deedc5;
+  --water: #5dbdbe;
+  --water-deep: #2b8a90;
+  --clay: #e96e4b;
+  --sand: #f4c652;
+  --line: rgba(22, 61, 56, 0.16);
+  --contour: rgba(20, 105, 82, 0.17);
+  --dark-contour: rgba(231, 239, 216, 0.18);
+  --map-ground-start: #e5f0d7;
+  --map-ground-mid: #bdd8b0;
+  --map-land-dark: #45875b;
+  --map-heat: #ed8057;
+  --map-raster-low: #a4ca8e;
+  --map-raster-mid: #f0cc67;
+  --map-raster-high: #f08a58;
+  --map-raster-peak: #da5947;
+  --globe-land: #c3dfab;
+  --system-node: #236657;
+  --system-node-alt: #378370;
+  --system-center: #327b70;
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   --content: 1180px;
+}
+
+html[data-theme="ocean"] {
+  --paper: #effbfc;
+  --paper-deep: #dceff3;
+  --ink: #122f43;
+  --ink-soft: #3c5d6b;
+  --forest: #087f95;
+  --forest-deep: #0d465a;
+  --moss: #367e8f;
+  --sage: #afe1d9;
+  --sage-light: #d4f0e5;
+  --water: #45c2d0;
+  --water-deep: #247f9c;
+  --clay: #fa735d;
+  --sand: #f4c75e;
+  --line: rgba(18, 47, 67, 0.16);
+  --contour: rgba(15, 107, 130, 0.18);
+  --dark-contour: rgba(205, 240, 245, 0.18);
+  --map-ground-start: #d9edf0;
+  --map-ground-mid: #abd7dc;
+  --map-land-dark: #2e7d86;
+  --map-heat: #fa8063;
+  --map-raster-low: #73cfca;
+  --map-raster-mid: #f4cf67;
+  --map-raster-high: #f49067;
+  --map-raster-peak: #e65d57;
+  --globe-land: #b4e1ca;
+  --system-node: #1c7180;
+  --system-node-alt: #3296a2;
+  --system-center: #287c91;
+}
+
+html[data-theme="canopy"] {
+  --paper: #fff9eb;
+  --paper-deep: #edf0d3;
+  --ink: #2c3822;
+  --ink-soft: #596447;
+  --forest: #3d7c41;
+  --forest-deep: #244b2c;
+  --moss: #618748;
+  --sage: #c8dc86;
+  --sage-light: #e6edba;
+  --water: #68c4a8;
+  --water-deep: #369078;
+  --clay: #e76543;
+  --sand: #e9b848;
+  --line: rgba(44, 56, 34, 0.16);
+  --contour: rgba(67, 109, 57, 0.2);
+  --dark-contour: rgba(241, 243, 210, 0.17);
+  --map-ground-start: #edf0d3;
+  --map-ground-mid: #c7d998;
+  --map-land-dark: #4b813e;
+  --map-heat: #e87949;
+  --map-raster-low: #b6d479;
+  --map-raster-mid: #e9c257;
+  --map-raster-high: #e7894a;
+  --map-raster-peak: #d85339;
+  --globe-land: #d2e09a;
+  --system-node: #39703d;
+  --system-node-alt: #5b8a4c;
+  --system-center: #4f8054;
+}
+
+html[data-theme="lavender"] {
+  --paper: #f8f5ff;
+  --paper-deep: #ece5fa;
+  --ink: #332a4c;
+  --ink-soft: #625775;
+  --forest: #6853a2;
+  --forest-deep: #3b3068;
+  --moss: #8c77c4;
+  --sage: #d0c4ef;
+  --sage-light: #e7e0f8;
+  --water: #81b9dc;
+  --water-deep: #5a85bf;
+  --clay: #d46692;
+  --sand: #edc56d;
+  --line: rgba(51, 42, 76, 0.17);
+  --contour: rgba(99, 76, 151, 0.18);
+  --dark-contour: rgba(242, 236, 255, 0.2);
+  --map-ground-start: #e9e2f6;
+  --map-ground-mid: #cad7ec;
+  --map-land-dark: #776daf;
+  --map-heat: #df7c9a;
+  --map-raster-low: #a3c9cf;
+  --map-raster-mid: #eed17a;
+  --map-raster-high: #e58b9b;
+  --map-raster-peak: #c75d88;
+  --globe-land: #d3c9eb;
+  --system-node: #67559c;
+  --system-node-alt: #8873ba;
+  --system-center: #6d64ad;
 }
 
 * {
@@ -127,7 +234,7 @@ button:focus-visible {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(24px, 4vw, 52px);
+  gap: clamp(14px, 2.2vw, 29px);
 }
 
 .site-nav a,
@@ -150,6 +257,110 @@ button:focus-visible {
   padding: 0 16px;
   border: 1px solid var(--line);
   border-radius: 2px;
+}
+
+.theme-control {
+  position: relative;
+  display: inline-flex;
+  height: 39px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.theme-swatch {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--clay);
+  box-shadow: 6px 0 0 var(--water);
+}
+
+.theme-control-label {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.theme-control select {
+  max-width: 123px;
+  appearance: none;
+  padding: 5px 16px 5px 2px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-control::after {
+  position: absolute;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.theme-control {
+  position: relative;
+  display: inline-flex;
+  height: 39px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.theme-swatch {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--clay);
+  box-shadow: 6px 0 0 var(--water);
+}
+
+.theme-control-label {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.theme-control select {
+  max-width: 123px;
+  appearance: none;
+  padding: 5px 16px 5px 2px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-control::after {
+  position: absolute;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
 }
 
 .menu-toggle {
@@ -259,7 +470,7 @@ button:focus-visible {
 
 .button-dark {
   background: var(--forest-deep);
-  color: #f5f2e7;
+  color: var(--paper);
 }
 
 .button-dark:hover {
@@ -272,7 +483,7 @@ button:focus-visible {
 }
 
 .button-light:hover {
-  background: #fffdf6;
+  background: var(--paper);
 }
 
 .button-outline {
@@ -339,10 +550,10 @@ button:focus-visible {
   inset: 3% 0 0 0;
   overflow: hidden;
   border-radius: 49% 51% 47% 53% / 43% 43% 57% 57%;
-  background-color: #e5e5d6;
+  background-color: var(--paper-deep);
   background-image:
-    repeating-radial-gradient(ellipse at 29% 42%, transparent 0 15px, rgba(91, 112, 87, 0.15) 16px 17px, transparent 18px 30px),
-    repeating-radial-gradient(ellipse at 73% 65%, transparent 0 21px, rgba(110, 125, 92, 0.11) 22px 23px, transparent 24px 37px);
+    repeating-radial-gradient(ellipse at 29% 42%, transparent 0 15px, var(--contour) 16px 17px, transparent 18px 30px),
+    repeating-radial-gradient(ellipse at 73% 65%, transparent 0 21px, var(--contour) 22px 23px, transparent 24px 37px);
   transform: rotate(-7deg);
 }
 
@@ -355,7 +566,7 @@ button:focus-visible {
   overflow: hidden;
   border: 7px solid var(--paper);
   border-radius: 47% 47% 3px 3px;
-  background: #809080;
+  background: var(--map-ground-mid);
   box-shadow: 0 22px 65px rgba(34, 55, 45, 0.16);
 }
 
@@ -408,22 +619,22 @@ button:focus-visible {
 }
 
 .globe-grid {
-  stroke: rgba(242, 238, 216, 0.36);
+  stroke: color-mix(in srgb, var(--paper) 48%, transparent);
   stroke-width: 0.8;
 }
 
 .land {
-  fill: #bfc69f;
-  stroke: rgba(35, 67, 53, 0.18);
+  fill: var(--globe-land);
+  stroke: var(--contour);
   stroke-width: 0.8;
 }
 
 .land-light {
-  fill: #d1bc8e;
+  fill: var(--sand);
 }
 
 .raster-base {
-  fill: rgba(232, 173, 105, 0.46);
+  fill: color-mix(in srgb, var(--map-heat) 52%, transparent);
 }
 
 .raster-lines {
@@ -432,25 +643,25 @@ button:focus-visible {
 }
 
 .raster-high {
-  fill: #d78350;
+  fill: var(--map-heat);
   opacity: 0.79;
 }
 
 .raster-low {
-  fill: #a4b486;
+  fill: var(--sage);
   opacity: 0.86;
 }
 
 .vector-route {
-  stroke: #f2d89d;
+  stroke: var(--sand);
   stroke-width: 2.2;
   stroke-linecap: round;
   stroke-dasharray: 4 3;
 }
 
 .vector-node {
-  fill: #e9bd7a;
-  stroke: #36594a;
+  fill: var(--sand);
+  stroke: var(--forest-deep);
   stroke-width: 1.5;
 }
 
@@ -475,11 +686,11 @@ button:focus-visible {
   height: 7px;
   margin-left: 3px;
   border-radius: 50%;
-  background: #d78350;
+  background: var(--clay);
 }
 
 .label-vector {
-  background: var(--forest);
+  background: var(--water);
 }
 
 .art-coordinate {
@@ -531,7 +742,7 @@ button:focus-visible {
 
 .intro-strip {
   border-block: 1px solid var(--line);
-  background: rgba(224, 225, 209, 0.54);
+  background: var(--paper-deep);
 }
 
 .strip-inner {
@@ -671,7 +882,7 @@ button:focus-visible {
 }
 
 .work-section {
-  background: #eae9dd;
+  background: var(--paper-deep);
 }
 
 .work-section .section-heading {
@@ -720,30 +931,30 @@ button:focus-visible {
 }
 
 .air-art {
-  background-color: #c9d0b4;
+  background-color: var(--map-ground-mid);
   background-image:
-    radial-gradient(ellipse at 55% 60%, rgba(216, 158, 95, 0.24), transparent 49%),
-    linear-gradient(130deg, #dce0cc, #aebfae);
+    radial-gradient(ellipse at 55% 60%, color-mix(in srgb, var(--clay) 25%, transparent), transparent 49%),
+    linear-gradient(130deg, var(--map-ground-start), var(--map-ground-mid));
 }
 
 .air-map-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(53, 90, 75, 0.11) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(53, 90, 75, 0.11) 1px, transparent 1px);
+    linear-gradient(var(--contour) 1px, transparent 1px),
+    linear-gradient(90deg, var(--contour) 1px, transparent 1px);
   background-size: 28px 28px;
   mask-image: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent);
 }
 
 .map-water {
-  stroke: #718e88;
+  stroke: var(--water-deep);
   stroke-width: 13;
   opacity: 0.52;
 }
 
 .map-road {
-  stroke: #f4edd8;
+  stroke: var(--paper);
   stroke-width: 6;
   opacity: 0.88;
 }
@@ -755,33 +966,33 @@ button:focus-visible {
 
 .contour,
 .building-contour {
-  stroke: rgba(62, 91, 70, 0.36);
+  stroke: var(--contour);
   stroke-width: 1;
 }
 
 .heat {
-  fill: #c46843;
+  fill: var(--map-heat);
   opacity: 0.16;
 }
 
 .heat-two {
-  fill: #d77d4e;
+  fill: var(--clay);
   opacity: 0.3;
 }
 
 .heat-three {
-  fill: #d79258;
+  fill: var(--sand);
   opacity: 0.23;
 }
 
 .map-point {
-  fill: #a45136;
-  stroke: #f3e8cd;
+  fill: var(--forest-deep);
+  stroke: var(--paper);
   stroke-width: 3;
 }
 
 .map-point-light {
-  fill: #cf7750;
+  fill: var(--clay);
 }
 
 .art-scale,
@@ -800,7 +1011,7 @@ button:focus-visible {
   right: 11px;
   bottom: 11px;
   padding: 5px 7px;
-  background: rgba(243, 241, 231, 0.82);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
   color: var(--forest-deep);
   font-size: 7px;
   font-weight: 650;
@@ -808,8 +1019,8 @@ button:focus-visible {
 }
 
 .building-art {
-  background-color: #d4d7c2;
-  background-image: linear-gradient(130deg, #dfe0cf, #bdc9b5 65%, #d7c7a6);
+  background-color: var(--map-ground-mid);
+  background-image: linear-gradient(130deg, var(--map-ground-start), var(--map-ground-mid) 65%, var(--paper-deep));
 }
 
 .building-contour {
@@ -822,34 +1033,34 @@ button:focus-visible {
 }
 
 .block-dark {
-  fill: #6f8b70;
+  fill: var(--map-land-dark);
 }
 
 .block-mid {
-  fill: #a7b593;
+  fill: var(--sage);
 }
 
 .block-light {
-  fill: #d8c696;
+  fill: var(--sand);
 }
 
 .block-terracotta {
-  fill: #bc7956;
+  fill: var(--clay);
 }
 
 .building-road {
-  stroke: #f1e9d8;
+  stroke: var(--paper);
   stroke-width: 13;
 }
 
 .building-road-light {
-  stroke: #f8f3e7;
+  stroke: color-mix(in srgb, var(--paper) 74%, transparent);
   stroke-width: 3;
 }
 
 .building-point {
-  fill: #bb7152;
-  stroke: #f3f1e7;
+  fill: var(--clay);
+  stroke: var(--paper);
   stroke-width: 3;
 }
 
@@ -861,25 +1072,25 @@ button:focus-visible {
   align-items: center;
   gap: 3px;
   padding: 6px 7px;
-  background: rgba(243, 241, 231, 0.87);
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
 }
 
 .raster-legend i {
   width: 8px;
   height: 8px;
-  background: #b2bf9c;
+  background: var(--map-raster-low);
 }
 
 .raster-legend i:nth-child(2) {
-  background: #d3c48e;
+  background: var(--map-raster-mid);
 }
 
 .raster-legend i:nth-child(3) {
-  background: #d9965d;
+  background: var(--map-raster-high);
 }
 
 .raster-legend i:nth-child(4) {
-  background: #bd7150;
+  background: var(--map-raster-peak);
 }
 
 .raster-legend small {
@@ -890,23 +1101,23 @@ button:focus-visible {
 }
 
 .land-art {
-  background: linear-gradient(135deg, #cad2b6, #a9bd9e 55%, #d8c693);
+  background: linear-gradient(135deg, var(--map-ground-start), var(--map-ground-mid) 55%, var(--sand));
 }
 
 .field-line {
-  stroke: rgba(61, 93, 65, 0.58);
+  stroke: var(--contour);
   stroke-width: 1.35;
 }
 
 .field-line-accent {
-  stroke: #c26f4c;
+  stroke: var(--clay);
   stroke-width: 2;
   stroke-dasharray: 4 4;
 }
 
 .field-node {
-  fill: #c66f4c;
-  stroke: #f3f1e7;
+  fill: var(--clay);
+  stroke: var(--paper);
   stroke-width: 3;
 }
 
@@ -974,7 +1185,7 @@ button:focus-visible {
   height: 330px;
   margin: 0;
   overflow: hidden;
-  background: #707d6c;
+  background: var(--forest);
 }
 
 .field-photo::after {
@@ -1050,8 +1261,8 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-radial-gradient(ellipse at 8% 93%, transparent 0 25px, rgba(215, 223, 199, 0.1) 26px 27px, transparent 28px 43px),
-    repeating-radial-gradient(ellipse at 95% 0%, transparent 0 38px, rgba(215, 223, 199, 0.07) 39px 40px, transparent 41px 58px);
+    repeating-radial-gradient(ellipse at 8% 93%, transparent 0 25px, var(--dark-contour) 26px 27px, transparent 28px 43px),
+    repeating-radial-gradient(ellipse at 95% 0%, transparent 0 38px, var(--dark-contour) 39px 40px, transparent 41px 58px);
   content: "";
   pointer-events: none;
 }
@@ -1087,7 +1298,7 @@ button:focus-visible {
 }
 
 .earth-copy h2 em {
-  color: #d7bd8e;
+  color: var(--sand);
 }
 
 .earth-copy > p:not(.eyebrow) {
@@ -1111,7 +1322,7 @@ button:focus-visible {
 }
 
 .system-ring {
-  stroke: rgba(215, 223, 199, 0.17);
+  stroke: var(--dark-contour);
   stroke-width: 1;
   stroke-dasharray: 3 6;
 }
@@ -1122,56 +1333,56 @@ button:focus-visible {
 }
 
 .system-ring-inner {
-  stroke: rgba(214, 189, 145, 0.35);
+  stroke: color-mix(in srgb, var(--sand) 35%, transparent);
 }
 
 .system-link {
-  stroke: rgba(214, 189, 145, 0.62);
+  stroke: color-mix(in srgb, var(--sand) 62%, transparent);
   stroke-width: 1;
   stroke-dasharray: 3 4;
 }
 
 .system-node {
-  fill: #355b4b;
-  stroke: rgba(215, 223, 199, 0.55);
+  fill: var(--system-node);
+  stroke: var(--dark-contour);
   stroke-width: 1;
 }
 
 .system-node:nth-of-type(even) {
-  fill: #496955;
+  fill: var(--system-node-alt);
 }
 
 .system-center {
-  fill: #567969;
-  stroke: rgba(231, 231, 207, 0.65);
+  fill: var(--system-center);
+  stroke: var(--dark-contour);
   stroke-width: 1;
 }
 
 .system-latitude,
 .system-longitude {
-  stroke: rgba(231, 231, 207, 0.42);
+  stroke: var(--dark-contour);
   stroke-width: 0.9;
 }
 
 .system-land {
-  fill: #c2c69f;
-  stroke: rgba(243, 241, 231, 0.27);
+  fill: var(--globe-land);
+  stroke: color-mix(in srgb, var(--paper) 27%, transparent);
   stroke-width: 0.8;
 }
 
 .system-route {
-  stroke: #e3c18d;
+  stroke: var(--sand);
   stroke-width: 2;
   stroke-dasharray: 4 4;
   stroke-linecap: round;
 }
 
 .system-node-dot {
-  fill: #e3c18d;
+  fill: var(--sand);
 }
 
 .system-label {
-  fill: #f3f1e7;
+  fill: var(--paper);
   font-family: var(--sans);
   font-size: 8px;
   font-weight: 600;
@@ -1179,7 +1390,7 @@ button:focus-visible {
 }
 
 .system-center-label {
-  fill: rgba(243, 241, 231, 0.8);
+  fill: color-mix(in srgb, var(--paper) 80%, transparent);
   font-family: var(--sans);
   font-size: 7px;
   font-weight: 600;
@@ -1267,7 +1478,7 @@ button:focus-visible {
 
 .book-section {
   overflow: hidden;
-  background: #e5e6d9;
+  background: var(--paper-deep);
 }
 
 .book-grid {
@@ -1285,9 +1496,9 @@ button:focus-visible {
   flex-direction: column;
   overflow: hidden;
   padding: 22px 22px 16px;
-  background: #42634f;
+  background: var(--forest-deep);
   box-shadow: 11px 15px 30px rgba(36, 63, 53, 0.2);
-  color: #f1ebd9;
+  color: var(--paper);
   transform: rotate(-3deg);
 }
 
@@ -1322,7 +1533,7 @@ button:focus-visible {
 }
 
 .book-cover strong span {
-  color: #ddbd87;
+  color: var(--sand);
   font-style: italic;
 }
 
@@ -1647,6 +1858,21 @@ button:focus-visible {
     margin-top: 9px;
     padding: 12px 3px;
     border: 0;
+  }
+
+  .site-nav .theme-control {
+    min-height: 45px;
+    justify-content: space-between;
+    margin-block: 9px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .site-nav .theme-control select {
+    width: 190px;
+    max-width: 65%;
+    text-align: right;
   }
 
   .hero {
