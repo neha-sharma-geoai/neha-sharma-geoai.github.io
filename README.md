@@ -1,12 +1,16 @@
 # Neha Sharma — GeoAI & Earth systems
 
 A standalone, responsive portfolio site for Neha Sharma, designed around
-geospatial research and the colors and textures of the natural world. Its
-neumorphic treatments vary by section: open editorial passages, inset maps,
-floating project artwork, and raised controls create a softer, flowing atlas.
-Visitors can switch between Earth relief, Ocean mist, Canopy, and Lavender
-from the palette selector in the navigation; their choice is saved in the
-browser.
+geospatial research, with a parchment, cobalt, teal, and coral palette. A
+single researcher-led opening hero unites a world map, portrait, and satellite
+orbits, followed by an editorial, map-inspired flow between research, selected
+work, publications, and teaching, with map graphics and project artwork as
+visual anchors rather than dashboard-like panels. Visitors can
+switch between Earth relief, Ocean mist, Canopy, and Lavender from the
+palette selector in the navigation; their choice is saved in the browser. The
+portfolio also includes selected publications and researcher profiles,
+teaching programmes, community service, awards, exam milestones, and a
+downloadable CV at `assets/neha-sharma-cv.pdf`.
 
 ## Journey maps
 
