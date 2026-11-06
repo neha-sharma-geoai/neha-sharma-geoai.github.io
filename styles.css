@@ -843,9 +843,25 @@ button:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--paper) 28%, var(--ink));
-  background-color: var(--forest-deep);
-  box-shadow: 0 14px 28px rgba(22, 61, 56, 0.12);
+  border: 1px solid color-mix(in srgb, var(--sage) 30%, var(--paper));
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 72% 38%, color-mix(in srgb, var(--water) 15%, transparent), transparent 58%),
+    linear-gradient(145deg, var(--forest-deep), color-mix(in srgb, var(--forest-deep) 82%, var(--water-deep)));
+  box-shadow: 0 14px 28px rgba(22, 61, 56, 0.16);
+}
+
+.journey-map-canvas::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--paper) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--paper) 8%, transparent) 1px, transparent 1px);
+  background-size: 16.6667% 25%;
+  content: "";
+  opacity: 0.42;
+  pointer-events: none;
 }
 
 .locus-map--world .journey-map-canvas {
@@ -868,8 +884,20 @@ button:focus-visible {
 }
 
 .map-boundary--world {
-  background-color: var(--paper);
-  filter: drop-shadow(0 8px 8px rgba(12, 35, 38, 0.2));
+  background:
+    repeating-radial-gradient(
+      ellipse at 38% 52%,
+      transparent 0 32px,
+      color-mix(in srgb, var(--moss) 12%, transparent) 33px 34px,
+      transparent 35px 52px
+    ),
+    linear-gradient(
+      135deg,
+      var(--paper),
+      color-mix(in srgb, var(--paper) 82%, var(--sage)) 58%,
+      color-mix(in srgb, var(--paper) 88%, var(--sand))
+    );
+  filter: drop-shadow(0 9px 10px rgba(12, 35, 38, 0.24));
   -webkit-mask-image: url("assets/world-boundary-mask.png?v=2");
   mask-image: url("assets/world-boundary-mask.png?v=2");
   mask-mode: alpha;
@@ -878,7 +906,14 @@ button:focus-visible {
 }
 
 .map-boundary--india {
-  background-color: var(--sand);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--sand) 86%, var(--paper)),
+      var(--sand) 52%,
+      color-mix(in srgb, var(--sand) 76%, var(--clay))
+    );
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--sand) 40%, transparent));
   -webkit-mask-image: url("assets/india-boundary-mask.png?v=2");
   mask-image: url("assets/india-boundary-mask.png?v=2");
   mask-mode: alpha;
@@ -896,6 +931,19 @@ button:focus-visible {
   pointer-events: none;
 }
 
+.journey-route {
+  fill: none;
+  stroke: color-mix(in srgb, var(--water) 76%, var(--paper));
+  stroke-dasharray: 1.1 1.5;
+  stroke-linecap: round;
+  stroke-width: 0.26;
+  opacity: 0.82;
+}
+
+.journey-route--work {
+  stroke: color-mix(in srgb, var(--sand) 82%, var(--clay));
+}
+
 .journey-leaders {
   fill: none;
   stroke: color-mix(in srgb, var(--paper) 82%, transparent);
@@ -907,6 +955,7 @@ button:focus-visible {
 .journey-city {
   stroke: var(--forest-deep);
   stroke-width: 0.45;
+  filter: drop-shadow(0 0 1.5px color-mix(in srgb, var(--paper) 55%, transparent));
 }
 
 .journey-city--home {
@@ -953,7 +1002,7 @@ button:focus-visible {
 .journey-marker::after {
   position: absolute;
   inset: 4px;
-  border: 1px solid var(--clay);
+  border: 1px solid var(--sand);
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -999,6 +1048,11 @@ button:focus-visible {
   transform: scale(1.2);
 }
 
+.journey-marker:focus-visible {
+  outline: 2px solid var(--sand);
+  outline-offset: 3px;
+}
+
 .journey-popup {
   position: absolute;
   z-index: 4;
@@ -1006,9 +1060,10 @@ button:focus-visible {
   right: 16px;
   width: min(290px, calc(100% - 32px));
   padding: 18px 42px 18px 18px;
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--water) 30%, var(--line));
+  border-radius: 12px;
   background: var(--paper);
-  box-shadow: none;
+  box-shadow: 0 12px 30px rgba(6, 25, 23, 0.2);
   color: var(--ink);
   line-height: 1.45;
 }
@@ -2931,9 +2986,9 @@ body {
 
 .journey-map-canvas {
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--sage) 30%, var(--paper));
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgba(22, 61, 56, 0.16);
 }
 
 .journey-marker::before {
@@ -3389,10 +3444,6 @@ select:focus-visible {
   .site-footer {
     padding-inline: 13px;
   }
-}
-
-.journey-map-canvas {
-  box-shadow: none;
 }
 
 .hero-cover {
@@ -4848,8 +4899,13 @@ select:focus-visible {
 
 @media (max-width: 700px) {
   .locus-map--india .journey-map-canvas {
-    width: 49.6%;
+    width: min(78%, 300px);
     margin-inline: auto;
+  }
+
+  .locus-map--india .journey-marker {
+    width: 36px;
+    height: 36px;
   }
 
   .publication-entry,
