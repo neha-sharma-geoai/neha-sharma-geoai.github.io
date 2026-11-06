@@ -2818,7 +2818,21 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   background: var(--paper);
+}
+
+body::before {
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  background-image:
+    repeating-radial-gradient(ellipse at 16% 18%, transparent 0 36px, var(--contour) 37px 38px, transparent 39px 58px),
+    repeating-radial-gradient(ellipse at 86% 76%, transparent 0 48px, var(--contour) 49px 50px, transparent 51px 72px);
+  content: "";
+  opacity: 0.16;
+  pointer-events: none;
 }
 
 .site-header {
