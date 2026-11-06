@@ -2824,7 +2824,7 @@ body {
 }
 
 body::before {
-  position: fixed;
+  position: absolute;
   z-index: 4;
   inset: 0;
   background-image: repeating-radial-gradient(
