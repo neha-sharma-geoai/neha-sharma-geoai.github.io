@@ -1019,7 +1019,7 @@ button:focus-visible {
   }
 
   10% {
-    opacity: 0.58;
+    opacity: 0.78;
   }
 
   42% {
@@ -2640,6 +2640,11 @@ button:focus-visible {
   .hero--observatory .hero-satellite-orbit {
     animation: none !important;
   }
+
+  .page-satellite-rotor,
+  .contact-satellite-rotor {
+    animation: none !important;
+  }
 }
 
 body {
@@ -2818,24 +2823,7 @@ html {
 }
 
 body {
-  position: relative;
-  isolation: isolate;
   background: var(--paper);
-}
-
-body::before {
-  position: absolute;
-  z-index: 4;
-  inset: 0;
-  background-image: repeating-radial-gradient(
-    ellipse at 16% 18%,
-    transparent 0 36px,
-    var(--contour) 37px 38px,
-    transparent 39px 58px
-  );
-  content: "";
-  opacity: 0.16;
-  pointer-events: none;
 }
 
 .site-header {
@@ -4017,6 +4005,107 @@ select:focus-visible {
 @keyframes hero-satellite-revolution {
   to {
     transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.about.section,
+.publication-section.section {
+  position: relative;
+  isolation: isolate;
+}
+
+.about.section > :not(.page-satellite-orbit),
+.publication-section.section > :not(.page-satellite-orbit) {
+  position: relative;
+  z-index: 2;
+}
+
+.page-satellite-orbit {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: clamp(170px, 21vw, 270px);
+  height: auto;
+  overflow: visible;
+  opacity: 0.58;
+  pointer-events: none;
+}
+
+.page-satellite-track {
+  fill: none;
+  stroke: color-mix(in srgb, var(--water) 70%, transparent);
+  stroke-dasharray: 1.5 5;
+  stroke-width: 1.5;
+}
+
+.page-satellite-rotor {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: page-satellite-revolution 48s linear infinite;
+}
+
+.page-satellite-rotor > svg,
+.contact-satellite-rotor svg {
+  filter: drop-shadow(0 2px 6px rgba(5, 23, 38, 0.45));
+}
+
+.page-satellite-orbit--about {
+  top: 42px;
+  right: 26%;
+  transform: rotate(-16deg);
+}
+
+.page-satellite-orbit--publications {
+  top: 42px;
+  right: 26%;
+  width: clamp(160px, 17vw, 220px);
+  opacity: 0.54;
+  transform: rotate(13deg);
+}
+
+.page-satellite-orbit--publications .page-satellite-rotor {
+  animation-direction: reverse;
+  animation-duration: 57s;
+}
+
+@keyframes page-satellite-revolution {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.contact-satellite-rotor {
+  position: absolute;
+  inset: 0;
+  animation: page-satellite-revolution 68s linear infinite;
+  pointer-events: none;
+}
+
+.contact-satellite-rotor svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 46px;
+  height: auto;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+  .page-satellite-orbit {
+    top: 18px;
+    right: 0;
+    width: 100px;
+    opacity: 0.62;
+  }
+
+  .page-satellite-orbit--publications {
+    width: 100px;
+  }
+
+  .contact-satellite-rotor svg {
+    left: 14%;
+    width: 36px;
   }
 }
 
