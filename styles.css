@@ -522,7 +522,7 @@ ol {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(56px, 9vw, 112px) 0 clamp(64px, 9vw, 120px);
+  padding: clamp(24px, 4vw, 48px) 0 clamp(48px, 7vw, 88px);
 }
 
 .hero-bg {
@@ -631,7 +631,7 @@ ol {
 .hero-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(32px, 5vw, 72px);
 }
 
@@ -659,7 +659,7 @@ ol {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 36px;
+  margin-top: 18px;
 }
 
 .affiliation-chips li {
@@ -687,6 +687,7 @@ ol {
 
 .hero-visual {
   position: relative;
+  margin-top: 42px;
 }
 
 .earth-console {
