@@ -39,6 +39,9 @@ the public profile.
 
 Open `index.html` in a browser. The site uses plain HTML, CSS, JavaScript, and
 local image assets; it does not require a build step or package installation.
+The version query strings on the stylesheet and script references in
+`index.html` are cache keys; update them when publishing changes to those
+assets.
 
 ## Publish with GitHub Pages
 
