@@ -10,7 +10,8 @@ switch between Earth relief, Ocean mist, Canopy, and Lavender from the
 palette selector in the navigation; their choice is saved in the browser. The
 portfolio also includes selected publications and researcher profiles,
 teaching programmes, community service, awards, exam milestones, and a
-downloadable CV at `assets/neha-sharma-cv.pdf`.
+downloadable CV at `assets/neha-sharma-cv.pdf`, along with public GitHub
+profile details and recent activity.
 
 ## Journey maps
 
@@ -25,6 +26,14 @@ The production site sends page views to Google Analytics 4. Visit totals are
 not displayed on the public page and remain available in the private Analytics
 account. Tracking runs only on `neha-sharma-geoai.github.io`; local previews
 are excluded.
+
+## GitHub activity
+
+The GitHub section fetches public profile details and recent public events
+from the GitHub REST API as the section approaches the viewport. It does not
+include private contributions or claim an all-time contribution total. API
+rate limits and network errors are shown in the section, with a direct link to
+the public profile.
 
 ## Run locally
 
