@@ -1,23 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="orbit">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Neha Sharma is a GeoAI researcher and educator in India, using satellite imagery, spatial data science, and machine learning to study cities and landscapes."
+      content="Neha Sharma is a GeoAI (Earth AI) research scientist working with MIT CSAIL and the WCRP Digital Earths effort, turning satellite imagery into intelligence for cities, infrastructure, and climate."
     />
-    <meta name="theme-color" content="#f7f1e5" />
-    <meta property="og:title" content="Neha Sharma — GeoAI & Earth systems" />
+    <meta name="theme-color" content="#050a14" />
+    <meta property="og:title" content="Neha Sharma — GeoAI Research Scientist" />
     <meta
       property="og:description"
-      content="Based in India, Neha Sharma combines satellite imagery, spatial data science, and machine learning to investigate urban air, buildings, agriculture, and ship detection."
+      content="GeoAI (Earth AI) research scientist: geospatial deep learning, Earth observation, digital twins, and human-centred AI. MIT CSAIL · WCRP Digital Earths · ex-Esri GeoAI R&D."
     />
     <meta property="og:type" content="website" />
-    <title>Neha Sharma — GeoAI &amp; Earth systems</title>
+    <title>Neha Sharma — GeoAI Research Scientist</title>
     <link rel="icon" href="assets/earth-mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=distinct-palettes-20261106" />
-    <script src="script.js?v=distinct-palettes-20261106" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css?v=earth-ai-20261106c" />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedPalette = window.localStorage.getItem("geoai-palette-v2");
+        if (["orbit", "aurora", "glacier", "terra"].includes(savedPalette)) {
+          document.documentElement.dataset.theme = savedPalette;
+        }
+      } catch (error) {
+        /* Storage can be unavailable; the default palette applies. */
+      }
+    </script>
+    <script src="script.js?v=earth-ai-20261106b" defer></script>
     <script>
       if (
         window.location.protocol === "https:" &&
@@ -46,10 +63,9 @@
           <svg viewBox="0 0 36 36" fill="none">
             <circle cx="18" cy="18" r="13.5" />
             <path d="M5 18h26M18 4.5c4.2 4 6.3 8.5 6.3 13.5S22.2 27.5 18 31.5C13.8 27.5 11.7 23 11.7 18S13.8 8.5 18 4.5Z" />
-            <path d="M8.5 10.5c5.8 3.2 13.2 3.2 19 0M8.5 25.5c5.8-3.2 13.2-3.2 19 0" />
           </svg>
         </span>
-        <span class="brand-name">Neha Sharma<span class="brand-dot">.</span></span>
+        <span class="brand-name">Neha Sharma</span>
       </a>
 
       <button
@@ -63,414 +79,765 @@
       </button>
 
       <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
-        <a href="#work">Selected work</a>
-        <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
         <a href="#teaching">Teaching</a>
+        <a href="#journey">Journey</a>
         <label class="theme-control">
           <span class="theme-swatch" aria-hidden="true"></span>
-          <span class="theme-control-label">Palette</span>
-          <select id="theme-select" aria-label="Choose a color palette">
-            <option value="earth">Earth relief</option>
-            <option value="ocean">Arctic current</option>
-            <option value="canopy">Solar canopy</option>
-            <option value="lavender">Violet spectrum</option>
+          <span class="theme-control-label">Theme</span>
+          <select id="theme-select" aria-label="Choose a color theme">
+            <option value="orbit">Orbit night</option>
+            <option value="aurora">Aurora</option>
+            <option value="glacier">Glacier</option>
+            <option value="terra">Terra</option>
           </select>
         </label>
-        <a href="#contact" class="nav-contact">Let’s connect <span aria-hidden="true">↗</span></a>
+        <a href="#contact" class="nav-contact">Collaborate <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero-cover hero--observatory" id="top" aria-labelledby="cover-title">
-        <div class="page-wrap cover-inner">
-          <div class="cover-copy">
-            <p class="eyebrow"><span class="eyebrow-line"></span> GEOAI RESEARCHER &amp; EDUCATOR</p>
-            <h1 id="cover-title">Neha Sharma studies the places behind the <em>pixels.</em></h1>
-            <p class="cover-lede">
-              Her research combines satellite imagery, spatial data science, and
-              machine learning to investigate urban air, buildings, agricultural
-              landscapes, and ship detection.
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="hero-glow hero-glow--a"></span>
+          <span class="hero-glow hero-glow--b"></span>
+          <svg class="hero-art" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <defs>
+              <path id="contour-blob" d="M-110-20C-100-70-50-104 8-88C52-76 70-100 104-66C130-38 96 8 106 40C116 78 60 100 10 92C-30 86-50 112-86 84C-120 58-114 20-110-20Z" />
+              <symbol id="satellite" viewBox="0 0 60 40">
+                <path class="sat-panel" d="M2 12h14v16H2zM44 12h14v16H44z" />
+                <path class="sat-grid" d="M7 12v16m5-16v16m37-16v16m5-16v16" />
+                <path class="sat-boom" d="M16 20h28" />
+                <rect class="sat-body" x="22" y="13" width="16" height="14" rx="2" />
+                <path class="sat-antenna" d="M30 13V6m-4 0h8M30 27v7" />
+                <circle class="sat-sensor" cx="30" cy="20" r="2.5" />
+              </symbol>
+            </defs>
+
+            <g class="contour-system contour-system--a" transform="translate(1090 330)">
+              <use class="contour-ring" href="#contour-blob" transform="scale(1.1)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(6) scale(1.6)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(12) scale(2.1)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(20) scale(2.6)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(27) scale(3.1)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(33) scale(3.6)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(41) scale(4.1)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(47) scale(4.6)" />
+            </g>
+            <g class="contour-system contour-system--b" transform="translate(180 720)">
+              <use class="contour-ring" href="#contour-blob" transform="rotate(200) scale(0.9)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(210) scale(1.4)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(222) scale(1.9)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(231) scale(2.4)" />
+              <use class="contour-ring" href="#contour-blob" transform="rotate(240) scale(2.9)" />
+            </g>
+
+            <g transform="rotate(-14 1000 380)">
+              <ellipse class="orbit-track" cx="1000" cy="380" rx="660" ry="210" />
+              <g class="orbit-satellite">
+                <use href="#satellite" width="52" height="35" x="-26" y="-17.5" />
+                <animateMotion dur="80s" repeatCount="indefinite" path="M1660 380A660 210 0 1 1 340 380A660 210 0 1 1 1660 380" />
+              </g>
+            </g>
+            <g transform="rotate(11 420 600)">
+              <ellipse class="orbit-track" cx="420" cy="600" rx="470" ry="130" />
+              <g class="orbit-satellite">
+                <use href="#satellite" width="40" height="27" x="-20" y="-13.5" />
+                <animateMotion dur="58s" repeatCount="indefinite" path="M890 600A470 130 0 1 0 -50 600A470 130 0 1 0 890 600" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="kicker"><span class="pulse-dot"></span> Making Earth more legible.</p>
+            <h1 id="hero-title">Turning satellite pixels into <span class="gradient-text">planetary insight.</span></h1>
+            <p class="lede">
+              Neha Sharma brings GeoAI research closer to real-world decisions,
+              turning Earth observation into actionable insight for cities,
+              infrastructure, and climate. Her work spans geospatial deep
+              learning, multimodal remote sensing, and digital twins through
+              collaborations with MIT CSAIL and the WCRP Digital Earths effort.
+              She also serves as a GeoAI subject matter expert for Bootcamp in
+              GIS, a California-based GIS edtech company.
             </p>
-            <div class="cover-actions">
-              <a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-              <a class="cover-link" href="#about">Meet the researcher <span aria-hidden="true">↓</span></a>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">Meet the researcher <span aria-hidden="true">↘</span></a>
+              <a class="button button-ghost" href="assets/neha-sharma-cv.pdf" download="Neha-Sharma-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
             </div>
-            <ul class="cover-fields" aria-label="Research areas">
-              <li>Remote sensing</li>
-              <li>GeoAI</li>
-              <li>GIS &amp; planning</li>
+            <ul class="affiliation-chips" aria-label="Current roles">
+              <li><span class="chip-label">Now</span> GeoAI Developer · MIT CSAIL</li>
+              <li><span class="chip-label">Member</span> WCRP · Digital Earths</li>
+              <li><span class="chip-label">SME</span> Bootcamp in GIS, California-based GIS EdTech</li>
             </ul>
           </div>
 
-          <div class="cover-visual hero-art" role="group" aria-label="Portrait of Neha Sharma over a world map with a GeoAI neural network and satellite orbits">
-            <div class="cover-map" aria-hidden="true"></div>
-            <svg class="cover-network" viewBox="0 0 613 345" fill="none" aria-hidden="true">
-              <path class="cover-route" d="M73 198c57-71 108-83 160-52s76 94 130 81 83-77 176-89" />
-              <path class="cover-route cover-route--secondary" d="M111 248c73-39 121-49 178-29s97 62 171 38 92-64 110-83" />
-              <path class="cover-route cover-route--tertiary" d="M186 112c35 28 58 51 84 78s75 43 112 26 57-47 83-67" />
-              <circle class="cover-node" cx="73" cy="198" r="5" />
-              <circle class="cover-node" cx="233" cy="146" r="5" />
-              <circle class="cover-node cover-node--bright" cx="363" cy="227" r="7" />
-              <circle class="cover-node" cx="539" cy="138" r="5" />
-              <circle class="cover-node cover-node--bright" cx="460" cy="257" r="4" />
-            </svg>
-            <div class="hero-orbit-track hero-orbit-track--outer" aria-hidden="true"></div>
-            <div class="hero-satellite-orbit hero-satellite-orbit--outer" aria-hidden="true">
-              <svg class="hero-satellite-icon" viewBox="0 0 60 40" fill="none">
-                <path class="satellite-panel" d="M2 12h14v16H2zM44 12h14v16H44z" />
-                <path class="satellite-panel-grid" d="M7 12v16m5-16v16m37-16v16m5-16v16" />
-                <path class="satellite-boom" d="M16 20h28" />
-                <rect class="satellite-body" x="22" y="13" width="16" height="14" rx="2" />
-                <path class="satellite-antenna" d="M30 13V6m-4 0h8M30 27v7" />
-                <circle class="satellite-sensor" cx="30" cy="20" r="2.5" />
-              </svg>
-            </div>
-            <div class="hero-satellite-orbit hero-satellite-orbit--inner" aria-hidden="true">
-              <svg class="hero-satellite-icon" viewBox="0 0 60 40" fill="none">
-                <path class="satellite-panel" d="M2 12h14v16H2zM44 12h14v16H44z" />
-                <path class="satellite-panel-grid" d="M7 12v16m5-16v16m37-16v16m5-16v16" />
-                <path class="satellite-boom" d="M16 20h28" />
-                <rect class="satellite-body" x="22" y="13" width="16" height="14" rx="2" />
-                <path class="satellite-antenna" d="M30 13V6m-4 0h8M30 27v7" />
-                <circle class="satellite-sensor" cx="30" cy="20" r="2.5" />
-              </svg>
-            </div>
-            <div class="portrait-frame">
-              <img
-                class="portrait"
-                src="assets/neha-sharma-portrait.jpg"
-                alt="Neha Sharma outdoors"
-                fetchpriority="high"
-              />
-              <span class="portrait-caption">
-                <span class="portrait-caption-title"><span class="caption-dot"></span> PEOPLE · PLACE · PLANET</span>
-                <span class="portrait-caption-coordinate">26.2° N · 78.2° E</span>
-              </span>
-            </div>
-            <span class="cover-visual-label"><span class="cover-live-dot"></span> BASED IN INDIA · COLLABORATING GLOBALLY</span>
-            <div class="cover-readout" aria-hidden="true">
-              <svg class="cover-ai-diagram" viewBox="0 0 68 52" fill="none">
-                <g class="cover-ai-connections">
-                  <path d="M8 8 32 8M8 8 32 20M8 8 32 32M8 20 32 8M8 20 32 20M8 20 32 32M8 32 32 20M8 32 32 32M8 32 32 44M8 44 32 32M8 44 32 44M32 8 58 14M32 20 58 14M32 20 58 38M32 32 58 14M32 32 58 38M32 44 58 38" />
-                </g>
-                <g class="cover-ai-nodes">
-                  <circle cx="8" cy="8" r="3" />
-                  <circle cx="8" cy="20" r="3" />
-                  <circle cx="8" cy="32" r="3" />
-                  <circle cx="8" cy="44" r="3" />
-                  <circle cx="32" cy="8" r="3" />
-                  <circle cx="32" cy="20" r="3" />
-                  <circle cx="32" cy="32" r="3" />
-                  <circle cx="32" cy="44" r="3" />
-                  <circle class="cover-ai-node--output" cx="58" cy="14" r="4" />
-                  <circle class="cover-ai-node--output" cx="58" cy="38" r="4" />
-                </g>
-              </svg>
-              <div class="cover-readout-copy">
-                <span class="cover-readout-label">GEOAI WORKFLOW</span>
-                <strong>Pixels to insight <span>↗</span></strong>
-                <small>Satellite imagery · spatial ML</small>
+          <div class="hero-visual">
+            <div class="earth-console" role="group" aria-label="World map locating Neha Sharma in Gwalior, India at 26.2 degrees north, 78.2 degrees east">
+              <div class="console-bar">
+                <span class="console-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="console-title">EARTH OBSERVATION · BASE LOCATION</span>
+                <span class="console-live"><span class="pulse-dot"></span> ORBIT</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="intro-strip" aria-label="Research areas">
-        <div class="page-wrap strip-inner">
-          <span>Spatial data science</span><i aria-hidden="true"></i>
-          <span>Earth observation</span><i aria-hidden="true"></i>
-          <span>Human-centered GeoAI</span><i aria-hidden="true"></i>
-          <span>Climate &amp; place</span>
-        </div>
-      </section>
-
-      <section class="work-section section" id="work" aria-labelledby="work-title">
-        <div class="page-wrap">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow"><span class="eyebrow-line"></span> FROM PIXELS TO PATTERNS</p>
-              <h2 id="work-title">Selected <em>work.</em></h2>
-            </div>
-            <span class="section-index">01 — PROJECTS</span>
-          </div>
-          <p class="section-intro">
-            Work spanning urban air, building intelligence, agricultural
-            landscapes, and ship detection—using remote sensing, computer
-            vision, and GIS to turn spatial data into useful insight.
-          </p>
-          <div class="project-grid">
-            <article class="project-card project-card--air">
-              <div class="project-art air-art" aria-hidden="true">
-                <div class="air-map-grid"></div>
-                <svg viewBox="0 0 480 250" fill="none">
-                  <path class="map-water" d="M320-12c-17 37-11 60 17 74s44 32 33 60 8 44 31 50 40 29 28 76" />
-                  <path class="map-road" d="M-20 198c75-29 107-67 162-56s94 54 149 31 92-64 209-57" />
-                  <path class="map-road map-road-light" d="M20-15c22 50 70 53 73 108s41 75 78 88 53 30 55 84M199-12c-9 51 9 81 53 103s53 57 45 100 8 49 24 72M395-15c-43 50-53 88-39 121s-4 60-27 79-32 43-34 75" />
-                  <path class="contour" d="M-12 82c54-21 92-18 126 7s57 31 94 18 57-36 102-23 81 19 183-16" />
-                  <path class="contour" d="M-4 95c52-18 88-14 120 9s59 28 91 15 60-32 101-20 83 19 179-10" />
-                  <circle class="heat heat-one" cx="190" cy="126" r="41" />
-                  <circle class="heat heat-two" cx="190" cy="126" r="23" />
-                  <circle class="heat heat-three" cx="315" cy="105" r="31" />
-                  <circle class="map-point" cx="190" cy="126" r="5" />
-                  <circle class="map-point map-point-light" cx="315" cy="105" r="4" />
+              <div class="console-map">
+                <div class="console-contours" aria-hidden="true"></div>
+                <div class="console-map-land" aria-hidden="true"></div>
+                <svg class="console-orbit" viewBox="0 0 178 100" aria-hidden="true" focusable="false">
+                  <g transform="rotate(-16 89 50)">
+                    <ellipse class="orbit-track" cx="89" cy="50" rx="84" ry="30" />
+                    <g class="orbit-satellite">
+                      <use href="#satellite" width="14" height="9.5" x="-7" y="-4.75" />
+                      <animateMotion dur="26s" repeatCount="indefinite" path="M173 50A84 30 0 1 1 5 50A84 30 0 1 1 173 50" />
+                    </g>
+                  </g>
                 </svg>
-                <span class="art-scale">AHMEDABAD<br />URBAN AIR</span>
-                <span class="art-tag">AIR · TIME · PLACE</span>
-              </div>
-              <div class="project-content">
-                <div class="project-meta"><span>REMOTE SENSING</span><span>01 / 04</span></div>
-                <h3>Urban air quality, in space &amp; time</h3>
-                <p>A spatio-temporal analysis of Ahmedabad’s air quality, completed as an M.Tech thesis in Geomatics.</p>
-                <a class="project-link" href="https://repository.cept.ac.in/items/bd12366d-50ec-41a4-8bdb-dc010cd081b9" target="_blank" rel="noreferrer">View research <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card--building">
-              <div class="project-art building-art" aria-hidden="true">
-                <svg viewBox="0 0 480 250" fill="none">
-                  <path class="building-contour" d="M-8 56c43-28 94-36 132-16s54 34 101 23 87-42 129-26 77 19 136-9" />
-                  <path class="building-contour" d="M-15 76c45-27 94-32 130-11s59 29 105 18 84-37 124-21 80 20 145-4" />
-                  <path class="block block-dark" d="m62 110 43-18 31 15-2 44-44 17-29-17z" />
-                  <path class="block block-mid" d="m136 81 36-16 34 15-1 35-37 16-32-14z" />
-                  <path class="block block-light" d="m224 112 43-20 37 17-2 38-41 19-38-18z" />
-                  <path class="block block-terracotta" d="m317 74 35-17 31 14v35l-34 17-31-16z" />
-                  <path class="block block-dark" d="m355 138 41-17 31 17-3 36-37 14-32-17z" />
-                  <path class="building-road" d="M-8 196c64-40 105-45 153-27s69 29 114 4 75-31 122-13 68 18 111-5" />
-                  <path class="building-road building-road-light" d="M287-12c-5 40-20 69-2 99s19 57 7 87 0 55 16 84" />
-                  <circle class="building-point" cx="250" cy="130" r="5" />
-                </svg>
-                <span class="raster-legend"><i></i><i></i><i></i><i></i><small>LOW → HIGH</small></span>
-                <span class="art-tag">BUILDINGS · RASTER · AI</span>
-              </div>
-              <div class="project-content">
-                <div class="project-meta"><span>GEOAI · COMPUTER VISION</span><span>02 / 04</span></div>
-                <h3>Reading rooftops from above</h3>
-                <p>This MS Data Science thesis combines fine-grained roof-type classification with multimodal building detection and height estimation.</p>
-                <a class="project-link" href="https://link.springer.com/book/9789819677481#overview" target="_blank" rel="noreferrer">Explore the research <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card--land">
-              <div class="project-art land-art" aria-hidden="true">
-                <svg viewBox="0 0 480 250" fill="none">
-                  <path class="field-line" d="M-13 42c60 15 102 8 141-13s80-22 119 4 78 38 124 17 77-28 125-14" />
-                  <path class="field-line" d="M-17 67c59 14 100 7 139-13s79-21 116 5 80 37 126 16 77-27 129-12" />
-                  <path class="field-line" d="M-17 92c59 13 100 6 136-13s79-19 116 6 82 35 128 15 78-25 129-10" />
-                  <path class="field-line" d="M-10 118c58 11 98 4 134-14s77-18 114 8 85 33 130 13 80-24 129-8" />
-                  <path class="field-line" d="M-10 145c58 9 95 2 131-15s75-17 112 10 87 31 134 11 80-21 123-5" />
-                  <path class="field-line" d="M-7 172c54 8 93 0 128-17s73-15 110 12 90 29 136 8 78-19 119-1" />
-                  <path class="field-line" d="M-2 200c51 5 89-3 124-19s71-14 109 13 91 27 136 5 79-15 121 3" />
-                  <path class="field-line field-line-accent" d="M42 266c41-44 77-73 112-84s76-9 100 4 60 12 103-24 67-55 105-61" />
-                  <circle class="field-node" cx="254" cy="186" r="5" />
-                </svg>
-                <span class="land-label">GUJARAT · INDIA</span>
-                <span class="art-tag">CROPS · LAND · SEASONS</span>
-              </div>
-              <div class="project-content">
-                <div class="project-meta"><span>GIS · LANDSCAPES</span><span>03 / 04</span></div>
-                <h3>Following the fields of Gujarat</h3>
-                <p>An assessment of district-level cropping patterns across Gujarat, developed through a Geographic Information Science project focused on the 2018 monsoon season.</p>
-                <a class="project-link" href="https://portfolio.cept.ac.in/2024/M/ft/geographic-information-science-foundation-studio-5757-monsoon-2018/assessment-of-crops-of-gujarat-monsoon-2018-pg180592" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-            <article class="project-card project-card--ship">
-              <div class="project-art ship-art" aria-hidden="true">
-                <div class="ship-raster-grid"></div>
-                <svg viewBox="0 0 480 250" fill="none">
-                  <path class="ship-sea-line" d="M-20 66c62-16 111-16 160 4s93 22 145 2 112-24 215-3M-25 190c75-21 127-15 177 5s105 18 153-2 105-21 205 0" />
-                  <path class="ship-track" d="M85 177c66-45 128-62 198-67s113 4 175-34" />
-                  <path class="ship-vessel" d="m193 111 65-19-17 42-32 15-30-14z" />
-                  <path class="ship-vessel-detail" d="m211 131 25 3 10-25-38 12z" />
-                  <rect class="ship-detection-box" x="179" y="79" width="91" height="81" rx="2" />
-                  <path class="ship-crosshair" d="M173 94v-11h13m77 0h13v13m-103 52v12h13m77 0h13v-13" />
-                  <circle class="ship-detection-point" cx="224" cy="120" r="3" />
-                </svg>
-                <span class="art-scale">RGB<br />SHIP DETECTION</span>
-                <span class="art-tag">RASTER · OBJECT DETECTION</span>
-              </div>
-              <div class="project-content">
-                <div class="project-meta"><span>GEOAI · OBJECT DETECTION</span><span>04 / 04</span></div>
-                <h3>Ship detection in RGB imagery</h3>
-                <p>A pretrained deep-learning model for detecting ships in RGB imagery, exploring how satellite scenes can reveal useful maritime patterns.</p>
-                <a class="project-link" href="https://www.arcgis.com/home/item.html?id=2fd653cd9de446ccbab34f69e9e70d81" target="_blank" rel="noreferrer">View model <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="github-activity section" id="github-activity" aria-labelledby="github-title">
-        <div class="page-wrap">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow"><span class="eyebrow-line"></span> PUBLIC PROFILE · CONTRIBUTIONS</p>
-              <h2 id="github-title">GitHub <em>contributions.</em></h2>
-            </div>
-            <span class="section-index">GITHUB PROFILE</span>
-          </div>
-
-          <div class="github-dashboard" id="github-dashboard" aria-busy="true">
-            <article class="github-profile-card" aria-label="GitHub profile">
-              <div class="github-profile-heading">
-                <span class="github-mark" aria-hidden="true">GH</span>
-                <div>
-                  <p class="github-kicker">RESEARCHER PROFILE</p>
-                  <a
-                    class="github-username"
-                    href="https://github.com/neha-sharma-geoai"
-                    target="_blank"
-                    rel="noreferrer"
-                  >@neha-sharma-geoai <span aria-hidden="true">↗</span></a>
+                <div class="map-me" style="--x: 68.5%; --y: 54.2%">
+                  <span class="map-me-label">
+                    <strong>Neha Sharma</strong>
+                    <span>Gwalior, India</span>
+                    <span>26.2° N · 78.2° E</span>
+                  </span>
+                  <img
+                    src="assets/neha-sharma-portrait.jpg"
+                    alt="Neha Sharma, based in Gwalior, India"
+                    fetchpriority="high"
+                  />
                 </div>
               </div>
-              <p class="github-bio" id="github-bio">Loading public profile…</p>
-              <a class="github-profile-link" href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer">
-                View GitHub profile <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <dl class="github-stats" aria-label="Public GitHub contribution totals">
-              <div>
-                <dt>Commits</dt>
-                <dd id="github-commits">—</dd>
-              </div>
-              <div>
-                <dt>Issues opened</dt>
-                <dd id="github-issues">—</dd>
-              </div>
-              <div>
-                <dt>Pull requests</dt>
-                <dd id="github-pull-requests">—</dd>
-              </div>
-              <div>
-                <dt>Repositories</dt>
-                <dd id="github-repositories">—</dd>
-              </div>
-              <div>
-                <dt>Followers</dt>
-                <dd id="github-followers">—</dd>
-              </div>
-              <div>
-                <dt>Member since</dt>
-                <dd id="github-member-since">—</dd>
-              </div>
-            </dl>
-          </div>
-
-          <section class="github-affiliations" aria-labelledby="github-affiliations-title">
-            <div class="github-affiliations-heading">
-              <div>
-                <p class="github-kicker">ORGANIZATIONS</p>
-                <h3 id="github-affiliations-title">Affiliations</h3>
-              </div>
-              <p>Research and community connections</p>
+              <ul class="console-readout" aria-label="Profile at a glance">
+                <li><span>RESEARCHER</span><strong>GeoAI · Earth Observation · Digital Twins · Remote Sensing</strong></li>
+                <li><span>AUTHOR</span><strong>Co-editor, Smart Buildings &amp; Cities (T&amp;F, 2025)</strong></li>
+                <li><span>EDUCATOR</span><strong>NIT Calicut · CoA GAP · 2,500+ community</strong></li>
+              </ul>
             </div>
-            <ul class="github-affiliation-list">
-              <li>
-                <span class="github-affiliation-status">Current</span>
-                <span class="github-affiliation-name">MIT CompBio</span>
-              </li>
-              <li>
-                <span class="github-affiliation-status github-affiliation-status--former">Former</span>
-                <a class="github-affiliation-name" href="https://www.esri.com/" target="_blank" rel="noreferrer">Esri <span aria-hidden="true">↗</span></a>
-              </li>
-            </ul>
-          </section>
-
-          <p class="github-profile-status" id="github-profile-status" role="status">Loading public GitHub metrics…</p>
-          <p class="github-data-note">Contribution totals reflect public GitHub data; private activity is not included.</p>
-        </div>
-      </section>
-
-      <section class="about section page-wrap" id="about" aria-labelledby="about-title">
-        <svg class="page-satellite-orbit page-satellite-orbit--about" viewBox="0 0 320 140" aria-hidden="true" focusable="false">
-          <ellipse class="page-satellite-track" cx="160" cy="70" rx="142" ry="52" />
-          <g class="page-satellite-rotor">
-            <svg x="264" y="51" width="56" height="38" viewBox="0 0 60 40" fill="none" aria-hidden="true" focusable="false">
-              <path d="M2 12h14v16H2zM44 12h14v16H44z" fill="var(--water-deep)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M7 12v16m5-16v16m37-16v16m5-16v16" stroke="var(--paper)" stroke-opacity=".64" stroke-width=".8" />
-              <path d="M16 20h28" stroke="var(--paper)" stroke-width="2" />
-              <rect x="22" y="13" width="16" height="14" rx="2" fill="var(--sand)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M30 13V6m-4 0h8M30 27v7" stroke="var(--paper)" stroke-linecap="round" stroke-width="1.6" />
-              <circle cx="30" cy="20" r="2.5" fill="var(--clay)" stroke="var(--paper)" stroke-width=".8" />
-            </svg>
-          </g>
-        </svg>
-        <div class="section-heading">
-          <p class="eyebrow"><span class="eyebrow-line"></span> A PRACTICE ROOTED IN PLACE</p>
-          <span class="section-index">02 — ABOUT</span>
-        </div>
-        <div class="about-grid">
-          <h2 id="about-title">Curiosity about the world, grounded in <em>where.</em></h2>
-          <div class="about-copy">
-            <p>
-              Neha Sharma brings geospatial science and artificial intelligence together
-              to make complex spatial information easier to explore, interpret,
-              and apply to real-world questions.
-            </p>
-            <p>
-              Based in India, she works remotely with MIT CSAIL on research and
-              outreach in visual data science, multimodal knowledge exploration,
-              and human–AI collaboration. She also contributes to the WCRP Digital
-              Twins – Beyond Physical Systems Working Group within the Digital
-              Earths Lighthouse Activity.
-            </p>
-          </div>
-        </div>
-        <div class="experience-row">
-          <div class="experience-label">A path through<br />different scales</div>
-          <div class="experience-item">
-            <span class="experience-period">CURRENT</span>
-            <strong>MIT CSAIL</strong>
-            <span>AI research &amp; outreach · Remote from India</span>
-          </div>
-          <div class="experience-item">
-            <span class="experience-period">CURRENT</span>
-            <strong>GeoAI subject matter expert</strong>
-            <span>Bootcamp in GIS · California-based GIS edtech</span>
-          </div>
-          <div class="experience-item">
-            <span class="experience-period">2023 — 2026</span>
-            <strong>Esri · GeoAI R&amp;D Center</strong>
-            <span>Product Engineer · Geospatial Data Science</span>
-          </div>
-          <div class="experience-item">
-            <span class="experience-period">BEFORE</span>
-            <strong>Larsen &amp; Toubro</strong>
-            <span>GeoAI · Built environment</span>
-          </div>
-        </div>
-        <aside class="geo-journey" id="geo-journey" aria-labelledby="journey-title">
-          <div class="journey-intro">
-            <div class="journey-intro-heading">
-              <p class="eyebrow"><span class="eyebrow-line"></span> GEOGRAPHY, EXPERIENCE &amp; RESEARCH</p>
-              <h3 id="journey-title">A journey mapped across <em>places.</em></h3>
-            </div>
-            <div class="journey-intro-copy">
-              <p class="locus-description">
-                From Gwalior and universities in India to online study at Liverpool
-                John Moores University, remote work with MIT in Boston, and GeoAI
-                teaching for a California GIS edtech team. The map distinguishes
-                where places are from how they connect to Neha’s work.
+            <div class="namaste-welcome">
+              <button
+                class="namaste-trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="namaste-message"
+              >
+                <span class="namaste-icon" aria-hidden="true">🙏</span>
+                <span>Namaste</span>
+                <span class="namaste-hint">Click to say hello</span>
+              </button>
+              <p class="namaste-message" id="namaste-message" aria-live="polite" hidden>
+                Namaste, welcome to my profile! <a href="#research">Explore my research and projects <span aria-hidden="true">↘</span></a>
               </p>
             </div>
           </div>
-          <div class="journey-maps">
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Career at a glance">
+        <dl class="wrap stats-grid">
+          <div class="reveal">
+            <dt>years of industry experience in global R&amp;D centers</dt>
+            <dd>6+</dd>
+          </div>
+          <div class="reveal">
+            <dt>papers, chapters, and a co-edited book</dt>
+            <dd>11</dd>
+          </div>
+          <div class="reveal">
+            <dt>sessions across NIT Calicut, SPA Bhopal, CoA-TRC &amp; SAIARD/NIUA</dt>
+            <dd>30+</dd>
+          </div>
+          <div class="reveal">
+            <dt>people trained through national capacity-building programs</dt>
+            <dd>200+</dd>
+          </div>
+          <div class="reveal">
+            <dt>members in her global GeoAI community</dt>
+            <dd>2,500+</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section about wrap" id="about" aria-labelledby="about-title">
+        <figure class="about-photo reveal">
+          <img
+            src="assets/neha-among-the-trees.jpg"
+            alt="Neha standing beside a large tree in a garden"
+            loading="lazy"
+          />
+          <figcaption><span>FIELD NOTE 01</span><span>PLACE BEFORE PIXELS</span></figcaption>
+        </figure>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Profile</p>
+          <h2 id="about-title">From designing buildings to <span class="gradient-text">decoding the planet.</span></h2>
+          <p>
+            Trained across architecture, geomatics, and deep learning, Neha
+            builds geospatial AI that is rigorous enough for research and
+            usable enough for planners. She is a founding member of the GeoAI
+            R&amp;D team at Larsen &amp; Toubro, and spent three years at Esri’s GeoAI
+            R&amp;D Center shipping and quality-assuring pretrained models used
+            across ArcGIS.
+          </p>
+          <p>
+            Today she works remotely from India with MIT CSAIL on a visual data
+            science platform for multimodal knowledge exploration and
+            human–AI collaboration, and contributes to the WCRP Digital Twins –
+            Beyond Physical Systems Working Group.
+          </p>
+          <p class="about-note">
+            The data matters. The <em>living world</em> matters more. Her work
+            keeps people, ecosystems, and local knowledge in view as spatial
+            data becomes insight.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="research" aria-labelledby="research-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">01 · Research focus</p>
+            <h2 id="research-title">Where Earth observation meets <span class="gradient-text">machine intelligence.</span></h2>
+            <p class="section-intro">
+              Five connected threads, from the pixel-level models to the Earth
+              system frameworks they ultimately serve.
+            </p>
+          </header>
+
+          <div class="focus-grid">
+            <article class="focus-card reveal">
+              <span class="focus-index">01</span>
+              <h3>Geospatial deep learning</h3>
+              <p>Object detection, instance and semantic segmentation for satellite and drone imagery using Mask R-CNN, DeepLabv3, YOLOv5, and U-Net.</p>
+              <ul class="tag-list"><li>PyTorch</li><li>TensorFlow</li><li>arcgis.learn</li></ul>
+            </article>
+            <article class="focus-card reveal">
+              <span class="focus-index">02</span>
+              <h3>Multimodal Earth observation</h3>
+              <p>Fusing RGB and SAR for robust building detection and height estimation, using a dataset that spans seven continents.</p>
+              <ul class="tag-list"><li>SAR</li><li>Hyperspectral</li><li>Multitask learning</li></ul>
+            </article>
+            <article class="focus-card reveal">
+              <span class="focus-index">03</span>
+              <h3>Digital Earth &amp; digital twins</h3>
+              <p>Connecting human and physical Earth systems for hydroclimate risk, water, agriculture, energy, and urban planning.</p>
+              <ul class="tag-list"><li>WCRP</li><li>Urban twins</li><li>Climate risk</li></ul>
+            </article>
+            <article class="focus-card reveal">
+              <span class="focus-index">04</span>
+              <h3>Urban air &amp; environmental monitoring</h3>
+              <p>Spatio-temporal analysis of pollution and land use with Sentinel-5P, MODIS, and AURA OMI, including a satellite-based air quality index.</p>
+              <ul class="tag-list"><li>Sentinel-5P</li><li>MODIS</li><li>GIS</li></ul>
+            </article>
+            <article class="focus-card reveal">
+              <span class="focus-index">05</span>
+              <h3>Human–AI collaboration</h3>
+              <p>Visual data science and multimodal knowledge exploration at MIT CSAIL, plus efficient LLM fine-tuning for low-resource settings.</p>
+              <ul class="tag-list"><li>LoRA · QLoRA</li><li>Hugging Face</li><li>Visual analytics</li></ul>
+            </article>
+            <aside class="earth-diagram reveal" aria-label="Earth systems diagram">
+              <svg class="system-map" viewBox="0 0 520 520" fill="none" role="img" aria-labelledby="system-title system-desc">
+                <title id="system-title">Earth systems connected through spatial data</title>
+                <desc id="system-desc">A globe is surrounded by connected climate, water, cities, land, people, and energy nodes.</desc>
+                <circle class="system-ring" cx="260" cy="260" r="219" />
+                <circle class="system-ring system-ring--mid" cx="260" cy="260" r="162" />
+                <circle class="system-ring system-ring--inner" cx="260" cy="260" r="107" />
+                <path class="system-link" d="M260 153V83M354 203l61-35M353 316l64 36M260 367v72M167 316l-62 36M167 203l-62-35" />
+                <circle class="system-node" cx="260" cy="76" r="42" />
+                <circle class="system-node" cx="424" cy="165" r="42" />
+                <circle class="system-node" cx="424" cy="355" r="42" />
+                <circle class="system-node" cx="260" cy="444" r="42" />
+                <circle class="system-node" cx="96" cy="355" r="42" />
+                <circle class="system-node" cx="96" cy="165" r="42" />
+                <circle class="system-center" cx="260" cy="260" r="91" />
+                <ellipse class="system-line" cx="260" cy="260" rx="91" ry="34" />
+                <ellipse class="system-line" cx="260" cy="260" rx="40" ry="91" />
+                <path class="system-land" d="m202 222 18-19 19-3 11 8 14-3 12 8 15 2 12 13-9 11-14 1-9 11-14 2-11-9-12 5-11-7-13 2-9-11-12-4-5-10Z" />
+                <path class="system-land" d="m245 272 15-7 15 8 10 15-6 15-8 12-4 16-12 10-9-12-3-14-10-14 3-13-9-11Z" />
+                <text class="system-label" x="260" y="81" text-anchor="middle">CLIMATE</text>
+                <text class="system-label" x="424" y="170" text-anchor="middle">WATER</text>
+                <text class="system-label" x="424" y="360" text-anchor="middle">CITIES</text>
+                <text class="system-label" x="260" y="449" text-anchor="middle">LAND</text>
+                <text class="system-label" x="96" y="360" text-anchor="middle">PEOPLE</text>
+                <text class="system-label" x="96" y="170" text-anchor="middle">ENERGY</text>
+              </svg>
+              <p>The Earth isn’t a set of layers. It’s a set of <em>relationships.</em></p>
+              <a class="text-link" href="https://www.wcrp-climate.org/" target="_blank" rel="noreferrer">About the WCRP <span aria-hidden="true">↗</span></a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">02 · Selected research</p>
+            <h2 id="projects-title">From pixels to <span class="gradient-text">patterns.</span></h2>
+            <p class="section-intro">
+              Theses, models, and applied systems across remote sensing,
+              computer vision, GIS, and language models.
+            </p>
+          </header>
+
+          <div class="project-grid">
+            <article class="project-card project-card--feature project-card--roof reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-fill"><rect x="36" y="34" width="96" height="62" rx="3" /><rect x="168" y="44" width="84" height="76" rx="3" /><rect x="286" y="30" width="82" height="52" rx="3" /><circle cx="104" cy="140" r="27" /></g>
+                  <g class="pa-stroke"><path d="M36 65h96M168 82h84M200 44l-14 38 14 38M220 44l14 38-14 38" /><rect x="298" y="42" width="58" height="28" /><circle cx="104" cy="140" r="12" /></g>
+                  <g class="pa-stroke pa-dash"><rect x="30" y="28" width="108" height="74" /><rect x="162" y="38" width="96" height="88" /><rect x="280" y="24" width="94" height="64" /><rect x="72" y="108" width="64" height="64" /></g>
+                  <g class="pa-text"><text x="32" y="22">GABLE</text><text x="162" y="32">HIP</text><text x="280" y="18">FLAT</text><text x="144" y="150">DOME</text></g>
+                  <g class="pa-stroke pa-faint"><path d="M200 150q14-12 28 0t28 0 28 0 28 0 28 0M200 162q14-12 28 0t28 0 28 0 28 0 28 0M200 174q14-12 28 0t28 0 28 0 28 0 28 0" /></g>
+                  <g class="pa-fill pa-fill--strong"><rect x="304" y="104" width="12" height="40" /><rect x="324" y="88" width="12" height="56" /><rect x="344" y="116" width="12" height="28" /></g>
+                </svg>
+                <span>ROOF TYPE · HEIGHT · RGB + SAR</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">MS Data Science thesis · LJMU</p>
+                <h3>Reading rooftops from above</h3>
+                <p>Fine-grained classification of 12 roof types, with a unified DeepLabv3 model that detects buildings and estimates height simultaneously from high-resolution satellite imagery.</p>
+                <ul class="tag-list"><li>Multimodal multitasking</li><li>7 continents</li><li>Rasterio + PyTorch</li></ul>
+                <a class="project-link" href="https://link.springer.com/book/9789819677481#overview" target="_blank" rel="noreferrer">Springer paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--feature project-card--ship reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-stroke pa-faint"><path d="M-10 40q40-14 80 0t80 0 80 0 80 0 80 0M-10 80q40-14 80 0t80 0 80 0 80 0 80 0M-10 120q40-14 80 0t80 0 80 0 80 0 80 0M-10 160q40-14 80 0t80 0 80 0 80 0 80 0" /></g>
+                  <g class="pa-stroke pa-dash"><path d="M20 168C90 126 150 110 210 100S320 70 410 30" /></g>
+                  <g class="pa-fill pa-fill--strong"><path d="M150 92l60-18 14 14-12 24-48 12z" /><path d="M262 66l44-12 10 10-8 18-34 8z" /></g>
+                  <g class="pa-stroke"><rect x="140" y="62" width="100" height="58" /><rect x="252" y="46" width="74" height="46" /></g>
+                  <g class="pa-text"><text x="140" y="56">SHIP 0.97</text><text x="252" y="40">SHIP 0.94</text></g>
+                </svg>
+                <span>RGB SHIP DETECTION · MASK R-CNN</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Esri GeoAI R&amp;D · pretrained model</p>
+                <h3>Ship detection in RGB imagery</h3>
+                <p>Led a Mask R-CNN pretrained model for localizing ships in high-resolution imagery, trained on an in-house dataset of 70,000 ships built globally from Maxar imagery.</p>
+                <ul class="tag-list"><li>ArcGIS API for Python</li><li>Living Atlas</li><li>Maritime monitoring</li></ul>
+                <a class="project-link" href="https://www.arcgis.com/home/item.html?id=2fd653cd9de446ccbab34f69e9e70d81" target="_blank" rel="noreferrer">View model <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--air reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-stroke pa-faint"><path d="M-10 150C60 110 110 120 170 90S300 40 410 70M60-10C80 50 130 70 140 120S120 180 150 200M260-10C240 40 280 80 260 120s20 60 40 80" /></g>
+                  <g class="pa-fill"><circle cx="180" cy="100" r="74" /><circle cx="180" cy="100" r="48" /><circle cx="290" cy="70" r="40" /></g>
+                  <g class="pa-fill pa-fill--strong"><circle cx="180" cy="100" r="24" /><circle cx="290" cy="70" r="16" /></g>
+                  <g class="pa-stroke"><circle cx="180" cy="100" r="92" /><circle cx="180" cy="100" r="110" /><circle cx="290" cy="70" r="58" /></g>
+                  <g class="pa-text"><text x="188" y="104">NO₂ HOTSPOT</text></g>
+                </svg>
+                <span>AHMEDABAD · AIR QUALITY</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">M.Tech thesis · CEPT</p>
+                <h3>Urban air quality, in space &amp; time</h3>
+                <p>Mapped pollution hotspots with AURA OMI, MODIS MAIAC, and Sentinel-5P, including the 2020 lockdown, and built a satellite-based spatial air quality index.</p>
+                <a class="project-link" href="https://repository.cept.ac.in/items/bd12366d-50ec-41a4-8bdb-dc010cd081b9" target="_blank" rel="noreferrer">View thesis <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--llm reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-fill"><rect x="30" y="36" width="64" height="104" rx="3" /></g>
+                  <g class="pa-fill pa-fill--strong"><rect x="134" y="36" width="64" height="28" rx="3" /><rect x="134" y="76" width="64" height="12" rx="3" /></g>
+                  <g class="pa-stroke"><rect x="30" y="36" width="64" height="104" rx="3" /><rect x="134" y="36" width="64" height="28" rx="3" /><rect x="134" y="76" width="64" height="12" rx="3" /><path d="M96 88h36M96 62h36" /></g>
+                  <g class="pa-fill pa-fill--strong"><rect x="256" y="34" width="26" height="106" /><rect x="292" y="84" width="26" height="56" /><rect x="328" y="102" width="26" height="38" /></g>
+                  <g class="pa-text"><text x="32" y="156">FULL FT</text><text x="132" y="156">LoRA</text><text x="250" y="156">100%</text><text x="290" y="156">~35%</text><text x="326" y="156">QLoRA</text></g>
+                  <g class="pa-stroke pa-dash"><path d="M240 140h130" /></g>
+                </svg>
+                <span>FLAN-T5 · LoRA · QLoRA</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">IIT Delhi · GenAI capstone</p>
+                <h3>Efficient LLM fine-tuning</h3>
+                <p>Compared LoRA, QLoRA, and prefix-tuning against full fine-tuning on FLAN-T5, cutting GPU memory by 65–70% with minimal accuracy loss.</p>
+                <ul class="tag-list"><li>PEFT</li><li>BLEU · ROUGE</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-card--drone reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-stroke pa-faint"><path d="M-10 160C60 120 120 150 190 120S310 90 410 120M-10 180C70 150 130 175 200 150S320 130 410 150" /></g>
+                  <g class="pa-stroke pa-dash"><path d="M30 150C90 80 150 120 200 70S300 40 370 60" /></g>
+                  <g class="pa-stroke"><path d="M56 28h-20v20M344 28h20v20M56 142h-20v-20M344 142h20v-20" /></g>
+                  <g class="pa-fill pa-fill--strong"><rect x="150" y="84" width="34" height="22" rx="3" /><rect x="236" y="62" width="30" height="20" rx="3" /></g>
+                  <g class="pa-stroke"><rect x="142" y="76" width="50" height="38" /><rect x="228" y="54" width="46" height="36" /></g>
+                  <g class="pa-text"><text x="142" y="70">VEHICLE</text><text x="228" y="48">VEHICLE</text><text x="50" y="22">● REC</text><text x="316" y="22">SRT · GPS</text></g>
+                </svg>
+                <span>DRONE VIDEO · GEO-LOCATION</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">Larsen &amp; Toubro · applied GeoAI</p>
+                <h3>Full-motion video analytics</h3>
+                <p>Geo-located objects from drone metadata, ran Mask R-CNN detection on video, and shipped a Flask and Leaflet web app for monitoring sites.</p>
+                <ul class="tag-list"><li>Photogrammetry</li><li>Flask</li><li>Leaflet</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-card--land reveal">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <g class="pa-fill"><path d="M10 30l80-14 40 28-20 50-76 8z" /><path d="M140 14l90 6 20 40-60 26-60-24z" /><path d="M244 24l90-12 60 34-40 44-90-6z" /></g>
+                  <g class="pa-fill pa-fill--strong"><path d="M20 116l90-10 30 36-40 40-84-14z" /><path d="M150 102l80 8 24 40-50 30-64-30z" /><path d="M262 108l86-14 50 42-60 36-76-24z" /></g>
+                  <g class="pa-stroke"><path d="M10 30l80-14 40 28-20 50-76 8zM140 14l90 6 20 40-60 26-60-24zM244 24l90-12 60 34-40 44-90-6zM20 116l90-10 30 36-40 40-84-14zM150 102l80 8 24 40-50 30-64-30zM262 108l86-14 50 42-60 36-76-24z" /></g>
+                  <g class="pa-stroke pa-faint"><path d="M-10 96C70 70 140 100 210 84S330 70 410 92" /></g>
+                </svg>
+                <span>GUJARAT · CROPS · SEASONS</span>
+              </div>
+              <div class="project-body">
+                <p class="project-meta">GIS studio · CEPT</p>
+                <h3>Following the fields of Gujarat</h3>
+                <p>District-level cropping-pattern assessment for the 2018 monsoon, examining crop shifts, surplus, and suitability.</p>
+                <a class="project-link" href="https://portfolio.cept.ac.in/2024/M/ft/geographic-information-science-foundation-studio-5757-monsoon-2018/assessment-of-crops-of-gujarat-monsoon-2018-pg180592" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="toolkit reveal" aria-label="Toolkit">
+            <p class="eyebrow">Toolkit</p>
+            <ul class="tag-list tag-list--large">
+              <li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>Hugging Face</li><li>PyTorch Lightning</li>
+              <li>ArcGIS API for Python</li><li>Google Earth Engine</li><li>Rasterio</li><li>GeoPandas</li>
+              <li>Dask</li><li>Azure Databricks</li><li>QGIS</li><li>ESA SNAP</li><li>Flask · Leaflet</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="publications" aria-labelledby="publications-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">03 · Publications</p>
+            <h2 id="publications-title">Ideas made <span class="gradient-text">shareable.</span></h2>
+          </header>
+
+          <div class="book-feature reveal">
+            <div class="book-cover" aria-hidden="true">
+              <span class="book-kicker">A FIELD GUIDE TO</span>
+              <strong>Smart<br />Buildings<br /><span>&amp;</span> Cities</strong>
+              <span class="book-subtitle">WITH REMOTE SENSING &amp; GIS</span>
+              <span class="book-publisher">CRC PRESS · 2025</span>
+            </div>
+            <div class="book-copy">
+              <p class="eyebrow">Co-edited book</p>
+              <h3>Smart Buildings and Cities with Remote Sensing and GIS</h3>
+              <p>
+                Co-edited with Dr. Shiv Mohan and Dr. Navneet Munoth, a
+                first-of-its-kind volume bridging remote sensing, GIS,
+                architecture, and planning. Neha also co-authored four chapters
+                in the book. Published with
+                <strong>Taylor &amp; Francis</strong> (2025), New York, USA.
+              </p>
+              <a class="button button-primary" href="https://www.taylorfrancis.com/books/edit/10.1201/9781003453321/smart-buildings-cities-remote-sensing-gis-shiv-mohan-navneet-munoth-neha-sharma" target="_blank" rel="noreferrer">Discover the book <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="publication-list">
+            <article class="publication-entry reveal">
+              <span class="publication-kind">Paper · 2026</span>
+              <div>
+                <h3>Satellite Image-Based Spatial Analysis of Urban Air Quality Index</h3>
+                <p>Darshana Rawal, Sindhu Ranganath, Neha Sharma &amp; Anjana Vyas. <i>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</i>, XLIX-B3-2026, 773–781. ISPRS Congress 2026, Canada.</p>
+              </div>
+              <a class="publication-link" href="https://doi.org/10.5194/isprs-archives-xlix-b3-2026-773-2026" target="_blank" rel="noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="publication-entry reveal">
+              <span class="publication-kind">Conference · 2025</span>
+              <div>
+                <h3>Fine-Grained Roof Type Classification &amp; Multimodal Multitasking Building Detection &amp; Height Estimation Using High-Resolution Satellite Imagery</h3>
+                <p>First author. International Conference on Data Science and Emerging Technologies (DaSET 2024), Springer, Singapore.</p>
+              </div>
+              <a class="publication-link" href="https://link.springer.com/book/9789819677481#overview" target="_blank" rel="noreferrer">Read proceedings <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="publication-entry reveal">
+              <span class="publication-kind">Chapter · 2025</span>
+              <div>
+                <h3>Introduction to Remote Sensing and GIS</h3>
+                <p>In <i>Smart Buildings and Cities with Remote Sensing and GIS</i>, CRC Press · Taylor &amp; Francis.</p>
+              </div>
+              <a class="publication-link" href="https://doi.org/10.1201/9781003453321-2" target="_blank" rel="noreferrer">Read chapter <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="publication-entry reveal">
+              <span class="publication-kind">Chapter · 2025</span>
+              <div>
+                <h3>Land Use Land Cover Mapping of San Diego Using AVIRIS Hyperspectral Imagery</h3>
+                <p>First author. In <i>Smart Buildings and Cities with Remote Sensing and GIS</i>, CRC Press · Taylor &amp; Francis.</p>
+              </div>
+              <a class="publication-link" href="https://doi.org/10.1201/9781003453321-18" target="_blank" rel="noreferrer">Read chapter <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+
+          <details class="more-publications reveal">
+            <summary>More publications (2016–2025)</summary>
+            <ul>
+              <li><span>2025</span> <strong>Smart Architectural Site Analysis using Remote Sensing and GIS</strong> · book chapter, second author</li>
+              <li><span>2025</span> <strong>Satellite Missions and Data Products for Architectural and Urban Planning Applications</strong> · book chapter, first author</li>
+              <li><span>2021</span> <strong>GIS-Based Air Quality Index Spatial Model for Indian Cities</strong> · <i>Challenges and Solutions for Sustainable Smart City Development</i>, Springer, second author</li>
+              <li><span>2020</span> <strong>Dramatic &amp; Conspicuous Impact of National Lockdown 2020 on Air Pollution Levels of Ahmedabad District</strong> · National Symposium (ISRO, ISRS, ISG), first author</li>
+              <li><span>2020</span> <strong>CAG Assesses Impact of Lockdown on Air Quality</strong> · CRDF Connect magazine, first author</li>
+              <li><span>2016</span> <strong>Green Building in Hot-Dry Climate – Design Contemplations</strong> · Amity University Journal, first author</li>
+            </ul>
+          </details>
+
+          <div class="writing reveal" aria-labelledby="writing-title">
+            <div class="writing-head">
+              <h3 id="writing-title">Latest writing</h3>
+              <p>
+                <a href="https://medium.com/@nsgeoai" target="_blank" rel="noreferrer">All on Medium <span aria-hidden="true">↗</span></a>
+                <a href="https://www.esri.com/arcgis-blog/author/nsharma" target="_blank" rel="noreferrer">All on ArcGIS Blog <span aria-hidden="true">↗</span></a>
+              </p>
+            </div>
+            <div class="article-grid">
+              <a class="article-card" href="https://medium.com/@nsgeoai/download-resourcesat-liss-iv-5-8-m-satellite-imagery-from-isros-bhoonidhi-portal-23550baa0d2d" target="_blank" rel="noreferrer">
+                <img src="assets/blog/medium-liss4.jpg" alt="" width="720" height="405" loading="lazy" />
+                <span class="article-source">MEDIUM · 4 NOV 2026</span>
+                <strong>Download ResourceSat LISS-IV (5.8 m) Satellite Imagery from ISRO’s Bhoonidhi Portal</strong>
+              </a>
+              <a class="article-card" href="https://medium.com/@nsgeoai/how-to-download-landsat-8-landsat-9-satellite-imagery-from-usgs-earthexplorer-dcac5ed26600" target="_blank" rel="noreferrer">
+                <img src="assets/blog/medium-landsat.jpg" alt="" width="720" height="405" loading="lazy" />
+                <span class="article-source">MEDIUM · 24 OCT 2026</span>
+                <strong>How to Download Landsat 8 &amp; Landsat 9 Satellite Imagery from USGS EarthExplorer</strong>
+              </a>
+              <a class="article-card" href="https://www.esri.com/arcgis-blog/products/arcgis-pro/geoai/boosting-geoai-model-performance-with-test-time-augmentation" target="_blank" rel="noreferrer">
+                <img src="assets/blog/arcgis-tta.jpg" alt="" width="720" height="405" loading="lazy" />
+                <span class="article-source article-source--esri">ARCGIS BLOG · 15 MAY 2025</span>
+                <strong>Boosting GeoAI Model Performance with Test Time Augmentation</strong>
+              </a>
+              <a class="article-card" href="https://www.esri.com/arcgis-blog/products/arcgis/geoai/esri-arcgis-ai-models-year-in-review" target="_blank" rel="noreferrer">
+                <img src="assets/blog/arcgis-year-in-review.jpg" alt="" width="720" height="406" loading="lazy" />
+                <span class="article-source article-source--esri">ARCGIS BLOG · 22 DEC 2023</span>
+                <strong>ArcGIS AI Models – Year in Review</strong>
+              </a>
+            </div>
+          </div>
+          <p class="footnote">The complete record is on <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">↗</span></a> and <a href="https://scholar.google.com/citations?user=JXyMLRcAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>.</p>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">04 · Experience</p>
+            <h2 id="experience-title">A path through <span class="gradient-text">different scales.</span></h2>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <span class="timeline-period">Oct 2026 — Present</span>
+              <div>
+                <h3>GeoAI subject matter expert · Bootcamp in GIS <small>California-based GIS EdTech</small></h3>
+                <p>Contributing GeoAI expertise to a hands-on GIS learning programme.</p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-period">May 2026 — Present</span>
+              <div>
+                <h3>GeoAI Developer · MIT CSAIL <small>Remote from India</small></h3>
+                <p>Developing geospatial capabilities on a visual data science platform for multimodal knowledge exploration and human–AI collaboration.</p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-period">May 2026 — Present</span>
+              <div>
+                <h3>Member · World Climate Research Programme <small>Geneva</small></h3>
+                <p>Digital Earths Lighthouse Activity, sponsored by WMO, IOC-UNESCO, and ISC. Advancing Digital Earth and digital twin frameworks that integrate human and physical Earth systems.</p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-period">Feb 2023 — Jan 2026</span>
+              <div>
+                <h3>Product Engineer II / I · Esri GeoAI R&amp;D Center <small>New Delhi</small></h3>
+                <p>Built and maintained ArcGIS pretrained models on Living Atlas, led the Ship Detection (RGB) model, and ran quality assurance for the <code>arcgis.learn</code> module, AutoML, and time-series tools. Authored documentation, story maps, and blogs.</p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-period">Oct 2020 — Feb 2023</span>
+              <div>
+                <h3>Software Engineer, GeoAI · L&amp;T · Mindtree · LTIMindtree <small>Chennai</small></h3>
+                <p>Founding member of the GeoAI R&amp;D team. Delivered biodiversity big-data pipelines on Azure Databricks for S&amp;P Global, drone video analytics, and deep learning for solar, construction, pool, and land-cover detection.</p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <span class="timeline-period">2020</span>
+              <div>
+                <h3>Research Assistant &amp; Teaching Associate · CEPT University <small>Ahmedabad</small></h3>
+                <p>Contributed to an ISRO-SAC urban air quality project (Sentinel-5P, MODIS) and assisted with the M.Tech Geomatics foundation studio.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="teaching" aria-labelledby="teaching-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">05 · Teaching &amp; capacity building</p>
+            <h2 id="teaching-title">Building skills across <span class="gradient-text">disciplines.</span></h2>
+            <p class="section-intro">
+              Neha has delivered 24 expert and guest sessions across NIT
+              Calicut, SPA Bhopal, CoA-TRC, and SAIARD/NIUA, and has co-organized
+              and taught through the Council of Architecture’s national GAP
+              capacity-building programme.
+            </p>
+          </header>
+
+          <div class="teaching-grid">
+            <article class="teaching-card reveal">
+              <span class="teaching-level">NIT Calicut · MoHUA · 2025–2026</span>
+              <h3>GeoAI for resilient urban systems</h3>
+              <p>Faculty for the Centre of Excellence in Urban Planning &amp; Design. Delivered 16 hands-on sessions in 2025 and 5 more in June 2026 on GeoAI for disaster management and digital twins for urban managers.</p>
+              <ul class="tag-list"><li>Flood mapping</li><li>Change detection</li><li>Digital twins</li></ul>
+            </article>
+            <article class="teaching-card reveal">
+              <span class="teaching-level">CoA-TRC · 2020–2023</span>
+              <h3>GAP: Bridging Geomatics, Architects &amp; Planners</h3>
+              <p>A national online programme in two levels, from GIS foundations to LULC, UAV, BIM–GIS, and spatial machine learning. Over 200 students and professionals trained.</p>
+              <ul class="tag-list"><li>Remote sensing</li><li>BIM–GIS</li><li>Spatial AI</li></ul>
+            </article>
+            <article class="teaching-card reveal">
+              <span class="teaching-level">Invited talks</span>
+              <h3>Guest sessions</h3>
+              <ul class="talk-list">
+                <li><span>2025</span> Google Earth Engine for Spatial Planning · SPA Bhopal</li>
+                <li><span>2022</span> Digital Research Methods in Architecture &amp; Planning · CoA-TRC FDP</li>
+                <li><span>2021</span> Role of GIS in Smart Transportation · SAIARD / NIUA</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="community-links reveal">
+            <a class="community-card" href="https://www.youtube.com/@BVM-Earth-AI" target="_blank" rel="noreferrer">
+              <span class="community-type">VIDEO CHANNEL</span>
+              <strong>BVM · Earth AI</strong>
+              <span>GeoAI, remote sensing, and geospatial learning on YouTube.</span>
+              <span class="community-cta">Watch on YouTube <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="community-card" href="https://www.linkedin.com/groups/14274291/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7523443243020242944&amp;q=highlightedFeedForGroups" target="_blank" rel="noreferrer">
+              <span class="community-type">GLOBAL COMMUNITY · 2,500+ MEMBERS</span>
+              <strong>Global Group – GeoAI, Remote Sensing &amp; GIS</strong>
+              <span>A space for collaboration, knowledge exchange, and opportunities across academia and industry.</span>
+              <span class="community-cta">Visit LinkedIn group <span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="recognition" aria-labelledby="recognition-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">06 · Recognition</p>
+            <h2 id="recognition-title">Milestones along the <span class="gradient-text">way.</span></h2>
+          </header>
+
+          <div class="recognition-grid">
+            <div class="recognition-column reveal">
+              <h3>Awards &amp; distinctions</h3>
+              <ul class="recognition-list">
+                <li><span class="recognition-year">2025</span><div><strong>Outstanding Achiever Award</strong><span>MS in Data Science · Liverpool John Moores University</span></div></li>
+                <li><span class="recognition-year">2022</span><div><strong>GICEA Gold Medal</strong><span>M.Tech Geomatics · Gujarat Institute of Civil Engineers and Architects</span></div></li>
+                <li><span class="recognition-year">2022</span><div><strong>MindFest Hackathon Winner</strong><span>ServiceNow Platform Hackathon · Mindtree</span></div></li>
+                <li><span class="recognition-year">2021</span><div><strong>Game Changer Team Award</strong><span>Mindtree NxT Hackathon · GeoAI idea for city cleanliness</span></div></li>
+                <li><span class="recognition-year">2020</span><div><strong>Academic Excellence, Best Capstone &amp; Distinguished Student</strong><span>M.Tech Geomatics · CEPT University</span></div></li>
+                <li><span class="recognition-year">2012</span><div><strong>Best Student of the Year · Mathematics</strong><span>Carmel Convent School, Gwalior</span></div></li>
+              </ul>
+            </div>
+            <div class="recognition-column reveal">
+              <h3>National exams</h3>
+              <ul class="recognition-list">
+                <li><span class="recognition-year">2022</span><div><strong>GATE · Geomatics Engineering</strong><span>All India Rank 171</span></div></li>
+                <li><span class="recognition-year">2020</span><div><strong>National JRF Eligibility Test (JET)</strong><span>Qualified · ISRO–IIRS, first national edition</span></div></li>
+                <li><span class="recognition-year">2018</span><div><strong>CEPT PG Entrance · Geomatics</strong><span>All India Rank 2 · admitted to M.Tech Geomatics at CEPT with a merit scholarship</span></div></li>
+                <li><span class="recognition-year">2012–13</span><div><strong>Joint Entrance Examination (JEE)</strong><span>Cleared Paper 1 &amp; 2 in 2012 and 2013, earning admission to MANIT Bhopal for B.Arch</span></div></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="memberships reveal" aria-label="Professional memberships">
+            <p class="eyebrow">Professional memberships</p>
+            <ul class="tag-list tag-list--large">
+              <li>WCRP · Digital Earths</li>
+              <li>American Association of Geographers</li>
+              <li>IEEE GRSS (Young Professional, 2019–22)</li>
+              <li>Indian Society of Geomatics · Life Member</li>
+              <li>Council of Architecture, India</li>
+              <li>The Institution of Engineers (India)</li>
+              <li>Society of Women Engineers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="education" aria-labelledby="education-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">07 · Education</p>
+            <h2 id="education-title">Built across <span class="gradient-text">disciplines.</span></h2>
+          </header>
+
+          <div class="education-grid">
+            <article class="education-card reveal">
+              <span class="education-year">2021 — 2023</span>
+              <h3>MS, Data Science</h3>
+              <p>Liverpool John Moores University</p>
+              <span class="education-note">Specialisation in deep learning · Distinction</span>
+            </article>
+            <article class="education-card reveal">
+              <span class="education-year">2018 — 2020</span>
+              <h3>M.Tech, Geomatics</h3>
+              <p>CEPT University</p>
+              <span class="education-note">Remote sensing &amp; GIS · Gold medallist</span>
+            </article>
+            <article class="education-card reveal">
+              <span class="education-year">2013 — 2018</span>
+              <h3>B.Arch, Architecture</h3>
+              <p>MANIT Bhopal</p>
+              <span class="education-note">Designing for people &amp; place</span>
+            </article>
+          </div>
+
+          <div class="cert-list reveal" aria-label="Recent certifications">
+            <p class="eyebrow">Recent certifications</p>
+            <ul>
+              <li><strong>MIT EECS IAP · GenVizAI</strong><span>Massachusetts Institute of Technology · Jan 2026</span></li>
+              <li><strong>Certificate Program in Generative AI</strong><span>IIT Delhi · Feb–Aug 2025</span></li>
+              <li><strong>PG Diploma in Data Science (Deep Learning)</strong><span>IIIT Bangalore · 2021–22</span></li>
+              <li><strong>Advanced Python</strong><span>Atmosera · Oct 2024</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="journey" aria-labelledby="journey-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">08 · Journey</p>
+            <h2 id="journey-title">A journey mapped across <span class="gradient-text">places.</span></h2>
+            <p class="section-intro">
+              From Gwalior and universities in India to online study at
+              Liverpool John Moores University, remote work with MIT in Boston,
+              and GeoAI teaching for a California GIS edtech team.
+            </p>
+          </header>
+
+          <div class="journey-maps reveal">
             <figure class="locus-map locus-map--world">
               <div class="journey-map-canvas">
                 <div class="map-boundary map-boundary--world" role="img" aria-label="World map boundary"></div>
-                <svg class="journey-annotation-layer journey-route-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <svg class="journey-annotation-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                   <path class="journey-route journey-route--study" d="M68.06 51.74 C61 42 54 32 47.8 30.6" />
                   <path class="journey-route journey-route--work" d="M68.06 51.74 C55 36 42 32 30.55 37.26" />
                   <path class="journey-route journey-route--work" d="M68.06 51.74 C51 40 30 35 15.06 45.72" />
+                  <path class="journey-route journey-route--work" d="M68.06 51.74 C63 43 57 37 49.97 34.9" />
                 </svg>
                 <button class="journey-marker journey-marker--home" type="button" data-latitude="26.2183" data-longitude="78.1828" style="--journey-delay: 0s; --marker-offset-x: -1.5%; --marker-offset-y: 4.5%;" data-popup-title="Home · Gwalior, India" data-popup-detail="Neha Sharma’s hometown in Madhya Pradesh, India." aria-label="Home in Gwalior, India" aria-haspopup="dialog" aria-controls="world-journey-popup" aria-expanded="false"><span aria-hidden="true">1</span></button>
                 <button class="journey-marker journey-marker--study" type="button" data-latitude="53.4084" data-longitude="-2.9916" style="--journey-delay: 0.3s;" data-popup-title="Second master’s · Liverpool, UK" data-popup-detail="MS Data Science at Liverpool John Moores University, completed online from India." aria-label="Online master’s study at Liverpool John Moores University in Liverpool, UK" aria-haspopup="dialog" aria-controls="world-journey-popup" aria-expanded="false"><span aria-hidden="true">2</span></button>
                 <button class="journey-marker journey-marker--work" type="button" data-latitude="42.3601" data-longitude="-71.0589" style="--journey-delay: 0.6s;" data-popup-title="MIT collaboration · Boston, USA" data-popup-detail="Working remotely from India with MIT CSAIL on AI research and outreach." aria-label="Remote work with MIT in Boston, USA" aria-haspopup="dialog" aria-controls="world-journey-popup" aria-expanded="false"><span aria-hidden="true">3</span></button>
                 <button class="journey-marker journey-marker--work journey-marker--san-diego" type="button" data-latitude="32.7157" data-longitude="-117.1611" style="--journey-delay: 0.9s; --marker-offset-x: -2.5%; --marker-offset-y: 2.5%;" data-popup-title="GeoAI subject matter expert · San Diego, USA" data-popup-detail="Recently joined a California-based GIS edtech company for its Bootcamp in GIS." aria-label="GeoAI subject matter expert for a GIS edtech company in San Diego, USA" aria-haspopup="dialog" aria-controls="world-journey-popup" aria-expanded="false"><span aria-hidden="true">4</span></button>
+                <button class="journey-marker journey-marker--work" type="button" data-latitude="46.2044" data-longitude="6.1432" style="--journey-delay: 1.2s;" data-popup-title="WCRP · Geneva, Switzerland" data-popup-detail="Neha is a member of the Digital Earths Lighthouse Activity, sponsored by WMO, IOC-UNESCO, and ISC." aria-label="World Climate Research Programme collaboration in Geneva, Switzerland" aria-haspopup="dialog" aria-controls="world-journey-popup" aria-expanded="false"><span aria-hidden="true">5</span></button>
                 <div class="journey-popup" id="world-journey-popup" role="dialog" aria-labelledby="world-journey-popup-title" aria-describedby="world-journey-popup-detail" hidden>
                   <button class="journey-popup-close" type="button" aria-label="Close location details">×</button>
                   <p class="journey-popup-kicker">A PLACE IN THE JOURNEY</p>
@@ -482,406 +849,107 @@
               <p class="journey-map-instruction">Select a point for the place and mode of collaboration.</p>
             </figure>
             <figure class="locus-map locus-map--india">
-            <div class="journey-map-canvas">
-              <div class="map-boundary map-boundary--india" role="img" aria-label="India map boundary"></div>
-              <svg class="journey-annotation-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <path class="journey-leaders" d="M31 29 42 23M34 37 42 37M31.5 47 42 51" />
-                <circle class="journey-city journey-city--work" cx="31" cy="29" r="0.8" />
-                <circle class="journey-city journey-city--home" cx="34" cy="37" r="0.8" />
-                <circle class="journey-city journey-city--study" cx="31.5" cy="47" r="0.8" />
-                <circle class="journey-city journey-city--study" cx="15" cy="48" r="0.8" />
-                <circle class="journey-city journey-city--work" cx="41.5" cy="82" r="0.8" />
-              </svg>
-              <button class="journey-marker journey-marker--home" type="button" style="--point-x: 42%; --point-y: 37%; --journey-delay: 0s;" data-popup-title="Hometown" data-popup-detail="Gwalior, Madhya Pradesh, India" aria-label="Hometown: Gwalior, Madhya Pradesh, India" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">1</span></button>
-              <button class="journey-marker journey-marker--study" type="button" style="--point-x: 42%; --point-y: 51%; --journey-delay: 0.2s;" data-popup-title="Undergraduate college · Bhopal" data-popup-detail="Bachelor of Architecture · Maulana Azad National Institute of Technology (MANIT)" aria-label="Undergraduate college in Bhopal" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">2</span></button>
-              <button class="journey-marker journey-marker--study" type="button" style="--point-x: 15%; --point-y: 48%; --journey-delay: 0.4s;" data-popup-title="Postgraduate college · Ahmedabad" data-popup-detail="M.Tech in Geomatics · CEPT University" aria-label="Postgraduate college in Ahmedabad" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">3</span></button>
-              <button class="journey-marker journey-marker--work" type="button" style="--point-x: 41.5%; --point-y: 82%; --journey-delay: 0.6s;" data-popup-title="First job · Chennai" data-popup-detail="The first professional chapter began in Chennai." aria-label="First job in Chennai" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">4</span></button>
-              <button class="journey-marker journey-marker--work" type="button" style="--point-x: 42%; --point-y: 23%; --journey-delay: 0.8s;" data-popup-title="Second job · Delhi" data-popup-detail="The next professional chapter took shape in Delhi." aria-label="Second job in Delhi" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">5</span></button>
-              <div class="journey-popup" id="journey-popup" role="dialog" aria-labelledby="journey-popup-title" aria-describedby="journey-popup-detail" hidden>
-                <button class="journey-popup-close" type="button" aria-label="Close location details">×</button>
-                <p class="journey-popup-kicker">A PLACE IN THE JOURNEY</p>
-                <h4 class="journey-popup-title" id="journey-popup-title"></h4>
-                <p class="journey-popup-detail" id="journey-popup-detail"></p>
+              <div class="journey-map-canvas">
+                <div class="map-boundary map-boundary--india" role="img" aria-label="India map boundary"></div>
+                <svg class="journey-annotation-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="journey-leaders" d="M31 29 42 23M34 37 42 37M31.5 47 42 51" />
+                  <circle class="journey-city journey-city--work" cx="31" cy="29" r="0.8" />
+                  <circle class="journey-city journey-city--home" cx="34" cy="37" r="0.8" />
+                  <circle class="journey-city journey-city--study" cx="31.5" cy="47" r="0.8" />
+                  <circle class="journey-city journey-city--study" cx="15" cy="48" r="0.8" />
+                  <circle class="journey-city journey-city--work" cx="41.5" cy="82" r="0.8" />
+                </svg>
+                <button class="journey-marker journey-marker--home" type="button" style="--point-x: 42%; --point-y: 37%; --journey-delay: 0s;" data-popup-title="Hometown" data-popup-detail="Gwalior, Madhya Pradesh, India" aria-label="Hometown: Gwalior, Madhya Pradesh, India" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">1</span></button>
+                <button class="journey-marker journey-marker--study" type="button" style="--point-x: 42%; --point-y: 51%; --journey-delay: 0.2s;" data-popup-title="Undergraduate college · Bhopal" data-popup-detail="Bachelor of Architecture · Maulana Azad National Institute of Technology (MANIT)" aria-label="Undergraduate college in Bhopal" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">2</span></button>
+                <button class="journey-marker journey-marker--study" type="button" style="--point-x: 15%; --point-y: 48%; --journey-delay: 0.4s;" data-popup-title="Postgraduate college · Ahmedabad" data-popup-detail="M.Tech in Geomatics · CEPT University" aria-label="Postgraduate college in Ahmedabad" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">3</span></button>
+                <button class="journey-marker journey-marker--work" type="button" style="--point-x: 41.5%; --point-y: 82%; --journey-delay: 0.6s;" data-popup-title="First job · Chennai" data-popup-detail="The first professional chapter began in Chennai." aria-label="First job in Chennai" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">4</span></button>
+                <button class="journey-marker journey-marker--work" type="button" style="--point-x: 42%; --point-y: 23%; --journey-delay: 0.8s;" data-popup-title="Second job · Delhi" data-popup-detail="The next professional chapter took shape in Delhi." aria-label="Second job in Delhi" aria-haspopup="dialog" aria-controls="journey-popup" aria-expanded="false"><span aria-hidden="true">5</span></button>
+                <div class="journey-popup" id="journey-popup" role="dialog" aria-labelledby="journey-popup-title" aria-describedby="journey-popup-detail" hidden>
+                  <button class="journey-popup-close" type="button" aria-label="Close location details">×</button>
+                  <p class="journey-popup-kicker">A PLACE IN THE JOURNEY</p>
+                  <h4 class="journey-popup-title" id="journey-popup-title"></h4>
+                  <p class="journey-popup-detail" id="journey-popup-detail"></p>
+                </div>
               </div>
-            </div>
-            <figcaption><span>INDIA · PLACES THAT SHAPED NEHA’S PATH</span></figcaption>
-            <p class="journey-map-instruction">Select a numbered point to reveal its story.</p>
+              <figcaption><span>INDIA · PLACES THAT SHAPED NEHA’S PATH</span></figcaption>
+              <p class="journey-map-instruction">Select a numbered point to reveal its story.</p>
             </figure>
           </div>
-        </aside>
-      </section>
-
-
-
-      <section class="earth-section section" id="research" aria-labelledby="earth-title">
-        <div class="page-wrap earth-grid">
-          <div class="earth-copy">
-            <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> THINKING IN SYSTEMS</p>
-            <span class="section-index section-index-light">03 — RESEARCH</span>
-            <h2 id="earth-title">The Earth isn’t a set of layers. It’s a set of <em>relationships.</em></h2>
-            <p>
-              Through the WCRP Digital Twins – Beyond Physical Systems Working
-              Group, Neha Sharma contributes to work connecting human and physical Earth
-              systems. These connections matter for understanding climate risk,
-              water, agriculture, energy, and urban planning.
-            </p>
-            <a class="button button-light" href="https://www.wcrp-climate.org/" target="_blank" rel="noreferrer">About the WCRP <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="earth-diagram">
-            <svg class="system-map" viewBox="0 0 520 520" fill="none" role="img" aria-labelledby="system-title system-desc">
-              <title id="system-title">Earth systems connected through spatial data</title>
-              <desc id="system-desc">A globe is surrounded by connected landscape, water, climate, and community nodes.</desc>
-              <circle class="system-ring system-ring-outer" cx="260" cy="260" r="219" />
-              <circle class="system-ring system-ring-mid" cx="260" cy="260" r="162" />
-              <circle class="system-ring system-ring-inner" cx="260" cy="260" r="107" />
-              <path class="system-link" d="M260 153V83M354 203l61-35M353 316l64 36M260 367v72M167 316l-62 36M167 203l-62-35" />
-              <circle class="system-node" cx="260" cy="76" r="42" />
-              <circle class="system-node" cx="424" cy="165" r="42" />
-              <circle class="system-node" cx="424" cy="355" r="42" />
-              <circle class="system-node" cx="260" cy="444" r="42" />
-              <circle class="system-node" cx="96" cy="355" r="42" />
-              <circle class="system-node" cx="96" cy="165" r="42" />
-              <circle class="system-center" cx="260" cy="260" r="91" />
-              <ellipse class="system-latitude" cx="260" cy="260" rx="91" ry="34" />
-              <ellipse class="system-longitude" cx="260" cy="260" rx="40" ry="91" />
-              <path class="system-land" d="m202 222 18-19 19-3 11 8 14-3 12 8 15 2 12 13-9 11-14 1-9 11-14 2-11-9-12 5-11-7-13 2-9-11-12-4-5-10Z" />
-              <path class="system-land" d="m245 272 15-7 15 8 10 15-6 15-8 12-4 16-12 10-9-12-3-14-10-14 3-13-9-11Z" />
-              <path class="system-route" d="M194 278c20-22 39-23 53-10s30 10 42-4 26-15 45-5" />
-              <circle class="system-node-dot" cx="194" cy="278" r="4" />
-              <circle class="system-node-dot" cx="247" cy="268" r="4" />
-              <circle class="system-node-dot" cx="289" cy="264" r="4" />
-              <text class="system-label" x="260" y="81" text-anchor="middle">CLIMATE</text>
-              <text class="system-label" x="424" y="170" text-anchor="middle">WATER</text>
-              <text class="system-label" x="424" y="360" text-anchor="middle">CITIES</text>
-              <text class="system-label" x="260" y="449" text-anchor="middle">LAND</text>
-              <text class="system-label" x="96" y="360" text-anchor="middle">PEOPLE</text>
-              <text class="system-label" x="96" y="170" text-anchor="middle">ENERGY</text>
-              <text class="system-center-label" x="260" y="380" text-anchor="middle">ONE LIVING SYSTEM</text>
-            </svg>
-            <span class="diagram-caption">OBSERVE THE CONNECTIONS</span>
-          </div>
         </div>
       </section>
 
-      <section class="publication-section section page-wrap" id="publications" aria-labelledby="publications-title">
-        <svg class="page-satellite-orbit page-satellite-orbit--publications" viewBox="0 0 320 140" aria-hidden="true" focusable="false">
-          <ellipse class="page-satellite-track" cx="160" cy="70" rx="142" ry="52" />
-          <g class="page-satellite-rotor">
-            <svg x="264" y="51" width="56" height="38" viewBox="0 0 60 40" fill="none" aria-hidden="true" focusable="false">
-              <path d="M2 12h14v16H2zM44 12h14v16H44z" fill="var(--water-deep)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M7 12v16m5-16v16m37-16v16m5-16v16" stroke="var(--paper)" stroke-opacity=".64" stroke-width=".8" />
-              <path d="M16 20h28" stroke="var(--paper)" stroke-width="2" />
-              <rect x="22" y="13" width="16" height="14" rx="2" fill="var(--sand)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M30 13V6m-4 0h8M30 27v7" stroke="var(--paper)" stroke-linecap="round" stroke-width="1.6" />
-              <circle cx="30" cy="20" r="2.5" fill="var(--clay)" stroke="var(--paper)" stroke-width=".8" />
-            </svg>
-          </g>
-        </svg>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> RESEARCH &amp; PUBLISHED WORK</p>
-            <h2 id="publications-title">Ideas made <em>shareable.</em></h2>
-          </div>
-          <span class="section-index">04 — PUBLICATIONS</span>
-        </div>
-        <div class="publication-list">
-          <article class="publication-entry">
-            <span class="publication-kind">JOURNAL ARTICLE · 2026</span>
-            <div>
-              <h3>Satellite Image-Based Spatial Analysis of Urban Air Quality Index</h3>
-              <p>Darshana Rawal, Sindhu Ranganath, Neha Sharma &amp; Anjana Vyas. <i>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</i>, XLIX-B3-2026, 773–781.</p>
-            </div>
-            <a class="publication-link" href="https://doi.org/10.5194/isprs-archives-xlix-b3-2026-773-2026" target="_blank" rel="noreferrer">Read paper <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication-entry">
-            <span class="publication-kind">BOOK CHAPTER · 2025</span>
-            <div>
-              <h3>Introduction to Remote Sensing and GIS</h3>
-              <p>In <i>Smart Buildings and Cities with Remote Sensing and GIS</i>, CRC Press · Taylor &amp; Francis.</p>
-            </div>
-            <a class="publication-link" href="https://doi.org/10.1201/9781003453321-2" target="_blank" rel="noreferrer">Read chapter <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication-entry">
-            <span class="publication-kind">BOOK CHAPTER · 2025</span>
-            <div>
-              <h3>Land Use Land Cover Mapping of San Diego Using AVIRIS Hyperspectral Imagery</h3>
-              <p>In <i>Smart Buildings and Cities with Remote Sensing and GIS</i>, CRC Press · Taylor &amp; Francis.</p>
-            </div>
-            <a class="publication-link" href="https://doi.org/10.1201/9781003453321-18" target="_blank" rel="noreferrer">Read chapter <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-        <div class="writing-links" aria-label="Writing and geospatial blogs">
-          <a class="writing-card writing-card--medium" href="https://medium.com/@nsgeoai" target="_blank" rel="noreferrer">
-            <span>NOTES &amp; PERSPECTIVES</span>
-            <strong>Writing on Medium</strong>
-            <p>Explore reflections on GeoAI, spatial data, and the places behind the pixels. <span aria-hidden="true">↗</span></p>
-          </a>
-          <a class="writing-card writing-card--arcgis" href="https://www.esri.com/arcgis-blog/author/nsharma" target="_blank" rel="noreferrer">
-            <span>GEOSPATIAL PRACTICE</span>
-            <strong>ArcGIS Blog</strong>
-            <p>Read geospatial stories and practical perspectives on the Esri blog. <span aria-hidden="true">↗</span></p>
-          </a>
-        </div>
-        <p class="publication-footnote">View the complete publication record on <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">↗</span></a>.</p>
-      </section>
+      <section class="github-activity section section--alt" id="github-activity" aria-labelledby="github-title">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">09 · Open source</p>
+            <h2 id="github-title">GitHub <span class="gradient-text">contributions.</span></h2>
+          </header>
 
-      <section class="field-note section page-wrap" aria-labelledby="field-note-title">
-        <figure class="field-photo">
-          <img
-            src="assets/neha-among-the-trees.jpg"
-            alt="Neha standing beside a large tree in a garden"
-            loading="lazy"
-          />
-          <figcaption><span>FIELD NOTE 01</span><span>PLACE BEFORE PIXELS</span></figcaption>
-        </figure>
-        <div class="field-note-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> A NOTE ON PLACE</p>
-          <h2 id="field-note-title">The data matters. The <em>living world</em> matters more.</h2>
-          <p>
-            Maps and models reveal patterns, but they can never replace the
-            places they describe. Her work keeps people, ecosystems, and local
-            knowledge in view as spatial data becomes insight.
-          </p>
-          <span class="field-note-coordinates">LAND · WATER · AIR · LIFE</span>
-        </div>
-      </section>
-
-
-
-      <section class="teaching-section section" id="teaching" aria-labelledby="teaching-title">
-        <div class="page-wrap">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow"><span class="eyebrow-line"></span> TEACHING &amp; GEOSPATIAL PRACTICE</p>
-              <h2 id="teaching-title">Building skills across <em>disciplines.</em></h2>
-            </div>
-            <span class="section-index">05 — COURSES</span>
-          </div>
-          <div class="teaching-intro">
-            <p>Neha Sharma’s teaching spans GeoAI, remote sensing, and geospatial practice for learners across research, planning, and the built environment. Since 2020, she has co-organized and served as a subject matter expert for the Council of Architecture–Training &amp; Research Center’s national GAP programme; she also teaches through NIT Calicut’s MoHUA-supported certification programmes. These are selected examples of a broader practice of designing and delivering courses, workshops, and learning experiences.</p>
-            <div class="teaching-impact"><strong>200+</strong><span>students and professionals trained through GAP</span></div>
-          </div>
-          <div class="teaching-grid">
-            <article class="teaching-card teaching-card--foundations">
-              <span class="teaching-level">FOUNDATIONS · LEVEL 1</span>
-              <h3>Bridging the GAP between Geomatics, Architects, and Planners</h3>
-              <p>A 24-hour programme delivered across eight days, introducing GIS and remote sensing for architectural pedagogy and built-environment analysis.</p>
-              <ul class="teaching-topics">
-                <li>GIS &amp; coordinate systems</li>
-                <li>Georeferencing &amp; digitization</li>
-                <li>Geoprocessing &amp; map design</li>
-                <li>Remote-sensing interpretation</li>
+          <div class="github-dashboard reveal" id="github-dashboard" aria-busy="true">
+            <article class="github-profile-card" aria-label="GitHub profile">
+              <p class="github-kicker">RESEARCHER PROFILE</p>
+              <a class="github-username" href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer">@neha-sharma-geoai <span aria-hidden="true">↗</span></a>
+              <p class="github-bio" id="github-bio">Loading public profile…</p>
+              <ul class="github-affiliation-list" aria-label="Organizations">
+                <li><span class="github-affiliation-status">Current</span> MIT CompBio</li>
+                <li><span class="github-affiliation-status github-affiliation-status--former">Former</span> <a href="https://www.esri.com/" target="_blank" rel="noreferrer">Esri <span aria-hidden="true">↗</span></a></li>
               </ul>
-              <span class="teaching-sessions">Sessions · 2020–2022</span>
             </article>
-            <article class="teaching-card teaching-card--advanced">
-              <span class="teaching-level">ADVANCED APPLICATIONS · LEVEL 2</span>
-              <h3>GAP Level 2 · Advanced geospatial applications</h3>
-              <p>Hands-on geospatial workflows for architects and planners, connecting data, imagery, and urban systems.</p>
-              <ul class="teaching-topics">
-                <li>LULC &amp; change detection</li>
-                <li>UAV imagery &amp; urban studies</li>
-                <li>BIM–GIS integration</li>
-                <li>Spatial AI &amp; machine learning</li>
-              </ul>
-              <span class="teaching-sessions">Sessions · 2022–2023</span>
-            </article>
-            <article class="teaching-card teaching-card--nit">
-              <span class="teaching-level">CERTIFICATION PROGRAMME · FACULTY</span>
-              <h3>GeoAI for resilient urban systems</h3>
-              <p>Faculty for the Centre of Excellence in Urban Planning &amp; Design at NIT Calicut, under the Ministry of Housing and Urban Affairs, Government of India.</p>
-              <ul class="teaching-topics">
-                <li>GeoAI for Disaster Management</li>
-                <li>Digital Twins for Resilient Infrastructure</li>
-              </ul>
-              <span class="teaching-sessions">NIT Calicut · MoHUA</span>
-            </article>
+
+            <dl class="github-stats" aria-label="Public GitHub contribution totals">
+              <div><dt>Commits</dt><dd id="github-commits">—</dd></div>
+              <div><dt>Issues opened</dt><dd id="github-issues">—</dd></div>
+              <div><dt>Pull requests</dt><dd id="github-pull-requests">—</dd></div>
+              <div><dt>Repositories</dt><dd id="github-repositories">—</dd></div>
+              <div><dt>Followers</dt><dd id="github-followers">—</dd></div>
+              <div><dt>Member since</dt><dd id="github-member-since">—</dd></div>
+            </dl>
           </div>
-          <p class="teaching-current"><span class="location-dot" aria-hidden="true"></span> Also contributing as a GeoAI subject matter expert for Bootcamp in GIS.</p>
-          <div class="learning-community">
-            <div class="learning-heading">
-              <div>
-                <p class="eyebrow"><span class="eyebrow-line"></span> LEARN &amp; CONNECT</p>
-                <h3>Geospatial ideas, <em>in conversation.</em></h3>
-              </div>
-              <p>Explore practical GeoAI and Earth-observation learning, and connect with a global community interested in geospatial ideas and practice.</p>
+
+          <div class="contrib reveal" id="github-contributions" aria-labelledby="contrib-title">
+            <div class="contrib-head">
+              <h3 id="contrib-title"><span id="contrib-total">Contributions</span> in the last year</h3>
+              <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="learning-links">
-              <a class="learning-card learning-card--video" href="https://www.youtube.com/@BVM-Earth-AI" target="_blank" rel="noreferrer">
-                <span class="learning-art" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none">
-                    <rect x="4" y="9" width="40" height="30" rx="8" />
-                    <path d="M20 17v14l12-7-12-7Z" />
-                  </svg>
-                </span>
-                <span class="learning-type">VIDEO CHANNEL</span>
-                <strong>BVM · Earth AI</strong>
-                <span class="learning-description">GeoAI, remote sensing, and geospatial learning on YouTube.</span>
-                <span class="learning-cta">Watch on YouTube <span aria-hidden="true">↗</span></span>
-              </a>
-              <a class="learning-card learning-card--group" href="https://www.linkedin.com/groups/14274291/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7523443243020242944&amp;q=highlightedFeedForGroups" target="_blank" rel="noreferrer">
-                <span class="learning-art" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none">
-                    <path d="M10 24c7-8 21-8 28 0M14 30c5-5 15-5 20 0M19 36c3-2 7-2 10 0" />
-                    <circle cx="24" cy="14" r="3" />
-                    <circle cx="10" cy="24" r="2" />
-                    <circle cx="38" cy="24" r="2" />
-                  </svg>
-                </span>
-                <span class="learning-type">GLOBAL COMMUNITY</span>
-                <strong>Global Group - GeoAI, Remote Sensing and GIS</strong>
-                <span class="learning-description">Join the global group for discussion and exchange across geospatial practice.</span>
-                <span class="learning-cta">Visit LinkedIn group <span aria-hidden="true">↗</span></span>
-              </a>
+            <div class="contrib-scroll">
+              <svg class="contrib-graph" id="contrib-graph" role="img" aria-label="Daily GitHub contributions over the last year" focusable="false"></svg>
             </div>
+            <div class="contrib-legend" aria-hidden="true">
+              <span>Less</span>
+              <i class="lv-0"></i><i class="lv-1"></i><i class="lv-2"></i><i class="lv-3"></i><i class="lv-4"></i>
+              <span>More</span>
+            </div>
+            <p class="contrib-status" id="contrib-status" role="status">Loading contribution graph…</p>
           </div>
+          <p class="github-profile-status" id="github-profile-status" role="status">Loading public GitHub metrics…</p>
+          <p class="github-data-note">Counts marked with + reflect publicly visible GitHub activity; private contributions are not included. The daily graph mirrors the public profile calendar through a third-party service (github-contributions-api.jogruber.de).</p>
         </div>
       </section>
 
-      <section class="education section page-wrap" aria-labelledby="education-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> MANY WAYS OF SEEING</p>
-            <h2 id="education-title">Built across <em>disciplines.</em></h2>
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-inner reveal">
+          <p class="eyebrow">10 · Collaborate</p>
+          <h2 id="contact-title">Let’s map the <span class="gradient-text">next question</span> together.</h2>
+          <p>Neha welcomes research collaborations, GeoAI projects, mentoring, and conversations about how spatial data can serve people and the planet.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:neha845sharma@yahoo.com">Email Neha <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="assets/neha-sharma-cv.pdf" download="Neha-Sharma-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="https://www.linkedin.com/in/neha-sharma-s/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-          <span class="section-index">06 — FOUNDATIONS</span>
+          <nav class="profile-links" aria-label="Research and learning profiles">
+            <a href="https://scholar.google.com/citations?user=JXyMLRcAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GS</span>Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Neha-Sharma-140?ev=hdr_xprf" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">RG</span>ResearchGate</a>
+            <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">ID</span>ORCID</a>
+            <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GH</span>GitHub</a>
+            <a href="https://www.youtube.com/@BVM-Earth-AI" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">YT</span>YouTube</a>
+          </nav>
         </div>
-        <div class="education-grid">
-          <article class="education-card">
-            <span class="education-year">2021 — 2023</span>
-            <span class="education-mark mark-data" aria-hidden="true">01</span>
-            <h3>MS, Data Science</h3>
-            <p>Liverpool John Moores University</p>
-            <span class="education-note">Online study · from India</span>
-          </article>
-          <article class="education-card">
-            <span class="education-year">2018 — 2020</span>
-            <span class="education-mark mark-geo" aria-hidden="true">02</span>
-            <h3>M.Tech, Geomatics</h3>
-            <p>CEPT University</p>
-            <span class="education-note">Spatial science &amp; mapping</span>
-          </article>
-          <article class="education-card">
-            <span class="education-year">2013 — 2018</span>
-            <span class="education-mark mark-arch" aria-hidden="true">03</span>
-            <h3>B.Arch, Architecture</h3>
-            <p>MANIT Bhopal</p>
-            <span class="education-note">Designing for people &amp; place</span>
-          </article>
-        </div>
-      </section>
-
-
-
-      <section class="book-section section" aria-labelledby="book-title">
-        <div class="page-wrap book-grid">
-          <div class="book-cover" aria-hidden="true">
-            <div class="book-cover-topo"></div>
-            <span class="book-kicker">A FIELD GUIDE TO</span>
-            <strong>Smart<br />Buildings<br /><span>&amp;</span> Cities</strong>
-            <span class="book-subtitle">WITH REMOTE SENSING &amp; GIS</span>
-            <span class="book-authors">DR. SHIV MOHAN · DR. NAVNEET MUNOTH<br />NEHA SHARMA</span>
-            <span class="book-publisher">CRC PRESS</span>
-          </div>
-          <div class="book-copy">
-            <p class="eyebrow"><span class="eyebrow-line"></span> A BOOK FOR CROSSING BOUNDARIES</p>
-            <h2 id="book-title">Smarter cities begin with a better <em>view.</em></h2>
-            <p>
-              Co-edited with Dr. Shiv Mohan and Dr. Navneet Munoth, <i>Smart Buildings
-              and Cities with Remote Sensing and GIS</i> shows how Earth
-              observation and geospatial tools can support better-informed
-              decisions for buildings, cities, and the people who shape them.
-            </p>
-            <a class="text-link" href="https://www.taylorfrancis.com/books/edit/10.1201/9781003453321/smart-buildings-cities-remote-sensing-gis-shiv-mohan-navneet-munoth-neha-sharma" target="_blank" rel="noreferrer">Discover the book <span aria-hidden="true">↗</span></a>
-            <span class="book-year">CRC Press · Taylor &amp; Francis · 2025</span>
-          </div>
-          <div class="book-decoration" aria-hidden="true">
-            <svg viewBox="0 0 260 180" fill="none">
-              <path d="M-5 108c38-43 74-56 106-39s51 24 75 8 54-41 90-29" />
-              <path d="M-5 120c38-42 74-54 106-37s51 23 75 7 54-39 90-27" />
-              <path d="M-5 132c38-40 74-52 106-35s51 22 75 6 54-37 90-25" />
-              <path d="M-5 144c38-39 74-50 106-33s51 21 75 5 54-35 90-23" />
-            </svg>
-          </div>
-        </div>
-      </section>
-
-      <section class="recognition-section section page-wrap" id="recognition" aria-labelledby="recognition-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> MILESTONES &amp; COMMUNITY</p>
-            <h2 id="recognition-title">Recognition along the <em>way.</em></h2>
-          </div>
-          <span class="section-index">07 — RECOGNITION</span>
-        </div>
-        <div class="recognition-grid">
-          <div class="recognition-column">
-            <h3>Awards &amp; distinctions</h3>
-            <ul class="recognition-list">
-              <li><span class="recognition-year">2025</span><div><strong>Outstanding Achiever Award</strong><span>MS in Data Science · Liverpool John Moores University</span></div></li>
-              <li><span class="recognition-year">2022</span><div><strong>GICEA Gold Medal</strong><span>M.Tech Geomatics · Gujarat Institute of Civil Engineers and Architects</span></div></li>
-              <li><span class="recognition-year">2022</span><div><strong>MindFest Hackathon Winner</strong><span>ServiceNow Platform Hackathon · Mindtree</span></div></li>
-              <li><span class="recognition-year">2021</span><div><strong>Academic Excellence, Best Capstone &amp; Distinguished Student</strong><span>M.Tech Geomatics · CEPT University</span></div></li>
-              <li><span class="recognition-year">2021</span><div><strong>Game Changer Team Award</strong><span>Mindtree NxT Hackathon · GeoAI idea for city cleanliness</span></div></li>
-            </ul>
-          </div>
-          <div class="recognition-column">
-            <h3>Exams &amp; academic milestones</h3>
-            <ul class="recognition-list">
-              <li><span class="recognition-year">2022</span><div><strong>GATE · Geomatics</strong><span>All India Rank 171</span></div></li>
-              <li><span class="recognition-year">2021</span><div><strong>National JRF Eligibility Test (JET)</strong><span>Qualified · ISRO–IIRS</span></div></li>
-              <li><span class="recognition-year">2018</span><div><strong>CEPT PG Entrance · Geomatics</strong><span>All India Rank 2</span></div></li>
-              <li><span class="recognition-year">2012–13</span><div><strong>Joint Entrance Examination (JEE)</strong><span>Main · Papers 1 &amp; 2</span></div></li>
-            </ul>
-          </div>
-        </div>
-        <div class="community-strip">
-          <div>
-            <span class="community-label">WORKING GROUP</span>
-            <strong>WCRP Digital Twins – Beyond Physical Systems</strong>
-            <span>Member · Digital Earths Lighthouse Activity</span>
-          </div>
-          <div>
-            <span class="community-label">COMMUNITY SERVICE</span>
-            <strong>ISG · IEEE · CEPT University</strong>
-            <span>Volunteer contributions across geospatial learning and practice</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-section section page-wrap" id="contact" aria-labelledby="contact-title">
-        <div class="contact-orbit" aria-hidden="true">
-          <div class="contact-satellite-rotor">
-            <svg viewBox="0 0 60 40" fill="none" focusable="false">
-              <path d="M2 12h14v16H2zM44 12h14v16H44z" fill="var(--water-deep)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M7 12v16m5-16v16m37-16v16m5-16v16" stroke="var(--paper)" stroke-opacity=".64" stroke-width=".8" />
-              <path d="M16 20h28" stroke="var(--paper)" stroke-width="2" />
-              <rect x="22" y="13" width="16" height="14" rx="2" fill="var(--sand)" stroke="var(--paper)" stroke-width="1" />
-              <path d="M30 13V6m-4 0h8M30 27v7" stroke="var(--paper)" stroke-linecap="round" stroke-width="1.6" />
-              <circle cx="30" cy="20" r="2.5" fill="var(--clay)" stroke="var(--paper)" stroke-width=".8" />
-            </svg>
-          </div>
-        </div>
-        <p class="eyebrow"><span class="eyebrow-line"></span> GOOD WORK IS A COLLECTIVE MAP</p>
-        <h2 id="contact-title">Let’s find the <em>next point</em> together.</h2>
-        <p>Neha welcomes research collaborations, GeoAI projects, mentoring, and conversations about how spatial data can serve people and the planet.</p>
-        <div class="contact-actions">
-          <a class="button button-dark" href="mailto:neha845sharma@yahoo.com">Email Neha <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="assets/neha-sharma-cv.pdf" download="Neha-Sharma-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
-          <a class="button button-outline" href="https://www.linkedin.com/in/neha-sharma-s/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
-        </div>
-        <nav class="profile-links" aria-label="Research and learning profiles">
-          <a href="https://scholar.google.com/citations?user=JXyMLRcAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GS</span>Google Scholar <span aria-hidden="true">↗</span></a>
-          <a href="https://www.researchgate.net/profile/Neha-Sharma-140?ev=hdr_xprf" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">RG</span>ResearchGate <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GH</span>GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://www.youtube.com/@BVM-Earth-AI" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">YT</span>YouTube <span aria-hidden="true">↗</span></a>
-        </nav>
       </section>
     </main>
 
-    <footer class="site-footer page-wrap">
-      <a class="footer-brand" href="#top">Neha Sharma<span class="brand-dot">.</span></a>
-      <span class="footer-note">Made with care for a living planet.</span>
+    <footer class="site-footer wrap">
+      <a class="footer-brand" href="#top">Neha Sharma</a>
+      <span class="footer-note">GeoAI · Made with care for a living planet.</span>
       <div class="footer-links">
         <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer">ORCID</a>

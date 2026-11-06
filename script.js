@@ -6,15 +6,15 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 
 if (paletteSelect) {
   const palettes = new Map([
-    ["earth", "#f7f1e5"],
-    ["ocean", "#e7f5fa"],
-    ["canopy", "#f2f6db"],
-    ["lavender", "#f3edff"],
+    ["orbit", "#050a14"],
+    ["aurora", "#060f0d"],
+    ["glacier", "#f4f8fc"],
+    ["terra", "#f6efe2"],
   ]);
   let savedPalette = null;
 
   try {
-    savedPalette = window.localStorage.getItem("geoai-palette");
+    savedPalette = window.localStorage.getItem("geoai-palette-v2");
   } catch (error) {
     console.warn("Could not read the saved color palette.", error);
   }
@@ -38,15 +38,45 @@ if (paletteSelect) {
       themeColor.content = palettes.get(palette);
     }
     try {
-      window.localStorage.setItem("geoai-palette", palette);
+      window.localStorage.setItem("geoai-palette-v2", palette);
     } catch (error) {
       console.warn("Could not save the selected color palette.", error);
     }
   });
 }
 
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window && revealItems.length > 0) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+  );
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
 if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
+}
+
+const namasteTrigger = document.querySelector(".namaste-trigger");
+const namasteMessage = document.querySelector("#namaste-message");
+
+if (namasteTrigger instanceof HTMLButtonElement && namasteMessage instanceof HTMLElement) {
+  namasteTrigger.addEventListener("click", () => {
+    const isExpanded = namasteTrigger.getAttribute("aria-expanded") === "true";
+    namasteTrigger.setAttribute("aria-expanded", String(!isExpanded));
+    namasteMessage.hidden = isExpanded;
+  });
 }
 
 if (menuToggle && navigation) {
@@ -261,9 +291,9 @@ if (githubActivitySection) {
           ? profile.bio
           : "No public bio provided.";
       document.querySelector("#github-repositories").textContent =
-        profile.public_repos.toLocaleString();
+        `${profile.public_repos.toLocaleString()}+`;
       document.querySelector("#github-followers").textContent =
-        profile.followers.toLocaleString();
+        `${profile.followers.toLocaleString()}+`;
       document.querySelector("#github-member-since").textContent =
         String(joinedDate.getFullYear());
       return true;
@@ -289,7 +319,7 @@ if (githubActivitySection) {
       }
 
       document.querySelector(selector).textContent =
-        result.total_count.toLocaleString();
+        `${result.total_count.toLocaleString()}+`;
       return true;
     } catch (error) {
       console.error(`Unable to load public GitHub ${label}.`, error);
@@ -342,3 +372,112 @@ if (githubActivitySection) {
     void requestGithubData();
   }
 }
+
+    const contributionGraph = document.querySelector("#contrib-graph");
+
+    if (contributionGraph && githubActivitySection) {
+      const svgNamespace = "http://www.w3.org/2000/svg";
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const cellSize = 11;
+      const cellStep = 14;
+      const labelHeight = 18;
+      const contribStatus = document.querySelector("#contrib-status");
+      const contribTotal = document.querySelector("#contrib-total");
+
+      const drawContributionGraph = (days) => {
+        const firstWeekday = new Date(`${days[0].date}T00:00:00Z`).getUTCDay();
+        const weekCount = Math.ceil((days.length + firstWeekday) / 7);
+        const width = weekCount * cellStep;
+        const height = labelHeight + 7 * cellStep;
+        contributionGraph.setAttribute("viewBox", `0 0 ${width} ${height}`);
+        contributionGraph.setAttribute("width", String(width));
+        contributionGraph.setAttribute("height", String(height));
+        contributionGraph.replaceChildren();
+
+        let lastMonth = -1;
+        days.forEach((day, index) => {
+          const slot = index + firstWeekday;
+          const week = Math.floor(slot / 7);
+          const weekday = slot % 7;
+          const x = week * cellStep;
+          const y = labelHeight + weekday * cellStep;
+          const month = Number(day.date.slice(5, 7)) - 1;
+
+          if (weekday === 0 && month !== lastMonth && x < width - 3 * cellStep) {
+            const label = document.createElementNS(svgNamespace, "text");
+            label.setAttribute("x", String(x));
+            label.setAttribute("y", "11");
+            label.setAttribute("class", "contrib-month");
+            label.textContent = monthNames[month];
+            contributionGraph.append(label);
+            lastMonth = month;
+          }
+
+          const cell = document.createElementNS(svgNamespace, "rect");
+          cell.setAttribute("x", String(x));
+          cell.setAttribute("y", String(y));
+          cell.setAttribute("width", String(cellSize));
+          cell.setAttribute("height", String(cellSize));
+          cell.setAttribute("rx", "2");
+          cell.setAttribute("class", `contrib-cell lv-${Math.min(4, Math.max(0, day.level))}`);
+          const title = document.createElementNS(svgNamespace, "title");
+          title.textContent = `${day.count} contribution${day.count === 1 ? "" : "s"} on ${day.date}`;
+          cell.append(title);
+          contributionGraph.append(cell);
+        });
+      };
+
+      const loadContributions = async () => {
+        try {
+          const response = await fetch(
+            "https://github-contributions-api.jogruber.de/v4/neha-sharma-geoai?y=last",
+          );
+          if (!response.ok) {
+            throw new Error(`Contribution request failed with status ${response.status}.`);
+          }
+          const data = await response.json();
+          const days = Array.isArray(data.contributions)
+            ? data.contributions.filter((day) => typeof day.date === "string" && Number.isFinite(day.count))
+            : [];
+          if (days.length === 0) {
+            throw new Error("The contribution response contained no days.");
+          }
+
+          // Keep a full 53-week window ending today, like the GitHub profile graph.
+          const visibleDays = days.slice(-371);
+          drawContributionGraph(visibleDays);
+          const total = visibleDays.reduce((sum, day) => sum + day.count, 0);
+          contribTotal.textContent = `${total.toLocaleString()}+ contributions`;
+          contribStatus.textContent = "";
+          const scroller = contributionGraph.parentElement;
+          scroller.scrollLeft = scroller.scrollWidth;
+        } catch (error) {
+          console.error("Unable to load the GitHub contribution graph.", error);
+          contribStatus.textContent =
+            "The contribution graph is unavailable right now. Visit GitHub for the latest activity.";
+        }
+      };
+
+      if ("IntersectionObserver" in window) {
+        const contributionObserver = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              contributionObserver.disconnect();
+              void loadContributions();
+            }
+          },
+          { rootMargin: "180px 0px" },
+        );
+        contributionObserver.observe(githubActivitySection);
+      } else {
+        void loadContributions();
+      }
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("svg").forEach((svg) => {
+        if (typeof svg.pauseAnimations === "function") {
+          svg.pauseAnimations();
+        }
+      });
+    }
