@@ -7,9 +7,9 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 if (paletteSelect) {
   const palettes = new Map([
     ["earth", "#f7f1e5"],
-    ["ocean", "#e6eef1"],
-    ["canopy", "#e9eee4"],
-    ["lavender", "#ece9f3"],
+    ["ocean", "#e7f5fa"],
+    ["canopy", "#f2f6db"],
+    ["lavender", "#f3edff"],
   ]);
   let savedPalette = null;
 
