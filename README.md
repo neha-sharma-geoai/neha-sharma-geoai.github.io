@@ -19,6 +19,13 @@ supplied India and world references. Their markers and location popups remain
 interactive and accessible, with online study and remote work called out in the
 location details.
 
+## Analytics
+
+The production site sends page views to Google Analytics 4. Visit totals are
+not displayed on the public page and remain available in the private Analytics
+account. Tracking runs only on `neha-sharma-geoai.github.io`; local previews
+are excluded.
+
 ## Run locally
 
 Open `index.html` in a browser. The site uses plain HTML, CSS, JavaScript, and

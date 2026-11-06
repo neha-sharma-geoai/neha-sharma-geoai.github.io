@@ -18,6 +18,25 @@
     <link rel="icon" href="assets/earth-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script>
+      if (
+        window.location.protocol === "https:" &&
+        window.location.hostname === "neha-sharma-geoai.github.io"
+      ) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", "G-M2Y0553EP7");
+
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-M2Y0553EP7";
+        document.head.append(analyticsScript);
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
