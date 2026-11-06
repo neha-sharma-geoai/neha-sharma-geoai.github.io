@@ -687,7 +687,7 @@ ol {
 
 .hero-visual {
   position: relative;
-  margin-top: 42px;
+  margin-top: 119px;
 }
 
 .earth-console {
@@ -2442,6 +2442,7 @@ ol {
 
   .hero-visual {
     max-width: 680px;
+    margin-top: 24px;
   }
 
   .about-photo {
