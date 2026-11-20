@@ -32,7 +32,7 @@ if (paletteSelect) {
   const palettes = new Map([
     ["orbit", "#050a14"],
     ["aurora", "#060f0d"],
-    ["glacier", "#f4f8fc"],
+    ["glacier", "#f1f8ff"],
     ["terra", "#f6efe2"],
     ["snow", "#f9fcff"],
   ]);
