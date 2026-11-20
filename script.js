@@ -93,6 +93,95 @@ if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
 
+const youtubeVideoGrid = document.querySelector("#youtube-video-grid");
+const youtubeVideoStatus = document.querySelector("#youtube-video-status");
+const youtubeVideosUpdated = document.querySelector("#youtube-videos-updated");
+
+if (youtubeVideoGrid && youtubeVideoStatus) {
+  const loadPopularYoutubeVideos = async () => {
+    try {
+      const response = await fetch("assets/data/youtube-popular.json", {
+        cache: "no-store",
+      });
+      if (!response.ok) {
+        throw new Error(`YouTube highlight request failed with status ${response.status}.`);
+      }
+
+      const data = await response.json();
+      if (!data || !Array.isArray(data.videos) || data.videos.length > 3) {
+        throw new Error("YouTube highlight data has an invalid video list.");
+      }
+
+      if (data.videos.length === 0) {
+        youtubeVideoStatus.textContent =
+          "Video highlights are being updated. Visit the channel for now.";
+        youtubeVideoGrid.setAttribute("aria-busy", "false");
+        return;
+      }
+
+      const videoCards = data.videos.map((video, index) => {
+        if (
+          !video ||
+          typeof video.id !== "string" ||
+          !/^[A-Za-z0-9_-]{11}$/.test(video.id) ||
+          typeof video.title !== "string" ||
+          !video.title.trim()
+        ) {
+          throw new Error("YouTube highlight data contains an invalid video.");
+        }
+
+        const card = document.createElement("a");
+        card.className = "youtube-video-card";
+        card.href = `https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`;
+        card.target = "_blank";
+        card.rel = "noreferrer";
+        card.setAttribute("aria-label", `Watch ${video.title} on YouTube`);
+
+        const thumbnail = document.createElement("img");
+        thumbnail.src = `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+        thumbnail.alt = "";
+        thumbnail.loading = "lazy";
+        thumbnail.decoding = "async";
+
+        const copy = document.createElement("span");
+        copy.className = "youtube-video-copy";
+
+        const title = document.createElement("strong");
+        title.textContent = video.title;
+
+        const rank = document.createElement("span");
+        rank.className = "youtube-video-rank";
+        rank.textContent = `Featured video ${index + 1}`;
+
+        copy.append(title, rank);
+        card.append(thumbnail, copy);
+        return card;
+      });
+
+      youtubeVideoGrid.replaceChildren(...videoCards);
+      youtubeVideoGrid.setAttribute("aria-busy", "false");
+      youtubeVideoStatus.textContent = "";
+
+      if (youtubeVideosUpdated && typeof data.updatedAt === "string") {
+        const updatedAt = new Date(data.updatedAt);
+        if (Number.isFinite(updatedAt.getTime())) {
+          youtubeVideosUpdated.textContent = `Updated ${new Intl.DateTimeFormat(
+            undefined,
+            { dateStyle: "medium" },
+          ).format(updatedAt)}`;
+        }
+      }
+    } catch (error) {
+      console.error("Unable to load YouTube video highlights.", error);
+      youtubeVideoGrid.setAttribute("aria-busy", "false");
+      youtubeVideoStatus.textContent =
+        "Video highlights are unavailable right now. Visit the BVM · Earth AI channel on YouTube.";
+    }
+  };
+
+  void loadPopularYoutubeVideos();
+}
+
 const namasteTrigger = document.querySelector(".namaste-trigger");
 const namasteMessage = document.querySelector("#namaste-message");
 

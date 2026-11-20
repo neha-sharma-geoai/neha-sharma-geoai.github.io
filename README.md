@@ -63,6 +63,15 @@ contribution graph comes from the third-party
 profile calendar. Organization affiliations are maintained in `index.html`
 because the public API does not provide affiliation history.
 
+## YouTube video highlights
+
+The teaching section displays up to three videos from the BVM · Earth AI
+channel. Maintain the list manually in `assets/data/youtube-popular.json`,
+ordered from most to fewer views. Each entry needs a YouTube video ID and
+title; the site builds the video link and thumbnail from the ID. Update
+`updatedAt` when you refresh the list. No API key or scheduled workflow is
+required.
+
 ## Run locally
 
 Open `index.html` in a browser. Update the `?v=` cache keys on the stylesheet

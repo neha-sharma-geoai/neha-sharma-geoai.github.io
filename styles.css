@@ -1572,6 +1572,87 @@ ol {
   font-weight: 600;
 }
 
+.youtube-popular {
+  margin-top: 24px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.youtube-popular-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.youtube-popular-heading h3 {
+  font-size: clamp(21px, 2.4vw, 28px);
+}
+
+.youtube-videos-updated {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.youtube-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.youtube-video-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-solid);
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.youtube-video-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.youtube-video-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-alt);
+}
+
+.youtube-video-copy {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+}
+
+.youtube-video-copy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.youtube-video-rank {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.youtube-video-status {
+  margin-top: 16px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
 .writing {
   margin-top: 48px;
 }
