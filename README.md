@@ -11,7 +11,7 @@ local image assets; there is no build step.
   Neha's photo to Gwalior, India (26.2° N, 78.2° E), with a profile strip
   (researcher, author, educator) below it. No square grid patterns are used
   anywhere; backgrounds use contour lines instead.
-- **Themes:** Orbit night (default), Aurora, Glacier, and Terra, switched from
+- **Themes:** Orbit night (default), Aurora, Glacier, Terra, and Snow, switched from
   the navigation. The choice is saved in `localStorage` (`geoai-palette-v2`).
   All colours are CSS variables defined per `data-theme` in `styles.css`.
 - **Motion:** scroll-reveal and map animations are disabled automatically for

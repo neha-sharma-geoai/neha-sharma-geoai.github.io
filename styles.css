@@ -87,6 +87,28 @@
   --header-bg: rgba(246, 239, 226, 0.82);
 }
 
+:root[data-theme="snow"] {
+  color-scheme: light;
+  --bg: #f9fcff;
+  --bg-alt: #eaf3f9;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-solid: #ffffff;
+  --line: rgba(18, 50, 82, 0.12);
+  --line-strong: rgba(18, 50, 82, 0.26);
+  --ink: #142b40;
+  --ink-soft: #526a7f;
+  --accent: #1769aa;
+  --accent-2: #007680;
+  --accent-3: #765090;
+  --on-accent: #ffffff;
+  --land: linear-gradient(135deg, #1769aa, #78b9d1 55%, #007680);
+  --glow-a: rgba(91, 166, 218, 0.19);
+  --glow-b: rgba(174, 218, 236, 0.3);
+  --star: rgba(23, 105, 170, 0.35);
+  --shadow: 0 24px 60px rgba(20, 43, 64, 0.13);
+  --header-bg: rgba(249, 252, 255, 0.84);
+}
+
 :root {
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --display: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -328,6 +350,24 @@ ol {
 }
 
 /* Header */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: 3px;
+  background: var(--line);
+  pointer-events: none;
+}
+
+.scroll-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+}
 
 .site-header {
   position: sticky;
@@ -639,6 +679,13 @@ ol {
   font-size: clamp(38px, 5.2vw, 68px);
   line-height: 1.04;
   letter-spacing: -0.035em;
+}
+
+.hero-role {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 600;
 }
 
 .hero-kicker {

@@ -3,6 +3,30 @@ const navigation = document.querySelector("#primary-navigation");
 const currentYear = document.querySelector("#current-year");
 const paletteSelect = document.querySelector("#theme-select");
 const themeColor = document.querySelector('meta[name="theme-color"]');
+const scrollProgress = document.querySelector("#scroll-progress");
+
+if (scrollProgress) {
+  const progressBar = scrollProgress.querySelector("span");
+
+  const updateScrollProgress = () => {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0
+      ? Math.min(Math.max(window.scrollY / scrollableHeight, 0), 1)
+      : 0;
+    const percentage = Math.round(progress * 100);
+
+    if (progressBar) {
+      progressBar.style.transform = `scaleX(${progress})`;
+    }
+    scrollProgress.setAttribute("aria-valuenow", String(percentage));
+    scrollProgress.setAttribute("aria-valuetext", `${percentage}% scrolled`);
+  };
+
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("resize", updateScrollProgress);
+  window.addEventListener("load", updateScrollProgress, { once: true });
+  updateScrollProgress();
+}
 
 if (paletteSelect) {
   const palettes = new Map([
@@ -10,6 +34,7 @@ if (paletteSelect) {
     ["aurora", "#060f0d"],
     ["glacier", "#f4f8fc"],
     ["terra", "#f6efe2"],
+    ["snow", "#f9fcff"],
   ]);
   let savedPalette = null;
 

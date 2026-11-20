@@ -22,19 +22,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="styles.css?v=earth-ai-20261106c" />
+    <link rel="stylesheet" href="styles.css?v=earth-ai-20261120a" />
     <script>
       document.documentElement.classList.add("js");
       try {
         const savedPalette = window.localStorage.getItem("geoai-palette-v2");
-        if (["orbit", "aurora", "glacier", "terra"].includes(savedPalette)) {
+        if (["orbit", "aurora", "glacier", "terra", "snow"].includes(savedPalette)) {
           document.documentElement.dataset.theme = savedPalette;
         }
       } catch (error) {
         /* Storage can be unavailable; the default palette applies. */
       }
     </script>
-    <script src="script.js?v=earth-ai-20261106b" defer></script>
+    <script src="script.js?v=earth-ai-20261120a" defer></script>
     <script>
       if (
         window.location.protocol === "https:" &&
@@ -57,6 +57,18 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div
+      class="scroll-progress"
+      id="scroll-progress"
+      role="progressbar"
+      aria-label="Page reading progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+      aria-valuetext="0% scrolled"
+    >
+      <span></span>
+    </div>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Neha Sharma, home">
         <span class="brand-mark" aria-hidden="true">
@@ -65,7 +77,7 @@
             <path d="M5 18h26M18 4.5c4.2 4 6.3 8.5 6.3 13.5S22.2 27.5 18 31.5C13.8 27.5 11.7 23 11.7 18S13.8 8.5 18 4.5Z" />
           </svg>
         </span>
-        <span class="brand-name">Neha Sharma</span>
+        <span class="brand-name">NS</span>
       </a>
 
       <button
@@ -93,6 +105,7 @@
             <option value="aurora">Aurora</option>
             <option value="glacier">Glacier</option>
             <option value="terra">Terra</option>
+            <option value="snow">Snow</option>
           </select>
         </label>
         <a href="#contact" class="nav-contact">Collaborate <span aria-hidden="true">↗</span></a>
@@ -154,6 +167,7 @@
         <div class="wrap hero-inner">
           <div class="hero-copy">
             <h1 id="hero-title"><span class="gradient-text">Neha Sharma</span></h1>
+            <p class="hero-role">Geospatial Data Science Researcher</p>
             <p class="kicker hero-kicker"><span class="pulse-dot"></span> Making Earth More Legible</p>
             <p class="lede">
               Using data science, machine learning, and Earth observation, I
@@ -935,12 +949,14 @@
             <a class="button button-ghost" href="assets/neha-sharma-cv.pdf" download="Neha-Sharma-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
             <a class="button button-ghost" href="https://www.linkedin.com/in/neha-sharma-s/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-          <nav class="profile-links" aria-label="Research and learning profiles">
+          <nav class="profile-links" aria-label="Research, learning, and writing profiles">
             <a href="https://scholar.google.com/citations?user=JXyMLRcAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GS</span>Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Neha-Sharma-140?ev=hdr_xprf" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">RG</span>ResearchGate</a>
             <a href="https://orcid.org/0000-0003-1302-9593" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">ID</span>ORCID</a>
             <a href="https://github.com/neha-sharma-geoai" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">GH</span>GitHub</a>
             <a href="https://www.youtube.com/@BVM-Earth-AI" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">YT</span>YouTube</a>
+            <a href="https://medium.com/@nsgeoai" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">M</span>Medium</a>
+            <a href="https://www.esri.com/arcgis-blog/author/nsharma" target="_blank" rel="noreferrer"><span class="profile-badge" aria-hidden="true">AB</span>ArcGIS Blog</a>
           </nav>
         </div>
       </section>
