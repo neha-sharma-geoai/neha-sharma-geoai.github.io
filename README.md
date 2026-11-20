@@ -1,8 +1,8 @@
 # Neha Sharma — Earth AI & GeoAI Research
 
-A standalone, responsive portfolio for Neha Sharma, an Earth AI and GeoAI
-research scientist. It uses plain HTML, CSS, and JavaScript with local image
-assets; there is no build step.
+A standalone, responsive portfolio for Neha Sharma, a geospatial data
+scientist and GeoAI researcher. It uses plain HTML, CSS, and JavaScript with
+local image assets; there is no build step.
 
 ## Design
 
